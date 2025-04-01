@@ -1,0 +1,173 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "5ea5755f-0671-4562-8c9a-60b206666055": {
+      "type": "index__image-with-text-overlay",
+      "settings": {
+        "image": "shopify://shop_images/Ambassadors.jpg",
+        "link": "",
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "pretext_color": "#000000",
+        "heading_color": "#000000",
+        "subheading_color": "#000000",
+        "text_alignment": "center",
+        "text_horizontal_position": "center",
+        "text_vertical_position": "middle",
+        "text_width": 40,
+        "background_color": "#FFFFFF",
+        "background_opacity": 77,
+        "border_color": "#FFFFFF",
+        "border_width": 0,
+        "button_1": "",
+        "button_1_link": "",
+        "button_1_style": "button--secondary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "mobile_text_below_image": true,
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_color_mobile": "rgba(0,0,0,0)",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "banner": {
+      "type": "banner",
+      "disabled": true,
+      "settings": {
+        "image_darken": false,
+        "subtitle": "Subheading",
+        "width": "wide",
+        "banner_height": "medium",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "main": {
+      "type": "page-content__main",
+      "disabled": true,
+      "settings": {
+        "show_heading": false,
+        "heading_alignment": "left",
+        "width": "standard",
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "a6b87816-3158-47d5-bd96-f4d9728e901a": {
+      "type": "index__image-with-text",
+      "blocks": {
+        "template--16057642811546__a6b87816-3158-47d5-bd96-f4d9728e901a-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/295944878_429692732546034_655821525366758940_n.jpg",
+            "image_link": ""
+          }
+        },
+        "template--16057642811546__a6b87816-3158-47d5-bd96-f4d9728e901a-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "JUMPERMAN KRIS",
+            "heading_size": "regular",
+            "text": "<p>IG: @jumpermankris<br/>YT: @JumperManKris<br/>TT: @jumpermankris</p>",
+            "alignment": "left",
+            "vertical_position": "center",
+            "button_label": "View",
+            "link": "https://www.instagram.com/reel/CuXUTPXJV9N/?hl=en",
+            "button_style": "button--primary",
+            "background": "rgba(0,0,0,0)",
+            "text_color": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "template--16057642811546__a6b87816-3158-47d5-bd96-f4d9728e901a-image-1",
+        "template--16057642811546__a6b87816-3158-47d5-bd96-f4d9728e901a-text-1"
+      ],
+      "settings": {
+        "width": "standard",
+        "show_gutter": true,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "99987112-7bd9-4200-83c9-e4c31ac0a7c0": {
+      "type": "index__image-with-text",
+      "blocks": {
+        "template--16057642811546__99987112-7bd9-4200-83c9-e4c31ac0a7c0-text-1": {
+          "type": "text",
+          "settings": {
+            "title": "DNA SHOW",
+            "heading_size": "regular",
+            "text": "<p>IG: @dna_show<br/>YT: @DNASHOW<br/>TT: @dj_sneakerhead</p>",
+            "alignment": "left",
+            "vertical_position": "center",
+            "button_label": "View",
+            "link": "https://www.youtube.com/watch?v=uro0VKp1oD4&t=1s&ab_channel=DNASHOW",
+            "button_style": "button--primary",
+            "background": "rgba(0,0,0,0)",
+            "text_color": "rgba(0,0,0,0)"
+          }
+        },
+        "template--16057642811546__99987112-7bd9-4200-83c9-e4c31ac0a7c0-image-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/vlcsnap-2023-06-06-20h29m51s661.png",
+            "image_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16057642811546__99987112-7bd9-4200-83c9-e4c31ac0a7c0-text-1",
+        "template--16057642811546__99987112-7bd9-4200-83c9-e4c31ac0a7c0-image-1"
+      ],
+      "settings": {
+        "width": "standard",
+        "show_gutter": true,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "c1ec0fa3-6d53-4257-a857-ae910bf47760": {
+      "type": "judgeme_carousel_section",
+      "settings": {
+        "maxwidth": 1080
+      }
+    }
+  },
+  "order": [
+    "5ea5755f-0671-4562-8c9a-60b206666055",
+    "banner",
+    "main",
+    "a6b87816-3158-47d5-bd96-f4d9728e901a",
+    "99987112-7bd9-4200-83c9-e4c31ac0a7c0",
+    "c1ec0fa3-6d53-4257-a857-ae910bf47760"
+  ]
+}

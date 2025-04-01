@@ -1,0 +1,120 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer",
+  "sections": {
+    "footer_icon_bar": {
+      "type": "footer__icon-bar",
+      "blocks": {
+        "footer__icon-bar-0": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "star",
+            "text": "Exceptional quality",
+            "link": ""
+          }
+        },
+        "footer__icon-bar-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "hanger",
+            "text": "Ethically made",
+            "link": ""
+          }
+        },
+        "footer__icon-bar-3": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "box",
+            "text": "Free shipping & returns",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "footer__icon-bar-0",
+        "footer__icon-bar-1",
+        "footer__icon-bar-3"
+      ],
+      "settings": {
+        "show_icon_bar": false,
+        "alignment": "center",
+        "icon_position": "column",
+        "size": "large",
+        "background": "#000000",
+        "link_color": "#ffffff",
+        "link_hover_color": "#be7a2c",
+        "text_color": "#8c523c",
+        "width": "standard",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "footer": {
+      "type": "footer-classic",
+      "blocks": {
+        "deecacca-7434-4800-a0ea-a9533763f980": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/white_logo_transparent_back.png",
+            "size": "medium",
+            "text": "",
+            "social_icons_footer": true
+          }
+        },
+        "a898b9ad-456c-4c66-8f09-9d059fad4ac1": {
+          "type": "link_list",
+          "settings": {
+            "menu": "kicks-kase-duffles",
+            "social_icons_footer": false
+          }
+        },
+        "4fc3decf-892f-41c6-91c0-0d3563938ee8": {
+          "type": "link_list",
+          "settings": {
+            "menu": "support",
+            "social_icons_footer": false
+          }
+        },
+        "8fbf93e9-8a02-4ac2-9f65-7e61813b7a2c": {
+          "type": "link_list",
+          "settings": {
+            "menu": "more-information",
+            "social_icons_footer": false
+          }
+        }
+      },
+      "block_order": [
+        "deecacca-7434-4800-a0ea-a9533763f980",
+        "a898b9ad-456c-4c66-8f09-9d059fad4ac1",
+        "4fc3decf-892f-41c6-91c0-0d3563938ee8",
+        "8fbf93e9-8a02-4ac2-9f65-7e61813b7a2c"
+      ],
+      "settings": {
+        "copyright_text": "",
+        "display_designed_by": false,
+        "display_shopify": false,
+        "display_payment_methods": true,
+        "show_locale_selector": true,
+        "show_currency_selector": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "footer_icon_bar",
+    "footer"
+  ]
+}

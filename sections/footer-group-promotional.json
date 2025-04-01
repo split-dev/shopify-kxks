@@ -1,0 +1,118 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer",
+  "sections": {
+    "footer_icon_bar": {
+      "type": "footer__icon-bar",
+      "blocks": {
+        "footer__icon-bar-0": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "star",
+            "text": "Exceptional quality",
+            "link": ""
+          }
+        },
+        "footer__icon-bar-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "hanger",
+            "text": "Ethically made",
+            "link": ""
+          }
+        },
+        "footer__icon-bar-3": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "box",
+            "text": "Free shipping & returns",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "footer__icon-bar-0",
+        "footer__icon-bar-1",
+        "footer__icon-bar-3"
+      ],
+      "settings": {
+        "show_icon_bar": false,
+        "alignment": "center",
+        "icon_position": "column",
+        "size": "large",
+        "background": "#000000",
+        "link_color": "#ffffff",
+        "link_hover_color": "#be7a2c",
+        "text_color": "#8c523c",
+        "width": "standard",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "footer": {
+      "type": "footer-promotional",
+      "blocks": {
+        "footer-promotional-0": {
+          "type": "logo",
+          "settings": {
+            "size": "small",
+            "alignment": "start"
+          }
+        },
+        "footer-promotional-1": {
+          "type": "link_list",
+          "settings": {
+            "menu_1": "main-menu",
+            "menu_2": "",
+            "menu_3": ""
+          }
+        },
+        "footer-promotional-2": {
+          "type": "text",
+          "settings": {
+            "title": "Title",
+            "content": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "footer-promotional-0",
+        "footer-promotional-1",
+        "footer-promotional-2"
+      ],
+      "settings": {
+        "copyright_text": "",
+        "display_designed_by": true,
+        "display_shopify": true,
+        "display_payment_methods": true,
+        "show_locale_selector": true,
+        "show_currency_selector": true,
+        "enable_promo": true,
+        "promo_background": "#EEEEEE",
+        "promo_text": "#000000",
+        "promo_position": "row-reverse",
+        "richtext": "<p>Use this area for promotional information.</p>",
+        "button_label": "Shop now",
+        "button_style": "button--primary",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "footer_icon_bar",
+    "footer"
+  ]
+}

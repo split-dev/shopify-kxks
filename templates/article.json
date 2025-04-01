@@ -1,0 +1,105 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "fallback_image_banner",
+      "settings": {
+        "image_darken": false,
+        "width": "wide",
+        "banner_height": "small",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "main": {
+      "type": "article__main",
+      "settings": {
+        "show_breadcrumb": true,
+        "blog_author": true,
+        "blog_date": true,
+        "read_time": true,
+        "blog_comment_count": true,
+        "show_tags": false,
+        "show_featured_image": false,
+        "show_sidebar": false,
+        "sidebar_position": "left",
+        "width": "standard",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "348b171e-6bda-4644-8844-cd2915edaf20": {
+      "type": "index__blog-posts",
+      "disabled": true,
+      "settings": {
+        "title": "Recent blog posts",
+        "blog_widget_select": "",
+        "home_page_articles": 3,
+        "blog_show_tags": true,
+        "blog_author": true,
+        "read_time": true,
+        "blog_date": true,
+        "blog_comment_count": false,
+        "blog_show_excerpt": true,
+        "show-border": true,
+        "button_label": "Read more",
+        "button_type": "button--primary",
+        "width": "wide",
+        "padding_top": 20,
+        "padding_bottom": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "a6d5814b-e279-4c68-9976-f094d9030ee3": {
+      "type": "index__rich-text",
+      "settings": {
+        "title": "Want to get featured?",
+        "heading_font": "open_sans_n4",
+        "heading_color": "rgba(0,0,0,0)",
+        "heading_alignment": "center",
+        "heading_size": 30,
+        "text": "<p>DM us at <a href=\"https://www.instagram.com/kxks.official/\" target=\"_blank\" title=\"https://www.instagram.com/kxks.official/\"><strong>@kxks.official</strong></a> and let us know why you should be our next feature! </p><p>We'd love to hear from you.</p>",
+        "text_font": "open_sans_n4",
+        "text_color": "rgba(0,0,0,0)",
+        "text_alignment": "center",
+        "text_size": 14,
+        "columns": 1,
+        "button_label": "Get Featured",
+        "button_link": "https://www.instagram.com/kxks.official/",
+        "button_alignment": "center",
+        "button_style": "button--primary",
+        "background": "#EEEEEE",
+        "gradient": "#ffffff",
+        "gradient_rotation": 180,
+        "width": "wide",
+        "padding_top": 20,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "main",
+    "348b171e-6bda-4644-8844-cd2915edaf20",
+    "a6d5814b-e279-4c68-9976-f094d9030ee3"
+  ]
+}

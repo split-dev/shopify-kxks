@@ -1,0 +1,101 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer",
+  "sections": {
+    "footer_icon_bar": {
+      "type": "footer__icon-bar",
+      "blocks": {
+        "footer__icon-bar-0": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "star",
+            "text": "Exceptional quality",
+            "link": ""
+          }
+        },
+        "footer__icon-bar-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "hanger",
+            "text": "Ethically made",
+            "link": ""
+          }
+        },
+        "footer__icon-bar-3": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "box",
+            "text": "Free shipping & returns",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "footer__icon-bar-0",
+        "footer__icon-bar-1",
+        "footer__icon-bar-3"
+      ],
+      "settings": {
+        "show_icon_bar": false,
+        "alignment": "center",
+        "icon_position": "column",
+        "size": "large",
+        "background": "#000000",
+        "link_color": "#ffffff",
+        "link_hover_color": "#be7a2c",
+        "text_color": "#8c523c",
+        "width": "standard",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "footer": {
+      "type": "footer-centered",
+      "blocks": {
+        "07066192-4a23-4971-b851-1da14e55df03": {
+          "type": "newsletter",
+          "settings": {
+            "newsletter_title": "NEWSLETTER",
+            "newsletter_richtext": "<p>Subscribe to get notified of restocks and new releases.</p>",
+            "display_first_name": false,
+            "display_last_name": false
+          }
+        },
+        "footer-centered-3": {
+          "type": "social",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "07066192-4a23-4971-b851-1da14e55df03",
+        "footer-centered-3"
+      ],
+      "settings": {
+        "copyright_text": "",
+        "display_designed_by": false,
+        "display_shopify": false,
+        "display_payment_methods": true,
+        "show_locale_selector": true,
+        "show_currency_selector": false,
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "footer_icon_bar",
+    "footer"
+  ]
+}

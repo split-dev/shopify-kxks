@@ -1,0 +1,234 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/About_Us.jpg",
+        "image_darken": false,
+        "subtitle": "",
+        "width": "wide",
+        "banner_height": "small",
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "cb791318-c674-4742-b978-993b9d4cbd29": {
+      "type": "index__image-with-text-overlay",
+      "settings": {
+        "image": "shopify://shop_images/About_Us.jpg",
+        "link": "",
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "pretext_color": "#000000",
+        "heading_color": "#000000",
+        "subheading_color": "#000000",
+        "text_alignment": "center",
+        "text_horizontal_position": "center",
+        "text_vertical_position": "middle",
+        "text_width": 40,
+        "background_color": "#ffffff",
+        "background_opacity": 77,
+        "border_color": "#ffffff",
+        "border_width": 0,
+        "button_1": "",
+        "button_1_link": "",
+        "button_1_style": "button--secondary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 40,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "mobile_text_below_image": true,
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_color_mobile": "rgba(0,0,0,0)",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "page": {
+      "type": "page-content__main",
+      "disabled": true,
+      "settings": {
+        "show_heading": true,
+        "heading_alignment": "left",
+        "width": "standard",
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "main": {
+      "type": "index__faq",
+      "blocks": {
+        "16306825309648acac-4": {
+          "type": "heading",
+          "settings": {
+            "title": "Product"
+          }
+        },
+        "16306825309648acac-3": {
+          "type": "content",
+          "settings": {
+            "title": "When do you restock?",
+            "answer": "<p>We try to restock as often and quickly as we can but given the unprecedented high demands for certain colours, it is often very difficult to keep things in stock. If you are looking for a specific item, email us at <a href=\"mailto:info@kickskase.com\"><strong>info@kickskase.com</strong></a> and we'll let you know!</p>"
+          }
+        },
+        "0076c3df-b257-41f9-8b3b-d1127ead2858": {
+          "type": "content",
+          "settings": {
+            "title": "Are the Kicks Kase duffles carry-on approved?",
+            "answer": "<p>The dimensions of the duffle bags are TSA carry-on approved when packed correctly. We have never had or heard of any experiences of our bags being rejected for carry-on. </p>"
+          }
+        },
+        "9f8535fb-a361-4b8b-b527-cd7a0c044441": {
+          "type": "content",
+          "settings": {
+            "title": "Do your Kicks Kase duffles fit size 14 shoes?",
+            "answer": "<p>They fit up to size 14 shoes but depending on the type of shoe, the bag may not fit all 4 pairs of size 14 shoes due to the width of the style of some shoes. </p>"
+          }
+        },
+        "7db468dd-2470-4573-ac9f-8b5073bbaf52": {
+          "type": "heading",
+          "settings": {
+            "title": "Orders"
+          }
+        },
+        "16306825309648acac-2": {
+          "type": "content",
+          "settings": {
+            "title": "Are duties and taxes included for orders outside Australia?",
+            "answer": "<p>Duties and taxes are <span style=\"text-decoration:underline\">not</span> included in your shipping or order, and are non-refundable.  </p><p>Some countries will charge customs & import duties which are the responsibility of the customer. Unfortunately we are unable to provide an estimate as this depends on your order and the specific country. We suggest contacting your local customs office so you are aware of the exact charges that could potentially be incurred. Orders will <span style=\"text-decoration:underline\">not</span> be refunded if the customer fails to pay the duties required to accept delivery.</p>"
+          }
+        },
+        "16306825309648acac-6": {
+          "type": "content",
+          "settings": {
+            "title": "I've just placed an order. Where is my confirmation email?",
+            "answer": "<p>Please allow up to 2 hours for your confirmation email to be received in your registered email address inbox. We recommend checking your Junk/Spam mail folder as well. If you do not receive a confirmation email within this time frame, simply contact <a href=\"mailto:info@kickskase.com\"><strong>info@kickskase.com</strong></a>.</p>"
+          }
+        },
+        "16306825309648acac-7": {
+          "type": "content",
+          "settings": {
+            "title": "Can I cancel/make changes to the order I just placed?",
+            "answer": "<p>Generally we are unable to make manual changes, however if the order has not been shipped it may be possible. We process orders quickly, so changes cannot always be accommodated. Please immediately contact <a href=\"mailto:info@kickskase.com\"><strong>info@kickskase.com</strong></a> with your change request details included in the email. Please note our customer care team works on a different time zone to some of our international customers.</p>"
+          }
+        },
+        "16306825309648acac-5": {
+          "type": "content",
+          "settings": {
+            "title": "I received a faulty item, what do I do?",
+            "answer": "<p>On the rare occasion that your order has arrived damaged or is faulty please contact us immediately at <a href=\"mailto:info@kickskase.com\"><strong>info@kickskase.com</strong></a> with attached photographs of the damage or fault. All damages/faults must be reported within 14 days of receiving your order. Kicks Kase will not replace or refund any orders that are reported after this time period.</p>"
+          }
+        },
+        "16306825309648acac-0": {
+          "type": "heading",
+          "settings": {
+            "title": "Shipping & Returns"
+          }
+        },
+        "16306825309648acac-1": {
+          "type": "content",
+          "settings": {
+            "title": "Do you do returns?",
+            "answer": "<p>Yes, at KXKS. we want you to love your product. We offer returns for all orders within 30 days from the date of purchase. </p><p>Products must be returned unused, unwashed and in its original condition. Customers are responsible for paying all shipping costs when returning.</p><p>To process your return, please contact us at <a href=\"mailto:info@kickskase.com\"><strong>info@kickskase.com</strong></a>. </p>"
+          }
+        },
+        "6d79a2ba-b8f3-4262-bd8a-4aa5d314702a": {
+          "type": "content",
+          "settings": {
+            "title": "Do you ship worldwide?",
+            "answer": "<p>Yes, we do! <br/>For USA orders please go to <a href=\"http://kickskase.com/\" title=\"http://kickskase.com/\"><em><strong>kickskase.com</strong></em></a>. <br/>For other international orders please go to <a href=\"https://eu.kxks.store/\" title=\"https://kxks.store\"><em><strong>kxks.store</strong></em></a>. <br/></p><p>For our estimated shipping costs please go to: <a href=\"/pages/shipping-delivery\" title=\"Shipping & Delivery\"><strong>Shipping</strong></a>. If your country is not available for selection at check-out, please send us an email directly at <a href=\"mailto:info@kickskase.com\"><strong>info@kickskase.com</strong></a> and we will respond as soon as possible. </p>"
+          }
+        },
+        "16306825309648acac-8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/kickskase.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "16306825309648acac-4",
+        "16306825309648acac-3",
+        "0076c3df-b257-41f9-8b3b-d1127ead2858",
+        "9f8535fb-a361-4b8b-b527-cd7a0c044441",
+        "7db468dd-2470-4573-ac9f-8b5073bbaf52",
+        "16306825309648acac-2",
+        "16306825309648acac-6",
+        "16306825309648acac-7",
+        "16306825309648acac-5",
+        "16306825309648acac-0",
+        "16306825309648acac-1",
+        "6d79a2ba-b8f3-4262-bd8a-4aa5d314702a",
+        "16306825309648acac-8"
+      ],
+      "settings": {
+        "title": "",
+        "width": "standard",
+        "padding_top": 0,
+        "padding_bottom": 80,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "534e240d-7643-465b-96fc-a4eaa602a263": {
+      "type": "index__heading",
+      "settings": {
+        "preheading": "",
+        "title": "Can't find the answers you need?",
+        "subheading": "<p>Email us at <a href=\"mailto:info@kickskase.com\"><strong>info@kickskase.com</strong></a><strong> </strong>or direct message us on Facebook/Instagram <a href=\"https://www.instagram.com/kxks.official/\">(@kxks.official</a>).</p><p>We take customer service very seriously and aim to respond in less than 24 hours.</p>",
+        "heading_alignment": "center",
+        "vertical_spacing": "medium",
+        "preheading_color": "rgba(0,0,0,0)",
+        "heading_color": "rgba(0,0,0,0)",
+        "subheading_color": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "gradient": "rgba(0,0,0,0)",
+        "gradient_rotation": 0,
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "5f73963f-b6f8-4fe9-9d9b-ad6e1cdf48af": {
+      "type": "judgeme_carousel_section",
+      "settings": {
+        "maxwidth": 1080
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "cb791318-c674-4742-b978-993b9d4cbd29",
+    "page",
+    "main",
+    "534e240d-7643-465b-96fc-a4eaa602a263",
+    "5f73963f-b6f8-4fe9-9d9b-ad6e1cdf48af"
+  ]
+}
