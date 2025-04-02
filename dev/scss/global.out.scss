@@ -10,6 +10,9 @@ html {
   -webkit-text-size-adjust: none;
   -ms-text-size-adjust: none;
 }
+.d-flex {
+  display: flex !important;
+}
 
 .justify-content-start   { justify-content: flex-start !important; }
 .justify-content-end     { justify-content: flex-end !important; }
@@ -31,4 +34,7 @@ html {
 }
 .w-100 {
   width: 100%;
+}
+.position-relative {
+  position: relative;
 }

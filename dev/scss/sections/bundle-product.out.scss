@@ -1,0 +1,23 @@
+@use '../settings/config' as *;
+
+.product {
+    &__bundle-heading-background {
+        width: 75%;
+        background-color: $gray;
+        border-right: solid 1px #9fb0b3;
+    }
+    &__bundle-heading {
+        width: 25%;
+        padding-left: 24px;
+    }
+    &__bundle-slider {
+        width: 75%;
+        overflow: hidden;
+        background-color: $gray;
+        border-right: solid 1px #9fb0b3;
+    }
+    &__bundle-info {
+        width: 25%;
+        padding-left: 24px;
+    }
+}

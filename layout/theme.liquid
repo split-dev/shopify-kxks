@@ -70,17 +70,21 @@
   </script>
   {% comment %}Inject theme-object end{% endcomment %}
 
+  {% comment %} Swiper {% endcomment %}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  {% comment %} Swiper {% endcomment %}
 
   <script>
     {% render 'js-variables' %}
 
     //SEO hidden product
-    function redirectToHome() {
+    {% comment %} function redirectToHome() {
       window.location.replace('{{ routes.root_url }}');
     }
     {% if template.name == 'product' and product.metafields.seo.hidden == 1 and request.design_mode == false %}
       redirectToHome();
-    {% endif %}
+    {% endif %} {% endcomment %}
   </script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
