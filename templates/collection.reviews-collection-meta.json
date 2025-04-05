@@ -11,6 +11,7 @@
   "sections": {
     "banner": {
       "type": "fallback_image_banner",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/all_products_banner_279c0759-3cd3-4fa7-b13c-90c6c3327f7c.jpg",
         "image_darken": false,
@@ -22,12 +23,32 @@
         "custom_css": ""
       }
     },
+    "1672485675570cec0d": {
+      "type": "apps",
+      "blocks": {
+        "eba16e9f-1d07-4b70-afec-800e4e532765": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "eba16e9f-1d07-4b70-afec-800e4e532765"
+      ],
+      "settings": {
+        "width": "standard",
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
     "main": {
       "type": "collection__main",
       "blocks": {
         "c68204d5-dd17-4bb9-a7da-4fe44ea7fd54": {
           "type": "collection_list",
-          "disabled": true,
           "settings": {
             "title": "Collections"
           }
@@ -57,27 +78,6 @@
         "width": "standard",
         "padding_top": 0,
         "padding_bottom": 0,
-        "css_class": "",
-        "custom_css": ""
-      }
-    },
-    "1672485675570cec0d": {
-      "type": "apps",
-      "blocks": {
-        "eba16e9f-1d07-4b70-afec-800e4e532765": {
-          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "maxwidth": 1080
-          }
-        }
-      },
-      "block_order": [
-        "eba16e9f-1d07-4b70-afec-800e4e532765"
-      ],
-      "settings": {
-        "width": "standard",
-        "padding_top": 0,
-        "padding_bottom": 20,
         "css_class": "",
         "custom_css": ""
       }
@@ -140,6 +140,12 @@
         "padding_top": 20,
         "padding_bottom": 20,
         "animation": "none",
+        "mobile_layout": "stacked",
+        "crop_images_mobile": false,
+        "show_arrows": true,
+        "show_navigation_dots": true,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
         "css_class": "",
         "custom_css": ""
       }
@@ -177,9 +183,15 @@
         "padding_right": 0,
         "animation": "none",
         "mobile_text_below_image": true,
+        "mobile_preheading": "",
+        "mobile_heading": "",
+        "mobile_subheading": "",
         "pretext_color_mobile": "rgba(0,0,0,0)",
         "heading_color_mobile": "rgba(0,0,0,0)",
         "subheading_color_mobile": "rgba(0,0,0,0)",
+        "text_alignment_mobile": "same_as_desktop",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
         "css_class": "",
         "custom_css": ""
       }
@@ -187,8 +199,8 @@
   },
   "order": [
     "banner",
-    "main",
     "1672485675570cec0d",
+    "main",
     "fd7b3ee2-444d-4dcb-b11c-eb48a194d8d5",
     "164905993555c5a53a"
   ]
