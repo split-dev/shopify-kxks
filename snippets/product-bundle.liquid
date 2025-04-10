@@ -629,14 +629,14 @@
       console.log('No inputs with data-option-variant-id found on the page.');
       return;
     }
-  
+
     // Find the hidden input for bundle variant IDs
     const bundleInput = document.querySelector('input[name="properties[_bundleVariantIds]"]');
     if (!bundleInput) {
       console.log('No hidden input for _bundleVariantIds found.');
     }
   
-    // Function to update hidden input with selected variant IDs
+    // Update hidden input with selected variant IDs
     function updateBundleVariantIds() {
       if (!bundleInput) return;
   
@@ -646,8 +646,21 @@
       console.log('Updated _bundleVariantIds:', bundleInput.value);
     }
   
-    console.log('Variant inputs found. Initializing event listeners...');
+    // Update displayed selected value inside the info wrapper
+    function updateSelectedValueDisplay(input) {
+      const value = input.value;
+      const infoWrapper = input.closest('[data-info-wrapper]');
+      if (!infoWrapper) return;
   
+      const selectedValueElement = infoWrapper.querySelector('[data-selected-value]');
+      if (selectedValueElement) {
+        selectedValueElement.innerHTML = value;
+        console.log('Updated selected value display to:', value);
+      }
+    }
+  
+    console.log('Variant inputs found. Initializing event listeners...');
+
     // Watch for changes in variant inputs
     variantInputs.forEach(input => {
       input.addEventListener('change', function () {
@@ -662,22 +675,23 @@
           if (!infoWrapperValue) return;
   
           const sliderWrapper = document.querySelector(`[data-slider-wrapper="${infoWrapperValue}"]`);
-          if (!sliderWrapper) return;
+          if (sliderWrapper) {
+            const slides = sliderWrapper.querySelectorAll('.swiper-slide');
+            let targetIndex = -1;
   
-          const slides = sliderWrapper.querySelectorAll('.swiper-slide');
-          let targetIndex = -1;
+            slides.forEach((slide, index) => {
+              if (slide.getAttribute('data-variant-id') === variantId) {
+                targetIndex = index;
+              }
+            });
   
-          slides.forEach((slide, index) => {
-            if (slide.getAttribute('data-variant-id') === variantId) {
-              targetIndex = index;
+            if (targetIndex !== -1 && sliderWrapper.swiper) {
+              sliderWrapper.swiper.slideTo(targetIndex);
             }
-          });
-  
-          if (targetIndex !== -1 && sliderWrapper.swiper) {
-            sliderWrapper.swiper.slideTo(targetIndex);
           }
   
-          updateBundleVariantIds(); // Sync hidden input after change
+          updateBundleVariantIds();
+          updateSelectedValueDisplay(input);
         }
       });
     });
@@ -701,10 +715,13 @@
           input.checked = true;
           input.dispatchEvent(new Event('change', { bubbles: true }));
   
-          updateBundleVariantIds(); // Sync hidden input after slide change
+          updateBundleVariantIds();
+          updateSelectedValueDisplay(input);
         }
       });
     });
   });
+
+
   
 </script>
