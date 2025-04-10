@@ -38,7 +38,7 @@
         assign option_disabled = false
       endif
     -%}
-  
+    
     {%- capture input_id -%}
       {{ section.id }}-{{ option.position }}-{{ forloop.index0 -}}
     {%- endcapture -%}
@@ -75,7 +75,8 @@
         visually_disabled: option_disabled,
         shape: block.settings.swatch_shape,
         help_text: help_text,
-        additional_props: input_dataset
+        additional_props: input_dataset,
+        product_handle: product.handle
       %}
     {%- elsif picker_type == 'button' -%}
       <input

@@ -179,7 +179,7 @@
             <div class="swiper-button-next custom-swiper-button-next js-products-bundle-next-{{ bundled_product.handle }}">
                
             </div>
-            <div class="js-bundle-slider-init-{{ bundled_product.handle }} ">
+            <div class="js-bundle-slider-init-{{ bundled_product.handle }}" data-slider-wrapper="{{ bundled_product.handle }}">
               <div class="swiper-wrapper swiper-container">
                 {% for variant in bundled_product.variants %}
                   {%- liquid
@@ -230,7 +230,7 @@
               });
           });
           </script>
-          <div class="product__bundle-info">
+          <div class="product__bundle-info" data-info-wrapper="{{ bundled_product.handle }}">
             <h3>{{ bundled_product.title }}</h3>
             {% render 'product-variant-picker', product: bundled_product, block_index: block_index, skip_legend: true, block: section, product_form_id: product_form_id %}
           </div>
@@ -621,3 +621,90 @@
   </div> {% endcomment %}
 </div>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Find all variant inputs
+    const variantInputs = document.querySelectorAll('[data-option-variant-id]');
+    if (!variantInputs.length) {
+      console.log('No inputs with data-option-variant-id found on the page.');
+      return;
+    }
+  
+    // Find the hidden input for bundle variant IDs
+    const bundleInput = document.querySelector('input[name="properties[_bundleVariantIds]"]');
+    if (!bundleInput) {
+      console.log('No hidden input for _bundleVariantIds found.');
+    }
+  
+    // Function to update hidden input with selected variant IDs
+    function updateBundleVariantIds() {
+      if (!bundleInput) return;
+  
+      const checkedInputs = document.querySelectorAll('[data-option-variant-id]:checked');
+      const ids = Array.from(checkedInputs).map(input => input.getAttribute('data-option-variant-id'));
+      bundleInput.value = ids.join(',');
+      console.log('Updated _bundleVariantIds:', bundleInput.value);
+    }
+  
+    console.log('Variant inputs found. Initializing event listeners...');
+  
+    // Watch for changes in variant inputs
+    variantInputs.forEach(input => {
+      input.addEventListener('change', function () {
+        if (input.checked) {
+          const variantId = input.getAttribute('data-option-variant-id');
+          const infoWrapper = input.closest('[data-info-wrapper]');
+          const infoWrapperValue = infoWrapper ? infoWrapper.getAttribute('data-info-wrapper') : null;
+  
+          console.log('Checked variant ID:', variantId);
+          console.log('Parent data-info-wrapper:', infoWrapperValue);
+  
+          if (!infoWrapperValue) return;
+  
+          const sliderWrapper = document.querySelector(`[data-slider-wrapper="${infoWrapperValue}"]`);
+          if (!sliderWrapper) return;
+  
+          const slides = sliderWrapper.querySelectorAll('.swiper-slide');
+          let targetIndex = -1;
+  
+          slides.forEach((slide, index) => {
+            if (slide.getAttribute('data-variant-id') === variantId) {
+              targetIndex = index;
+            }
+          });
+  
+          if (targetIndex !== -1 && sliderWrapper.swiper) {
+            sliderWrapper.swiper.slideTo(targetIndex);
+          }
+  
+          updateBundleVariantIds(); // Sync hidden input after change
+        }
+      });
+    });
+  
+    // Watch for Swiper slide changes and update inputs accordingly
+    const sliderWrappers = document.querySelectorAll('[data-slider-wrapper]');
+  
+    sliderWrappers.forEach(sliderWrapper => {
+      const swiper = sliderWrapper.swiper;
+  
+      if (!swiper) return;
+  
+      swiper.on('slideChange', function () {
+        const activeSlide = swiper.slides[swiper.activeIndex];
+        const variantId = activeSlide.getAttribute('data-variant-id');
+  
+        if (!variantId) return;
+  
+        const input = document.querySelector(`[data-option-variant-id="${variantId}"]`);
+        if (input) {
+          input.checked = true;
+          input.dispatchEvent(new Event('change', { bubbles: true }));
+  
+          updateBundleVariantIds(); // Sync hidden input after slide change
+        }
+      });
+    });
+  });
+  
+</script>

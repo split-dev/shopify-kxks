@@ -86,6 +86,20 @@
       variant="{% if selected_variant %}{{ selected_variant.id }}{% else %}not-selected{% endif %}"
       data-variant-selection
     >
+      {%- if product.metafields.custom.bundled_products != blank -%}
+        {% assign bundle_variant_ids = '' %}
+
+        {% for bundled_product in product.metafields.custom.bundled_products.value %}
+          {% assign variant_id = bundled_product.selected_or_first_available_variant.id %}
+          {% assign bundle_variant_ids = bundle_variant_ids | append: variant_id %}
+          {% unless forloop.last %}
+            {% assign bundle_variant_ids = bundle_variant_ids | append: ',' %}
+          {% endunless %}
+        {% endfor %}
+
+        <input type="hidden" name="properties[_bundleVariantIds]" value="{{ bundle_variant_ids }}">
+      {%- endif -%}
+
       {% if product.has_only_default_variant %}
         <input
           class="variant-selection__variants variant-selection__variants--default"
