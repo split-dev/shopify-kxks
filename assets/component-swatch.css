@@ -4,7 +4,7 @@
   --swatch--border-radius: var(--swatch-input--border-radius, 50%);
 
   display: block;
-  width: var(--swatch--size);
+  width: 29px;
   max-width: 100%;
   aspect-ratio: 1 / 1;
   background: var(--swatch--background);
@@ -12,7 +12,7 @@
   background-size: cover;
   background-origin: border-box;
   border: 0.1rem solid rgba(var(--color-foreground), 0.15);
-  border-radius: var(--swatch--border-radius);
+  border-radius: 3px;
 }
 
 .swatch--square {

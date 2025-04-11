@@ -78,15 +78,8 @@
       @param swatches_product_page_size
       @param swatches_custom_colors
     {% endcomment %}
-    
-    <variant-selection
-      {% if variant_selection_id != blank %}id="{{ variant_selection_id }}"{% endif %}
-      class="variant-selection"
-      product-url="{{ product.url }}.js"
-      variant="{% if selected_variant %}{{ selected_variant.id }}{% else %}not-selected{% endif %}"
-      data-variant-selection
-    >
-      {%- if product.metafields.custom.bundled_products != blank -%}
+
+    {%- if product.metafields.custom.bundled_products != blank -%}
         {% assign bundle_variant_ids = '' %}
 
         {% for bundled_product in product.metafields.custom.bundled_products.value %}
@@ -99,6 +92,14 @@
 
         <input type="hidden" name="properties[_bundleVariantIds]" value="{{ bundle_variant_ids }}">
       {%- endif -%}
+    
+    <variant-selection
+      {% if variant_selection_id != blank %}id="{{ variant_selection_id }}"{% endif %}
+      class="variant-selection"
+      product-url="{{ product.url }}.js"
+      variant="{% if selected_variant %}{{ selected_variant.id }}{% else %}not-selected{% endif %}"
+      data-variant-selection
+    >
 
       {% if product.has_only_default_variant %}
         <input
