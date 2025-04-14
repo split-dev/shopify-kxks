@@ -1,16 +1,101 @@
 @use '../settings/config' as *;
 
 .product {
-    &__bundle-heading-background {
+    &__bundle-heading-background,
+    &__bundle-bottom-background {
         width: 70%;
         background-color: $gray;
         border-right: solid 1px #9fb0b3;
+        @include media-breakpoint-down(lg) {
+            width: 50%;
+        }
     }
-    &__bundle-heading {
+    &__bundle-heading,
+    &__bundle-bottom {
         width: 30%;
         padding-left: 24px;
+        @include media-breakpoint-down(lg) {
+            width: 50%;
+        }
+    }
+    &__bundle-heading {
         .product-title {
             text-transform: uppercase;
+        }
+        .price-ui {
+            margin-bottom: 21px;
+        }
+    }
+    &__bundle-bottom {
+        .items_left {
+            display: none !important;
+        }
+        .product-form-container {
+            padding-top: 0 !important;
+        }
+        .purchase-details__buttons {
+            flex-direction: column;
+            > * {
+                width: 100% !important;
+                max-width: 100% !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                margin-bottom: 8px !important;
+            }
+        }
+        .shopify-payment-button__more-options {
+            padding-bottom: 0 !important;
+        }
+    }
+    &__bundle-wrapper {
+        position: relative;
+    }
+    &__bundle-border {
+        position: absolute;
+        left: calc(70% / 2 - 123.5px);
+        width: 247px;
+        top: -5%;
+        height: 110%;
+        border: solid 2px #000;
+        border-radius: 4px;
+        z-index: 2;
+        pointer-events: none;
+        @include media-breakpoint-down(lg) {
+            left: calc(50% / 2 - 123.5px);
+        }
+        p {
+            position: relative;
+            font-size: 15px;
+            color: #000;
+            font-weight: 600;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTE1IiBoZWlnaHQ9IjMwIiB2aWV3Qm94PSIwIDAgMTE1IDMwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNNi4zNDUwOSAxLjY0NzAyQzYuNTE5NDEgMC44ODA1ODIgNy4yMDA4MyAwLjMzNjczNSA3Ljk4Njg0IDAuMzM2NzM1SDExMi45NDVDMTE0LjAyNiAwLjMzNjczNSAxMTQuODI2IDEuMzQwMTUgMTE0LjU4NyAyLjM5MzhMMTA4Ljc3MSAyNy45NjQ0QzEwOC41OTcgMjguNzMwOSAxMDcuOTE1IDI5LjI3NDcgMTA3LjEyOSAyOS4yNzQ3SDIuMTcxMTdDMS4wOTA2MSAyOS4yNzQ3IDAuMjg5NzgyIDI4LjI3MTMgMC41Mjk0MTkgMjcuMjE3Nkw2LjM0NTA5IDEuNjQ3MDJaIiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJibGFjayIgc3Ryb2tlLXdpZHRoPSIwLjY3MzQ3Ii8+Cjwvc3ZnPgo=');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            padding: 10px 13px;
+            z-index: 1;
+            white-space: nowrap;
+        }
+    }
+    &__bundle-border-text {
+        position: relative;
+        display: inline-block;
+        position: absolute;
+        top: -22px;
+        left: 50%;
+        transform: translateX(-50%);
+        &::before {
+            content: "";
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTE2IiBoZWlnaHQ9IjMwIiB2aWV3Qm94PSIwIDAgMTE2IDMwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNNi4zNzcxMiAxLjcyMjE4QzYuNTg2MyAwLjgwMjQ1OCA3LjQwNDAxIDAuMTQ5ODQxIDguMzQ3MjIgMC4xNDk4NDFIMTEzLjMwNUMxMTQuNjAyIDAuMTQ5ODQxIDExNS41NjMgMS4zNTM5NCAxMTUuMjc1IDIuNjE4MzJMMTA5LjQ2IDI4LjE4ODlDMTA5LjI1MSAyOS4xMDg3IDEwOC40MzMgMjkuNzYxMyAxMDcuNDkgMjkuNzYxM0gyLjUzMTU1QzEuMjM0ODggMjkuNzYxMyAwLjI3Mzg4NyAyOC41NTcyIDAuNTYxNDUxIDI3LjI5MjhMNi4zNzcxMiAxLjcyMjE4WiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg==');
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: -9px;
+            bottom: -7px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            z-index: -1;
         }
     }
     &__bundle-slider {
@@ -18,10 +103,43 @@
         overflow: hidden;
         background-color: $gray;
         border-right: solid 1px #9fb0b3;
+        padding-bottom: 65px;
+        display: flex;
+        justify-content: center;
+        @include media-breakpoint-down(lg) {
+            width: 50%;
+        }
+        * {
+            user-select: none;
+          }
         .swiper-slide {
             display: flex;
             justify-content: center;
+            height: fit-content;
+            max-height: 190px;
+            img {
+                object-fit: cover;
+            }
         }
+    }
+    &__bundle-slider-init {
+        height: 100%;
+        max-width: 640px;
+        overflow: hidden;
+        .swiper-wrapper {
+            align-items: center;
+        }
+    }
+    &__bundle-slider-label {
+        display: flex;
+        font-size: 15px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #9fb0b3;
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
     }
     &__bundle-info {
         width: calc(30% - 24px);
@@ -32,6 +150,9 @@
         margin-bottom: 65px;
         box-shadow: 15px 15px 0px 0px rgba(0,0,0,1);
         position: relative;
+        @include media-breakpoint-down(lg) {
+            width: calc(50% - 24px);
+        }
         h4 {
             font-size: 20px;
             margin-bottom: 12px;
@@ -69,4 +190,36 @@
         text-transform: uppercase;
         
     }
+}
+
+.custom-swiper-button-prev,
+.custom-swiper-button-next {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    top: 42% !important;
+    &::after {
+        content: none !important;
+    }
+    &.swiper-button-disabled {
+        opacity: 0 !important;
+    }
+    svg {
+        width: 10px;
+        height: 10px;
+    }
+}
+.custom-swiper-button-prev {
+    left: 25px !important;
+    svg {
+        transform: rotate(180deg);
+    }
+}
+.custom-swiper-button-next {
+    right: 25px !important;
 }
