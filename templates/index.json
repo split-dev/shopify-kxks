@@ -75,8 +75,8 @@
     "index_featured_collection_hRUEhX": {
       "type": "index__featured-collection",
       "settings": {
-        "title": "CLEARANCE",
-        "collection": "clearance",
+        "title": "HOT SELLERS",
+        "collection": "hot-sellers",
         "products_per": 4,
         "products_limit": 10,
         "align_height": false,
