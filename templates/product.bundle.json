@@ -32,26 +32,16 @@
     "main": {
       "type": "product__bundle",
       "blocks": {
-        "title": {
-          "type": "title",
-          "settings": {}
-        },
-        "price": {
-          "type": "price",
-          "settings": {
-            "display_savings": true
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {}
-        },
         "form": {
           "type": "form",
           "settings": {
             "show_payment_button": true,
             "show_gift_card_recipient_form": false
           }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
         },
         "ce770b67-888c-401e-8bd8-773651b7d21f": {
           "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
@@ -62,10 +52,8 @@
         }
       },
       "block_order": [
-        "title",
-        "price",
-        "description",
         "form",
+        "description",
         "ce770b67-888c-401e-8bd8-773651b7d21f"
       ],
       "settings": {
