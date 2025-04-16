@@ -48,7 +48,8 @@
         "form": {
           "type": "form",
           "settings": {
-            "show_payment_button": true
+            "show_payment_button": true,
+            "show_gift_card_recipient_form": false
           }
         },
         "share": {
@@ -92,6 +93,13 @@
         "custom_css": ""
       }
     },
+    "custom_liquid_JMF7Fg": {
+      "type": "custom-liquid",
+      "name": "Custom liquid",
+      "settings": {
+        "custom_liquid": "<dl class=\"accordion\">\n<dt><a class=\"active\" href=\"#\"><small class=\"right\">◄</small>Description</a></dt>\n<dd class=\"active\">Our superior quality sneaker duffles have 3 padded dividers with Velcro that sticks to the whole inner lining of the bag to offer you a customisable packing experience. The duffle fits up to size US15 men's shoes and a 16\" laptop. With a front pocket, side pockets and 3 inner pockets for small items, there is room for everything.</dd>\n<dt><a class=\"active\" href=\"#\"><small class=\"right\">◄</small>Size</a></dt>\n<dd class=\"active\">Approved for carry-on travel (55 x 24 x 33 cm)</dd>\n<dt><a class=\"active\" href=\"#\"><small class=\"right\">◄</small>Includes</a></dt>\n<dd class=\"active\">\n<ul data-mce-fragment=\"1\">\n<li data-mce-fragment=\"1\">1 x Duffle bag<br>\n</li>\n<li data-mce-fragment=\"1\">1 x Shoulder strap</li>\n<li data-mce-fragment=\"1\">3 x Padded dividers</li>\n<li data-mce-fragment=\"1\">4 x Shoe pouches</li>\n</ul>\n</dd>\n<dt><a class=\"active\" href=\"#\"><small class=\"right\">◄</small>Shipping</a></dt>\n<dd class=\"active\">\n<p class=\"lead\"><span>Free shipping for all AUS orders.</span></p>\n<table width=\"100%\">\n<tbody>\n<tr>\n<td><strong>Australia</strong></td>\n<td></td>\n</tr>\n<tr>\n<td>Standard <span>(5-10 business days)</span>\n</td>\n<td>FREE</td>\n</tr>\n<tr>\n<td>Express <span>(4-8 business days)</span>\n</td>\n<td>$6 AUD</td>\n</tr>\n</tbody>\n</table>\n<p>For shipping information for other countries please go to:<span> </span><a href=\"https://www.kickskase.com.au/pages/shipping-delivery\">Shipping &amp; Delivery</a>.</p>\n</dd>\n</dl>"
+      }
+    },
     "d32abb0c-a450-439b-ad28-c11709e81923": {
       "type": "index__video",
       "settings": {
@@ -129,6 +137,9 @@
         "pretext_color_mobile": "rgba(0,0,0,0)",
         "heading_color_mobile": "rgba(0,0,0,0)",
         "subheading_color_mobile": "rgba(0,0,0,0)",
+        "mobile_text_alignment": "none",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 0,
         "css_class": "",
         "custom_css": ""
       }
@@ -194,9 +205,15 @@
         "padding_right": 0,
         "animation": "none",
         "mobile_text_below_image": true,
+        "mobile_preheading": "",
+        "mobile_heading": "",
+        "mobile_subheading": "",
         "pretext_color_mobile": "rgba(0,0,0,0)",
         "heading_color_mobile": "rgba(0,0,0,0)",
         "subheading_color_mobile": "rgba(0,0,0,0)",
+        "text_alignment_mobile": "same_as_desktop",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
         "css_class": "",
         "custom_css": ""
       }
@@ -215,6 +232,8 @@
         "padding_top": 20,
         "padding_bottom": 20,
         "animation": "none",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
         "css_class": "",
         "custom_css": ""
       }
@@ -283,6 +302,12 @@
         "padding_top": 20,
         "padding_bottom": 20,
         "animation": "none",
+        "mobile_layout": "stacked",
+        "crop_images_mobile": false,
+        "show_arrows": true,
+        "show_navigation_dots": true,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
         "css_class": "",
         "custom_css": ""
       }
@@ -292,6 +317,7 @@
     "breadcrumbs",
     "sidebar",
     "main",
+    "custom_liquid_JMF7Fg",
     "d32abb0c-a450-439b-ad28-c11709e81923",
     "16484837071b250fef",
     "164906006462a11931",
