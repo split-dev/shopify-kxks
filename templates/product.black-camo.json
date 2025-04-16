@@ -56,6 +56,12 @@
           "type": "share",
           "settings": {}
         },
+        "html_content_Mene4E": {
+          "type": "html_content",
+          "settings": {
+            "html_area": "Hello sir"
+          }
+        },
         "ce770b67-888c-401e-8bd8-773651b7d21f": {
           "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
           "disabled": true,
@@ -70,6 +76,7 @@
         "description",
         "form",
         "share",
+        "html_content_Mene4E",
         "ce770b67-888c-401e-8bd8-773651b7d21f"
       ],
       "settings": {
