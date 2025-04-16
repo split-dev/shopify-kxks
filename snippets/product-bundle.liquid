@@ -35,7 +35,6 @@
             has-padding-bottom"
             >
   <div class="product__bundle w-100">
-    
     <div class="product__bundle-heading-wrapper d-flex">
       <div class="product__bundle-heading-background"></div>
       <div class="product__bundle-heading">
@@ -182,7 +181,7 @@
                   spaceBetween: 16,
                   centeredSlides: true,
                   breakpoints: {
-                    750: {
+                    900: {
                       slidesPerView: 2,
                       spaceBetween: 35,
                       centeredSlides: true,
@@ -758,5 +757,105 @@
   });
 
 
+  document.addEventListener('DOMContentLoaded', function () {
+    let isMobile = window.innerWidth < 1024;
+  
+    function isMobileView() {
+      return window.innerWidth < 1024;
+    }
+  
+    const accordions = document.querySelectorAll('.swatch-accordion');
+  
+    // Сохраняем данные, чтобы можно было сбросить
+    accordions.forEach((accordion) => {
+      accordion.dataset.initialized = 'false';
+    });
+  
+    function setupAccordion(accordion) {
+      const toggleBtn = accordion.querySelector('.accordion-toggle');
+      const fieldset = accordion.querySelector('fieldset');
+  
+      if (!toggleBtn || !fieldset) return;
+  
+      function updateSelectedSwatch() {
+        const checkedInput = fieldset.querySelector('input:checked');
+        const label = fieldset.querySelector(`label[for="${checkedInput.id}"]`);
+        if (!label) return;
+  
+        const swatch = label.querySelector('.swatch').cloneNode(true);
+        swatch.classList.add('selected-swatch');
+        toggleBtn.innerHTML = '';
+        toggleBtn.appendChild(swatch);
+      }
+  
+      updateSelectedSwatch();
+  
+      // Сохраняем ссылку на обработчик, чтобы удалить при ресайзе
+      function onToggleClick(e) {
+        e.stopPropagation();
+        const isOpen = accordion.classList.toggle('open');
+        toggleBtn.setAttribute('aria-expanded', isOpen);
+      }
+  
+      function onOutsideClick(e) {
+        if (!accordion.contains(e.target)) {
+          accordion.classList.remove('open');
+          toggleBtn.setAttribute('aria-expanded', false);
+        }
+      }
+  
+      toggleBtn.addEventListener('click', onToggleClick);
+      document.addEventListener('click', onOutsideClick);
+      fieldset.addEventListener('change', updateSelectedSwatch);
+  
+      // Сохраняем обработчики для последующего удаления
+      accordion._toggleClick = onToggleClick;
+      accordion._outsideClick = onOutsideClick;
+      accordion._swatchUpdate = updateSelectedSwatch;
+      accordion.dataset.initialized = 'true';
+    }
+  
+    function destroyAccordion(accordion) {
+      if (accordion.dataset.initialized !== 'true') return;
+  
+      const toggleBtn = accordion.querySelector('.accordion-toggle');
+      const fieldset = accordion.querySelector('fieldset');
+  
+      // Удаляем обработчики
+      if (accordion._toggleClick) toggleBtn.removeEventListener('click', accordion._toggleClick);
+      if (accordion._outsideClick) document.removeEventListener('click', accordion._outsideClick);
+      if (accordion._swatchUpdate) fieldset.removeEventListener('change', accordion._swatchUpdate);
+  
+      // Сброс состояний
+      toggleBtn.innerHTML = '';
+      toggleBtn.removeAttribute('aria-expanded');
+      accordion.classList.remove('open');
+      accordion.dataset.initialized = 'false';
+    }
+  
+    function initAllAccordions() {
+      const mobile = isMobileView();
+  
+      accordions.forEach((accordion) => {
+        if (mobile && accordion.dataset.initialized !== 'true') {
+          setupAccordion(accordion);
+        }
+  
+        if (!mobile && accordion.dataset.initialized === 'true') {
+          destroyAccordion(accordion);
+        }
+      });
+    }
+  
+    // Инициализация при загрузке
+    initAllAccordions();
+  
+    // Перезапуск при ресайзе
+    window.addEventListener('resize', () => {
+      initAllAccordions();
+    });
+  });
+  
+  
   
 </script>

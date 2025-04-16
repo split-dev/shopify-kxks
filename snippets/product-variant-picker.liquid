@@ -28,20 +28,25 @@
           endif
         -%}
         {%- if picker_type == 'swatch' -%}
-          <fieldset class="js product-form__input product-form__input--swatch">
             <legend class="form__label">
-              {{ option.name }}:
-              <span data-selected-value>
-                {{- option.selected_value -}}
-              </span>
-            </legend>
-            {% render 'product-variant-options',
-              product: product,
-              option: option,
-              block: block,
-              picker_type: picker_type
-            %}
-          </fieldset>
+                {{ option.name }}:
+                <span data-selected-value>
+                  {{- option.selected_value -}}
+                </span>
+              </legend>
+              <div class="swatch-accordion">
+                <button type="button" class="accordion-toggle" aria-expanded="false"></button>
+                <fieldset class="js product-form__input product-form__input--swatch">
+            
+                    {% render 'product-variant-options',
+                      product: product,
+                      option: option,
+                      block: block,
+                      picker_type: picker_type
+                    %}
+                  </fieldset>
+              </div>
+         
         {%- elsif picker_type == 'button' -%}
           <fieldset class="js product-form__input product-form__input--pill">
             <legend class="form__label">{{ option.name }}</legend>
