@@ -1,6 +1,35 @@
 @use '../settings/config' as *;
 
 .product {
+    &__custom-price {
+        margin-bottom: 24px;
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 20px;
+        }
+        .product-price {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            .original-price {
+                margin-right: 14px;
+                font-size: 20px;
+                text-decoration: line-through;
+                color: #9fb0b3;
+                opacity: 1;
+                @include media-breakpoint-down(lg) {
+                    font-size: 18px;
+                }
+            }
+            .discounted-price,
+            .product-price {
+                color: #CE2A2A;
+                font-size: 25px;
+                @include media-breakpoint-down(lg) {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
     &__bundle-heading-background,
     &__bundle-bottom-background {
         width: 70%;
@@ -55,6 +84,33 @@
         .shopify-payment-button__more-options {
             padding-bottom: 0 !important;
         }
+        .product__custom-price {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            @include media-breakpoint-down(lg) {
+                justify-content: center;
+                margin-top: 30px;
+            }
+            * {
+                font-weight: 600;
+            }
+            .product-price {
+                .original-price {
+                    font-size: 16px;
+                }
+                .discounted-price,
+                .product-price {
+                    font-size: 18px;
+                }
+            }
+        }
+        
+    }
+    &__custom-price-label {
+        text-transform: uppercase;
+        color: #000;
+        margin-right: 14px;
     }
     &__bundle-wrapper {
         position: relative;
@@ -143,6 +199,10 @@
             max-height: 190px;
             img {
                 object-fit: cover;
+                max-height: 190px;
+                max-width: 190px;
+                width: 190px;
+                height: 190px;
                 @include media-breakpoint-down(md) {
                     max-height: 130px;
                     max-width: 130px;

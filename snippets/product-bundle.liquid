@@ -49,98 +49,30 @@
           {% endif %}
         </h1>
         {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', jm_style: '', concierge_install: true, product: product %}
-  
-        {% if product.available == false %}
-          <span class="sold_out">
-            {{- 'products.product.sold_out' | t -}}
-          </span>
-        {% else %}
-          {% comment %}Inject @pixelunion/shopify-price-ui/price-ui begin{% endcomment %}
-          <div class="price-ui price-ui--loading" data-price-ui>
-            <noscript>
-              <style>
-                .price-ui--loading {
-                  display: block !important;
-                  opacity: 1 !important;
-                }
-              </style>
-            </noscript>
-            {% assign compare_at_price = false %}
-          
-            {% if product.compare_at_price and product.compare_at_price != product.price %}
-              {% if product.compare_at_price_varies %}
-                {%- capture price_min -%}
-                  {%-
-                    render 'price-ui-templates',
-                    template: 'price-min',
-                    value: product.compare_at_price_min,
-                  -%}
-                {%- endcapture -%}
-          
-                {%- capture price_max -%}
-                  {%-
-                    render 'price-ui-templates',
-                    template: 'price-max',
-                    value: product.compare_at_price_max,
-                  -%}
-                {%- endcapture -%}
-          
-                {%- assign compare_at_price = 'product.price.range_html' | t: price_min: price_min, price_max: price_max -%}
-              {% else %}
-                {%- capture compare_at_price -%}
-                  {%-
-                    render 'price-ui-templates',
-                    template: 'price',
-                    value: product.compare_at_price,
-                  -%}
-                {%- endcapture -%}
-              {% endif %}
-            {% endif %}
-          
-            {% if product.price_varies %}
-              {%- capture price_min -%}
-                {%-
-                  render 'price-ui-templates',
-                  template: 'price-min',
-                  value: product.price_min,
-                -%}
-              {%- endcapture -%}
-          
-              {%- capture price_max -%}
-                {%-
-                  render 'price-ui-templates',
-                  template: 'price-max',
-                  value: product.price_max,
-                -%}
-              {%- endcapture -%}
-          
-              {%- assign price = 'product.price.range_html' | t: price_min: price_min, price_max: price_max -%}
+        
+        <div class="product__custom-price">
+          {% if product.available %}
+            {% if product.compare_at_price > product.price %}
+              <span class="product-price sale">
+                <span class="original-price h3">{{ product.compare_at_price | money }}</span>
+                <span class="discounted-price h3">{{ product.price | money }}</span>
+              </span>
             {% else %}
-              {%- capture price -%}
-                {%-
-                  render 'price-ui-templates',
-                  template: 'price',
-                  value: product.price,
-                -%}
-              {%- endcapture -%}
+              <span class="product-price h3">{{ product.price | money }}</span>
             {% endif %}
-          
-            {%-
-              render 'price-ui-templates',
-              template: 'price-ui',
-              compare_at_price: compare_at_price,
-              price: price,
-              unit_pricing: false,
-            -%}
-          </div>
-        {% endif %}
+          {% else %}
+            <span class="product-price sold-out h3">{{- 'products.product.sold_out' | t -}}</span>
+          {% endif %}
+  
+        </div>
+        
       </div>
     </div>
     
     <div class="product__bundle-wrapper">
       <div class="product__bundle-border">
         <div class="product__bundle-border-text">
-          <p>Build your Bundle</p>
+          <p>{{ 'bundles.build_your_bundle' | t }}</p>
         </div>
       </div>
       {% for bundled_product in product.metafields.custom.bundled_products.value %}
@@ -167,12 +99,12 @@
                     endif
                   -%}
                   <div class="swiper-slide" data-variant-id="{{ variant.id }}">
-                    {{ bundle_variant_image | image_url: width: 190 | image_tag }}
+                    {{ bundle_variant_image | image_url: width: 400 | image_tag }}
                   </div>
                 {% endfor %}
               </div>
             </div>
-            <p class="product__bundle-slider-label">Item {{ forloop.index }}</p>
+            <p class="product__bundle-slider-label">{{ 'bundles.item' | t }} {{ forloop.index }}</p>
           </div>
           <script>
             document.addEventListener("DOMContentLoaded", () => {
@@ -201,7 +133,7 @@
           });
           </script>
           <div class="product__bundle-info" data-info-wrapper="{{ bundled_product.handle }}">
-            <p class="product__bundle-info-label">Item {{ forloop.index }}</p>
+            <p class="product__bundle-info-label">{{ 'bundles.item' | t }} {{ forloop.index }}</p>
             <h4>{{ bundled_product.title }}</h4>
             {% render 'product-variant-picker', product: bundled_product, block_index: block_index, skip_legend: true, block: section, product_form_id: product_form_id %}
             <a class="product__bundle-info-link" href="{{ bundled_product.url }}">More about {{ bundled_product.title }}</a>
@@ -213,6 +145,23 @@
     <div class="product__bundle-bottom-wrapper d-flex">
       <div class="product__bundle-bottom-background"></div>
       <div class="product__bundle-bottom">
+
+        <div class="product__custom-price">
+          {% if product.available %}
+            <span class="product__custom-price-label">{{ 'bundles.bundled_total' | t }}</span>
+            {% if product.compare_at_price > product.price %}
+              <span class="product-price sale">
+                <span class="original-price">{{ product.compare_at_price | money }}</span>
+                <span class="discounted-price">{{ product.price | money }}</span>
+              </span>
+            {% else %}
+              <span class="product-price">{{ product.price | money }}</span>
+            {% endif %}
+          {% else %}
+            <span class="product-price sold-out">{{- 'products.product.sold_out' | t -}}</span>
+          {% endif %}
+  
+        </div>
       
         <div class="product-form-container has-padding-top">
   
@@ -758,15 +707,13 @@
 
 
   document.addEventListener('DOMContentLoaded', function () {
-    let isMobile = window.innerWidth < 1024;
-  
     function isMobileView() {
       return window.innerWidth < 1024;
     }
   
     const accordions = document.querySelectorAll('.swatch-accordion');
   
-    // Сохраняем данные, чтобы можно было сбросить
+    // Отметим аккордионы как неинициализированные
     accordions.forEach((accordion) => {
       accordion.dataset.initialized = 'false';
     });
@@ -777,6 +724,7 @@
   
       if (!toggleBtn || !fieldset) return;
   
+      // Обновление выбранного свотча в кнопке
       function updateSelectedSwatch() {
         const checkedInput = fieldset.querySelector('input:checked');
         const label = fieldset.querySelector(`label[for="${checkedInput.id}"]`);
@@ -790,13 +738,14 @@
   
       updateSelectedSwatch();
   
-      // Сохраняем ссылку на обработчик, чтобы удалить при ресайзе
+      // Клик по кнопке раскрытия
       function onToggleClick(e) {
         e.stopPropagation();
         const isOpen = accordion.classList.toggle('open');
         toggleBtn.setAttribute('aria-expanded', isOpen);
       }
   
+      // Клик вне аккордиона
       function onOutsideClick(e) {
         if (!accordion.contains(e.target)) {
           accordion.classList.remove('open');
@@ -804,14 +753,22 @@
         }
       }
   
+      // При выборе варианта — обновляем и закрываем
+      function onSwatchChange() {
+        updateSelectedSwatch();
+        accordion.classList.remove('open');
+        toggleBtn.setAttribute('aria-expanded', false);
+      }
+  
       toggleBtn.addEventListener('click', onToggleClick);
       document.addEventListener('click', onOutsideClick);
-      fieldset.addEventListener('change', updateSelectedSwatch);
+      fieldset.addEventListener('change', onSwatchChange);
   
-      // Сохраняем обработчики для последующего удаления
+      // Сохраняем обработчики для удаления
       accordion._toggleClick = onToggleClick;
       accordion._outsideClick = onOutsideClick;
-      accordion._swatchUpdate = updateSelectedSwatch;
+      accordion._swatchUpdate = onSwatchChange;
+  
       accordion.dataset.initialized = 'true';
     }
   
@@ -826,7 +783,6 @@
       if (accordion._outsideClick) document.removeEventListener('click', accordion._outsideClick);
       if (accordion._swatchUpdate) fieldset.removeEventListener('change', accordion._swatchUpdate);
   
-      // Сброс состояний
       toggleBtn.innerHTML = '';
       toggleBtn.removeAttribute('aria-expanded');
       accordion.classList.remove('open');
@@ -847,14 +803,10 @@
       });
     }
   
-    // Инициализация при загрузке
     initAllAccordions();
-  
-    // Перезапуск при ресайзе
-    window.addEventListener('resize', () => {
-      initAllAccordions();
-    });
+    window.addEventListener('resize', initAllAccordions);
   });
+  
   
   
   

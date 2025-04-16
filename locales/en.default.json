@@ -28,6 +28,11 @@
       "in_stock": "In stock"
     }
   },
+  "bundles": {
+    "build_your_bundle": "Build your Bundle",
+    "item": "Item",
+    "bundled_total": "Bundled Total:"
+  },
   "store_availability": {
     "general": {
       "in_stock": "In stock",
