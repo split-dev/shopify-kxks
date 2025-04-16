@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
     "index_html_Qme7Nm": {
       "type": "index__html",
@@ -75,15 +75,15 @@
     "index_featured_collection_hRUEhX": {
       "type": "index__featured-collection",
       "settings": {
-        "title": "CLEARANCE",
-        "collection": "clearance",
+        "title": "HOT SELLERS",
+        "collection": "hot-sellers",
         "products_per": 4,
-        "products_limit": 10,
+        "products_limit": 16,
         "align_height": false,
         "collection_height": 200,
         "button_label": "",
         "button_style": "button--primary",
-        "collection_style": "grid",
+        "collection_style": "slider",
         "width": "wide",
         "show_gutter": true,
         "padding_top": 20,
