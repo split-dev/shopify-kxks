@@ -59,7 +59,7 @@
         "html_content_Mene4E": {
           "type": "html_content",
           "settings": {
-            "html_area": "Hello sir"
+            "html_area": "<dl class=\"accordion\">\n<dt><a class=\"active\" href=\"#\"><small class=\"right\">◄</small>Description</a></dt>\n<dd class=\"active\">Our superior quality sneaker duffles have 3 padded dividers with Velcro that sticks to the whole inner lining of the bag to offer you a customisable packing experience. The duffle fits up to size US15 men's shoes and a 16\" laptop. With a front pocket, side pockets and 3 inner pockets for small items, there is room for everything.</dd>\n<dt><a class=\"active\" href=\"#\"><small class=\"right\">◄</small>Size</a></dt>\n<dd class=\"active\">Approved for carry-on travel (55 x 24 x 33 cm)</dd>\n<dt><a class=\"active\" href=\"#\"><small class=\"right\">◄</small>Includes</a></dt>\n<dd class=\"active\">\n<ul>\n<li>1 x Duffle bag<br>\n</li>\n<li>1 x Shoulder strap</li>\n<li>3 x Padded dividers</li>\n<li>4 x Shoe pouches</li>\n</ul>\n</dd>\n<dt><a class=\"active\" href=\"#\"><small class=\"right\">◄</small>Shipping</a></dt>\n<dd class=\"active\">\n<p class=\"lead\"><span>Free shipping for all AUS orders.</span></p>\n<table width=\"100%\">\n<tbody>\n<tr>\n<td><strong>Australia</strong></td>\n<td></td>\n</tr>\n<tr>\n<td>Standard <span>(5-10 business days)</span>\n</td>\n<td>FREE</td>\n</tr>\n<tr>\n<td>Express <span>(4-8 business days)</span>\n</td>\n<td>$6 AUD</td>\n</tr>\n</tbody>\n</table>\n<p>For shipping information for other countries please go to:<span> </span><a href=\"https://www.kickskase.com.au/pages/shipping-delivery\">Shipping &amp; Delivery</a>.</p>\n</dd>\n</dl>"
           }
         },
         "ce770b67-888c-401e-8bd8-773651b7d21f": {
