@@ -328,3 +328,57 @@ max-width: 360px !important;
 {% endcapture %}
 {% assign content = content | replace_first: '<!doctype', '!doctype' | split: ' <' %}
 {%- for html in content -%}{%- assign htmlblock = html | strip | prepend: ' <' -%}{{htmlblock | replace: ' </', '</'}}{%- endfor -%}
+
+
+  <script>
+    document.addEventListener('click', async function (event) {
+      const bundleButton = event.target.closest('[data-bundle-checkout]');
+      if (!bundleButton) return;
+    
+      event.preventDefault(); 
+      event.stopPropagation(); 
+    
+      try {
+        const cart = await fetch('/cart.js').then(res => res.json());
+    
+        const bundleItems = cart.items.filter(item =>
+          item.properties && item.properties._bundleTrue === 'bundle'
+        );
+    
+        if (!bundleItems.length) {
+          window.location.href = '/checkout';
+          return;
+        }
+    
+        const bundleVariantIdsList = bundleItems
+          .map(item => item.properties && item.properties._bundleVariantIds)
+          .filter(Boolean);
+    
+        await fetch('/your-custom-endpoint', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            message: 'Bundle checkout initiated',
+            bundleVariantIds: bundleVariantIdsList
+          })
+        });
+    
+        for (const item of bundleItems) {
+          await fetch('/cart/change.js', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: item.key, quantity: 0 })
+          });
+        }
+    
+        window.location.href = '/checkout';
+    
+      } catch (error) {
+        console.error('Error during bundle checkout handling:', error);
+        window.location.href = '/checkout';
+      }
+    });
+    
+      
+    
+  </script>

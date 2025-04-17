@@ -80,18 +80,38 @@
     {% endcomment %}
 
     {%- if product.metafields.custom.bundled_products != blank -%}
-        {% assign bundle_variant_ids = '' %}
-
-        {% for bundled_product in product.metafields.custom.bundled_products.value %}
-          {% assign variant_id = bundled_product.selected_or_first_available_variant.id %}
-          {% assign bundle_variant_ids = bundle_variant_ids | append: variant_id %}
-          {% unless forloop.last %}
-            {% assign bundle_variant_ids = bundle_variant_ids | append: ',' %}
-          {% endunless %}
-        {% endfor %}
-
-        <input type="hidden" name="properties[_bundleVariantIds]" value="{{ bundle_variant_ids }}">
-      {%- endif -%}
+      {% assign bundle_variant_ids = '' %}
+      {% assign bundle_product_ids = '' %}
+      {% assign bundle_options = '' %}
+    
+      {% for bundled_product in product.metafields.custom.bundled_products.value %}
+        {% assign variant = bundled_product.selected_or_first_available_variant %}
+        {% assign variant_id = variant.id %}
+        
+        {% assign bundle_variant_ids = bundle_variant_ids | append: variant_id %}
+        {% assign bundle_product_ids = bundle_product_ids | append: bundled_product.id %}
+        
+        {% assign options_string = variant.option1 %}
+        {% if variant.option2 %}
+          {% assign options_string = options_string | append: '/' | append: variant.option2 %}
+        {% endif %}
+        {% if variant.option3 %}
+          {% assign options_string = options_string | append: '/' | append: variant.option3 %}
+        {% endif %}
+        {% assign bundle_options = bundle_options | append: options_string %}
+    
+        {% unless forloop.last %}
+          {% assign bundle_variant_ids = bundle_variant_ids | append: ',' %}
+          {% assign bundle_product_ids = bundle_product_ids | append: ',' %}
+          {% assign bundle_options = bundle_options | append: ',' %}
+        {% endunless %}
+      {% endfor %}
+    
+      <input type="hidden" name="properties[_bundleTrue]" value="bundle">
+      <input type="hidden" name="properties[_bundleVariantIds]" value="{{ bundle_variant_ids }}">
+      <input type="hidden" name="properties[_bundleProductsIds]" value="{{ bundle_product_ids }}">
+      <input type="hidden" name="properties[_bundleOptionsIds]" value="{{ bundle_options }}">
+    {%- endif -%}
     
     <variant-selection
       {% if variant_selection_id != blank %}id="{{ variant_selection_id }}"{% endif %}
