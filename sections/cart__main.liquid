@@ -135,7 +135,7 @@
 
             <div class="cart__card container is-align-center" data-cart-item="{{ item.key }}" data-variant-id="{{ item.id }}" data-line-item="{{ forloop.index }}">
               <div class="cart__image">
-                <a href="{{ item.url }}" title="{{ item.title | escape }}" class="cart_page_image">
+                <a href="{{ item.url }}" title="{{ item.title | escape }}" class="cart_page_image {% if item.product.tags contains 'custom_bundle' %} pointer-evetns-none {% endif %}">
                   {%
                     render 'image-element',
                     image: item.image,

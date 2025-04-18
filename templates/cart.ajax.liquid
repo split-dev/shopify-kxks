@@ -65,13 +65,13 @@
           <figure class="ajax-cart__product-image media-left">
             {% if item.product.media %}
               {% if item.product.featured_media.preview_image %}
-                <a href="{{ item.url }}">
+                <a href="{{ item.url }}" class="{% if item.product.tags contains 'custom_bundle' %} pointer-evetns-none {% endif %}">
                   <img src="{{ item.image | img_url: '320x' }}" alt="{{ item.title | escape }}" />
                 </a>
               {% endif %}
             {% else %}
               {% if item.image %}
-                <a href="{{ item.url }}">
+                <a href="{{ item.url }}" class="{% if item.product.tags contains 'custom_bundle' %} pointer-evetns-none {% endif %}">
                   <img src="{{ item | img_url: '320x' }}" alt="{{ item.title | escape }}" />
                 </a>
               {% endif %}
@@ -80,7 +80,7 @@
 
           <div class="ajax-cart__product-content media-content">
             <div class="ajax-cart__product-title">
-              <a href="{{ item.url }}">
+              <a href="{{ item.url }}" class="{% if item.product.tags contains 'custom_bundle' %} pointer-evetns-none {% endif %}">
                 {{ item.product.title }}
                 {% unless item.product.has_only_default_variant or item.variant.title contains "Title" %}
                   -
@@ -168,14 +168,14 @@
 
             {% if settings.display_ajax_quantity_box %}
               <div class="ajax-cart__quantity-box product-quantity-box" data-line-item-key={{ forloop.index }}>
-                {% unless item.properties._bundleTrue == "bundle" %}
-                {%
-                  render 'quantity-box',
-                  item: item,
-                  size: 'is-medium',
-                  variant: item.variant
-                %}
-              {% endunless %}
+                {% unless item.properties._bundleTrue == "bundle" or item.product.tags contains "custom_bundle" %}
+                  {%
+                    render 'quantity-box',
+                    item: item,
+                    size: 'is-medium',
+                    variant: item.variant
+                  %}
+                {% endunless %}
               </div>
               <p class="ajax-cart__quantity-warning quantity-warning">
             {% endif %}
