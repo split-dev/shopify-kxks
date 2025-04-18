@@ -108,6 +108,7 @@
       {% endfor %}
     
       <input type="hidden" name="properties[_bundleTrue]" value="bundle">
+      <input type="hidden" name="properties[_bundleId]" value="{{ product.id }}">
       <input type="hidden" name="properties[_bundleVariantIds]" value="{{ bundle_variant_ids }}">
       <input type="hidden" name="properties[_bundleProductsIds]" value="{{ bundle_product_ids }}">
       <input type="hidden" name="properties[_bundleOptionsIds]" value="{{ bundle_options }}">
