@@ -149,7 +149,11 @@
                 <div class="cart__description">
                   <div class="cart__text">
                     <p class="item__title">
-                      <a href="{{ item.url }}">{{ item.product.title }}</a>
+                      {% unless item.product.tags contains 'custom_bundle' %}
+                        <a href="{{ item.url }}">{{ item.product.title }}</a>
+                      {% else %}
+                        {{ item.product.title }}
+                      {% endunless %}
                     </p>
 
                     {%- if item.product.has_only_default_variant == false
@@ -265,7 +269,7 @@
 
                 {% if section.settings.display_product_quantity_cart %}
                   <div class="cart__quantity">
-                    {% unless item.properties._bundleTrue == "bundle" %}
+                    {% unless item.properties._bundleTrue == "bundle" or item.product.tags contains "custom_bundle" %}
                       <div class="purchase-details__quantity product-quantity-box" data-line-item-key={{ forloop.index }}>
                         {%
                           render 'quantity-box',

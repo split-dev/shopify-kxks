@@ -338,6 +338,12 @@ max-width: 360px !important;
       event.preventDefault();
       event.stopPropagation();
     
+      // Показываем прелоадер внутри кнопки
+      bundleButton.disabled = true;
+      bundleButton.innerHTML = 'Creating bundle...';
+      bundleButton.classList.add('bundle-loading');
+      
+    
       try {
         const cart = await fetch('/cart.js').then(res => res.json());
     
@@ -377,11 +383,9 @@ max-width: 360px !important;
         const responseJson = await response.json();
         console.log('✅ Backend responded:', responseJson);
     
-        // Извлекаем variantId
         const variantGid = responseJson.variantId;
         const variantId = variantGid.split('/').pop();
     
-        // Удаляем бандлы
         for (const item of bundleItems) {
           await fetch('/cart/change.js', {
             method: 'POST',
@@ -390,21 +394,18 @@ max-width: 360px !important;
           });
         }
     
-        // Добавляем новый продукт (вариант) в корзину
         await fetch('/cart/add.js', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ id: variantId, quantity: 1 })
         });
     
-        // Перенаправление на checkout
         window.location.href = '/checkout';
     
       } catch (error) {
         console.error('❌ Error during bundle checkout handling:', error);
         window.location.href = '/checkout';
       }
-    });
-    
+    });    
 
   </script>
