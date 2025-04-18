@@ -100,7 +100,7 @@
                       endif
                     -%}
                     <div class="swiper-slide" data-variant-id="{{ variant.id }}">
-                      {{ bundle_variant_image | image_url: width: 400 | image_tag }}
+                      {{ bundle_variant_image | image_url: width: 460 | image_tag }}
                     </div>
                   {% endfor %}
                 </div>
@@ -117,13 +117,13 @@
                   breakpoints: {
                     900: {
                       slidesPerView: 2,
-                      spaceBetween: 35,
+                      spaceBetween: 21,
                       centeredSlides: true,
           
                     },
                     1024: {
                       slidesPerView: 3,
-                      spaceBetween: 35,
+                      spaceBetween: 21,
                       centeredSlides: true,
                     }
                   },
