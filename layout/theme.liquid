@@ -342,7 +342,7 @@ max-width: 360px !important;
       bundleButton.disabled = true;
       bundleButton.innerHTML = 'Creating bundle...';
       bundleButton.classList.add('bundle-loading');
-      
+
     
       try {
         const cart = await fetch('/cart.js').then(res => res.json());
@@ -376,7 +376,7 @@ max-width: 360px !important;
           color: colorList.join(',')
         });
     
-        const requestUrl = `https://radiant-app-ywles.ampt.app/test-bundle?${query.toString()}`;
+        const requestUrl = `https://reliable-build-56fxk.ampt.app/test-bundle?${query.toString()}`;
         console.log('📦 Sending GET request to backend:', requestUrl);
     
         const response = await fetch(requestUrl);
