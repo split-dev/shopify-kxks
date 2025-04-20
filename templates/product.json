@@ -12,7 +12,7 @@
     "breadcrumbs": {
       "type": "product__breadcrumb",
       "settings": {
-        "width": "wide",
+        "width": "standard",
         "padding_top": 20,
         "padding_bottom": 20,
         "css_class": "",
@@ -85,7 +85,7 @@
         "display_thumbnails": true,
         "thumbnail_position": "bottom-thumbnails",
         "enable_thumbnail_slider": true,
-        "width": "standard",
+        "width": "wide",
         "padding_top": 20,
         "padding_bottom": 20,
         "animation": "none",
