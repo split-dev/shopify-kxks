@@ -85,7 +85,7 @@
         "display_thumbnails": true,
         "thumbnail_position": "bottom-thumbnails",
         "enable_thumbnail_slider": true,
-        "width": "wide",
+        "width": "standard",
         "padding_top": 20,
         "padding_bottom": 20,
         "animation": "none",
