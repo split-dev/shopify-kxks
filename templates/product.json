@@ -31,6 +31,13 @@
     "main": {
       "type": "product__main",
       "blocks": {
+        "form": {
+          "type": "form",
+          "settings": {
+            "show_payment_button": true,
+            "show_gift_card_recipient_form": false
+          }
+        },
         "title": {
           "type": "title",
           "settings": {}
@@ -45,12 +52,6 @@
           "type": "description",
           "settings": {}
         },
-        "form": {
-          "type": "form",
-          "settings": {
-            "show_payment_button": true
-          }
-        },
         "share": {
           "type": "share",
           "settings": {}
@@ -64,10 +65,10 @@
         }
       },
       "block_order": [
+        "form",
         "title",
         "price",
         "description",
-        "form",
         "share",
         "ce770b67-888c-401e-8bd8-773651b7d21f"
       ],
@@ -129,6 +130,9 @@
         "pretext_color_mobile": "rgba(0,0,0,0)",
         "heading_color_mobile": "rgba(0,0,0,0)",
         "subheading_color_mobile": "rgba(0,0,0,0)",
+        "mobile_text_alignment": "none",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 0,
         "css_class": "",
         "custom_css": ""
       }
@@ -194,9 +198,15 @@
         "padding_right": 0,
         "animation": "none",
         "mobile_text_below_image": true,
+        "mobile_preheading": "",
+        "mobile_heading": "",
+        "mobile_subheading": "",
         "pretext_color_mobile": "rgba(0,0,0,0)",
         "heading_color_mobile": "rgba(0,0,0,0)",
         "subheading_color_mobile": "rgba(0,0,0,0)",
+        "text_alignment_mobile": "same_as_desktop",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
         "css_class": "",
         "custom_css": ""
       }
@@ -215,6 +225,8 @@
         "padding_top": 20,
         "padding_bottom": 20,
         "animation": "none",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
         "css_class": "",
         "custom_css": ""
       }
@@ -283,6 +295,12 @@
         "padding_top": 20,
         "padding_bottom": 20,
         "animation": "none",
+        "mobile_layout": "stacked",
+        "crop_images_mobile": false,
+        "show_arrows": true,
+        "show_navigation_dots": true,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
         "css_class": "",
         "custom_css": ""
       }
