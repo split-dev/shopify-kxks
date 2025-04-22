@@ -41,16 +41,16 @@
             "display_savings": true
           }
         },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
         "form": {
           "type": "form",
           "settings": {
             "show_payment_button": true,
             "show_gift_card_recipient_form": false
           }
-        },
-        "description": {
-          "type": "description",
-          "settings": {}
         },
         "share": {
           "type": "share",
@@ -67,8 +67,8 @@
       "block_order": [
         "title",
         "price",
-        "form",
         "description",
+        "form",
         "share",
         "ce770b67-888c-401e-8bd8-773651b7d21f"
       ],
