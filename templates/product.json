@@ -31,13 +31,6 @@
     "main": {
       "type": "product__main",
       "blocks": {
-        "form": {
-          "type": "form",
-          "settings": {
-            "show_payment_button": true,
-            "show_gift_card_recipient_form": false
-          }
-        },
         "title": {
           "type": "title",
           "settings": {}
@@ -46,6 +39,13 @@
           "type": "price",
           "settings": {
             "display_savings": true
+          }
+        },
+        "form": {
+          "type": "form",
+          "settings": {
+            "show_payment_button": true,
+            "show_gift_card_recipient_form": false
           }
         },
         "description": {
@@ -65,9 +65,9 @@
         }
       },
       "block_order": [
-        "form",
         "title",
         "price",
+        "form",
         "description",
         "share",
         "ce770b67-888c-401e-8bd8-773651b7d21f"
