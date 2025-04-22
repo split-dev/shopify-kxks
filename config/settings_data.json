@@ -171,6 +171,7 @@
     "free_price_text": "Free",
     "product_form_style": "dropdown",
     "swatch_style": "square",
+    "swatches_option_style": "variant_image",
     "notify_me_form": true,
     "notify_me_description": "<p>Notify me when this product is available:</p>",
     "size_chart": "",
