@@ -523,7 +523,6 @@
       console.log('No hidden input for _bundleOptionsIds found.');
     }
   
-    // Update _bundleVariantIds
     function updateBundleVariantIds() {
       if (!bundleInput) return;
   
@@ -533,7 +532,6 @@
       console.log('Updated _bundleVariantIds:', bundleInput.value);
     }
   
-    // Update _bundleOptionsIds
     function updateBundleOptionsIds() {
       if (!optionsInput) return;
   
@@ -553,6 +551,19 @@
         selectedValueElement.innerHTML = value;
         console.log('Updated selected value display to:', value);
       }
+    }
+  
+    function toggleAddToCartButtonState() {
+      const addToCartButton = document.querySelector('[data-add-to-cart-trigger]');
+      if (!addToCartButton) return;
+  
+      const checkedInput = document.querySelector('[data-option-variant-id]:checked');
+      if (!checkedInput) return;
+  
+      const isDisabled = checkedInput.classList.contains('visually-disabled');
+      addToCartButton.disabled = isDisabled;
+  
+      console.log(`Add to cart button ${isDisabled ? 'disabled' : 'enabled'}`);
     }
   
     console.log('Variant inputs found. Initializing event listeners...');
@@ -587,7 +598,8 @@
   
           updateSelectedValueDisplay(input);
           updateBundleVariantIds();
-          updateBundleOptionsIds(); // 👈 добавлено
+          updateBundleOptionsIds();
+          toggleAddToCartButtonState();
         }
       });
     });
@@ -611,11 +623,29 @@
           input.dispatchEvent(new Event('change', { bubbles: true }));
   
           updateBundleVariantIds();
-          updateBundleOptionsIds(); // 👈 добавлено
+          updateBundleOptionsIds();
+          toggleAddToCartButtonState();
         }
       });
     });
+  
+    // Отметить visually-disabled слайды
+    variantInputs.forEach(input => {
+      const variantId = input.getAttribute('data-option-variant-id');
+      if (!variantId || !input.classList.contains('visually-disabled')) return;
+  
+      const slide = document.querySelector(`.swiper-slide[data-variant-id="${variantId}"]`);
+      if (slide) {
+        slide.classList.add('visually-disabled');
+        console.log(`Slide ${variantId} marked as visually-disabled`);
+      }
+    });
+  
+    // Проверка при загрузке
+    toggleAddToCartButtonState();
   });
+  
+  
   
 
 
