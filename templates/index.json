@@ -58,7 +58,7 @@
         "padding_left": 0,
         "padding_right": 0,
         "animation": "none",
-        "mobile_text_below_image": true,
+        "mobile_text_below_image": false,
         "mobile_preheading": "",
         "mobile_heading": "",
         "mobile_subheading": "",
