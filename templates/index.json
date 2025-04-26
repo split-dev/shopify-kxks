@@ -100,20 +100,6 @@
     "e377968d-b8b5-48b0-8bac-f8d3c56f35ac": {
       "type": "index__gallery",
       "blocks": {
-        "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-0": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/originals_tile.jpg",
-            "link": "shopify://collections/originals"
-          }
-        },
-        "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-2": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/suede_tile_e2db298c-1f47-4779-84d4-2bfe73e125c2.jpg",
-            "link": "shopify://collections/suede"
-          }
-        },
         "image_AzCcgR": {
           "type": "image",
           "settings": {
@@ -127,13 +113,27 @@
             "image": "shopify://shop_images/packing_organisers.jpg",
             "link": "shopify://collections/travel-cases"
           }
+        },
+        "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/originals_tile.jpg",
+            "link": "shopify://collections/originals"
+          }
+        },
+        "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/suede_tile_e2db298c-1f47-4779-84d4-2bfe73e125c2.jpg",
+            "link": "shopify://collections/suede"
+          }
         }
       },
       "block_order": [
-        "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-0",
-        "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-2",
         "image_AzCcgR",
-        "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-3"
+        "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-3",
+        "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-0",
+        "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-2"
       ],
       "settings": {
         "gallery_type": "classic",
