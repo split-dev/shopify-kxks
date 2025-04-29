@@ -277,20 +277,19 @@
           </div>
         </div>
       {% endif %}
-
-      {% comment %} {% for bundled_product in product.metafields.custom.bundled_products.value %}
+      {% if product.metafields.custom.bundled_product_4.value != blank %}
         <div class="product__bundle-item d-flex">
           <div class="product__bundle-slider position-relative">
             <div class="product__bundle-slider-box">
-              <div class="swiper-button-prev custom-swiper-button-prev js-products-bundle-prev-{{ bundled_product.handle }}">
+              <div class="swiper-button-prev custom-swiper-button-prev js-products-bundle-prev-product-4">
                 {% render 'icon-arrow' %}
               </div>
-              <div class="swiper-button-next custom-swiper-button-next js-products-bundle-next-{{ bundled_product.handle }}">
+              <div class="swiper-button-next custom-swiper-button-next js-products-bundle-next-product-4">
                 {% render 'icon-arrow' %}
               </div>
-              <div class="product__bundle-slider-init js-bundle-slider-init-{{ bundled_product.handle }}" data-slider-wrapper="{{ bundled_product.handle }}">
+              <div class="product__bundle-slider-init js-bundle-slider-init-product-4" data-slider-wrapper="product-4">
                 <div class="swiper-wrapper swiper-container">
-                  {% for variant in bundled_product.variants %}
+                  {% for variant in product.metafields.custom.bundled_product_4.value.variants %}
                     {%- liquid
                       if variant.product.has_only_default_variant
                         assign bundle_variant_image = variant.product.featured_image
@@ -308,12 +307,12 @@
                   {% endfor %}
                 </div>
               </div>
-              <p class="product__bundle-slider-label">{{ 'bundles.item' | t }} {{ forloop.index }}</p>
+              <p class="product__bundle-slider-label">{{ 'bundles.item' | t }} 4</p>
             </div>
           </div>
           <script>
             document.addEventListener("DOMContentLoaded", () => {
-              const collectionSlider = new Swiper(".js-bundle-slider-init-{{ bundled_product.handle }}", {
+              const collectionSlider = new Swiper(".js-bundle-slider-init-product-4", {
                   slidesPerView: 1,
                   spaceBetween: 16,
                   centeredSlides: true,
@@ -331,20 +330,155 @@
                     }
                   },
                   navigation: {
-                    nextEl: ".js-products-bundle-next-{{ bundled_product.handle }}",
-                    prevEl: ".js-products-bundle-prev-{{ bundled_product.handle }}",
+                    nextEl: ".js-products-bundle-next-product-4",
+                    prevEl: ".js-products-bundle-prev-product-4",
                   },
               });
           });
           </script>
-          <div class="product__bundle-info" data-info-wrapper="{{ bundled_product.handle }}">
-            <p class="product__bundle-info-label">{{ 'bundles.item' | t }} {{ forloop.index }}</p>
-            <h4>{{ bundled_product.title }}</h4>
-            {% render 'product-variant-picker', product: bundled_product, block_index: block_index, skip_legend: true, block: section, product_form_id: product_form_id %}
-            <a class="product__bundle-info-link" href="{{ bundled_product.url }}">More about {{ bundled_product.title }}</a>
+          <div class="product__bundle-info" data-info-wrapper="product-4">
+            <p class="product__bundle-info-label">{{ 'bundles.item' | t }} 4</p>
+            <h4>{{ product.metafields.custom.bundled_product_4.value.title }}</h4>
+            {% render 'product-variant-picker', product: product.metafields.custom.bundled_product_4.value, block_index: 'product-4',  skip_legend: true, block: section, product_form_id: product_form_id %}
+            <a class="product__bundle-info-link" href="{{ product.metafields.custom.bundled_product_4.value.url }}">More about {{ product.metafields.custom.bundled_product_4.value.title }}</a>
           </div>
         </div>
-      {% endfor %} {% endcomment %}
+      {% endif %}
+      {% if product.metafields.custom.bundled_product_5.value != blank %}
+        <div class="product__bundle-item d-flex">
+          <div class="product__bundle-slider position-relative">
+            <div class="product__bundle-slider-box">
+              <div class="swiper-button-prev custom-swiper-button-prev js-products-bundle-prev-product-5">
+                {% render 'icon-arrow' %}
+              </div>
+              <div class="swiper-button-next custom-swiper-button-next js-products-bundle-next-product-5">
+                {% render 'icon-arrow' %}
+              </div>
+              <div class="product__bundle-slider-init js-bundle-slider-init-product-5" data-slider-wrapper="product-5">
+                <div class="swiper-wrapper swiper-container">
+                  {% for variant in product.metafields.custom.bundled_product_5.value.variants %}
+                    {%- liquid
+                      if variant.product.has_only_default_variant
+                        assign bundle_variant_image = variant.product.featured_image
+                      else
+                        if variant.featured_image
+                          assign bundle_variant_image = variant.featured_image
+                        else
+                          assign bundle_variant_image = variant.product.featured_image
+                        endif
+                      endif
+                    -%}
+                    <div class="swiper-slide" data-variant-id="{{ variant.id }}">
+                      {{ bundle_variant_image | image_url: width: 460 | image_tag }}
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+              <p class="product__bundle-slider-label">{{ 'bundles.item' | t }} 5</p>
+            </div>
+          </div>
+          <script>
+            document.addEventListener("DOMContentLoaded", () => {
+              const collectionSlider = new Swiper(".js-bundle-slider-init-product-5", {
+                  slidesPerView: 1,
+                  spaceBetween: 16,
+                  centeredSlides: true,
+                  breakpoints: {
+                    900: {
+                      slidesPerView: 2,
+                      spaceBetween: 21,
+                      centeredSlides: true,
+          
+                    },
+                    1024: {
+                      slidesPerView: 3,
+                      spaceBetween: 21,
+                      centeredSlides: true,
+                    }
+                  },
+                  navigation: {
+                    nextEl: ".js-products-bundle-next-product-5",
+                    prevEl: ".js-products-bundle-prev-product-5",
+                  },
+              });
+          });
+          </script>
+          <div class="product__bundle-info" data-info-wrapper="product-5">
+            <p class="product__bundle-info-label">{{ 'bundles.item' | t }} 5</p>
+            <h4>{{ product.metafields.custom.bundled_product_5.value.title }}</h4>
+            {% render 'product-variant-picker', product: product.metafields.custom.bundled_product_5.value, block_index: 'product-5',  skip_legend: true, block: section, product_form_id: product_form_id %}
+            <a class="product__bundle-info-link" href="{{ product.metafields.custom.bundled_product_5.value.url }}">More about {{ product.metafields.custom.bundled_product_5.value.title }}</a>
+          </div>
+        </div>
+      {% endif %}
+      {% if product.metafields.custom.bundled_product_6.value != blank %}
+        <div class="product__bundle-item d-flex">
+          <div class="product__bundle-slider position-relative">
+            <div class="product__bundle-slider-box">
+              <div class="swiper-button-prev custom-swiper-button-prev js-products-bundle-prev-product-6">
+                {% render 'icon-arrow' %}
+              </div>
+              <div class="swiper-button-next custom-swiper-button-next js-products-bundle-next-product-6">
+                {% render 'icon-arrow' %}
+              </div>
+              <div class="product__bundle-slider-init js-bundle-slider-init-product-6" data-slider-wrapper="product-6">
+                <div class="swiper-wrapper swiper-container">
+                  {% for variant in product.metafields.custom.bundled_product_6.value.variants %}
+                    {%- liquid
+                      if variant.product.has_only_default_variant
+                        assign bundle_variant_image = variant.product.featured_image
+                      else
+                        if variant.featured_image
+                          assign bundle_variant_image = variant.featured_image
+                        else
+                          assign bundle_variant_image = variant.product.featured_image
+                        endif
+                      endif
+                    -%}
+                    <div class="swiper-slide" data-variant-id="{{ variant.id }}">
+                      {{ bundle_variant_image | image_url: width: 460 | image_tag }}
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+              <p class="product__bundle-slider-label">{{ 'bundles.item' | t }} 6</p>
+            </div>
+          </div>
+          <script>
+            document.addEventListener("DOMContentLoaded", () => {
+              const collectionSlider = new Swiper(".js-bundle-slider-init-product-6", {
+                  slidesPerView: 1,
+                  spaceBetween: 16,
+                  centeredSlides: true,
+                  breakpoints: {
+                    900: {
+                      slidesPerView: 2,
+                      spaceBetween: 21,
+                      centeredSlides: true,
+          
+                    },
+                    1024: {
+                      slidesPerView: 3,
+                      spaceBetween: 21,
+                      centeredSlides: true,
+                    }
+                  },
+                  navigation: {
+                    nextEl: ".js-products-bundle-next-product-6",
+                    prevEl: ".js-products-bundle-prev-product-6",
+                  },
+              });
+          });
+          </script>
+          <div class="product__bundle-info" data-info-wrapper="product-6">
+            <p class="product__bundle-info-label">{{ 'bundles.item' | t }} 6</p>
+            <h4>{{ product.metafields.custom.bundled_product_6.value.title }}</h4>
+            {% render 'product-variant-picker', product: product.metafields.custom.bundled_product_6.value, block_index: 'product-6',  skip_legend: true, block: section, product_form_id: product_form_id %}
+            <a class="product__bundle-info-link" href="{{ product.metafields.custom.bundled_product_6.value.url }}">More about {{ product.metafields.custom.bundled_product_6.value.title }}</a>
+          </div>
+        </div>
+      {% endif %}
+
     </div>
     
     <div class="product__bundle-bottom-wrapper d-flex">
@@ -742,12 +876,14 @@
         console.log('Updated selected value display to:', value);
       }
     }
-  
-    function toggleAddToCartButtonState() {
+
+    function toggleAddToCartButtonStateForWrapper(wrapper) {
       const addToCartButton = document.querySelector('[data-add-to-cart-trigger]');
       if (!addToCartButton) return;
-      const checkedInput = document.querySelector('[data-option-variant-id]:checked');
+  
+      const checkedInput = wrapper.querySelector('[data-option-variant-id]:checked');
       if (!checkedInput) return;
+  
       const isDisabled = checkedInput.classList.contains('visually-disabled');
       addToCartButton.disabled = isDisabled;
       console.log(`Add to cart button ${isDisabled ? 'disabled' : 'enabled'}`);
@@ -774,7 +910,7 @@
           updateSelectedValueDisplay(input);
           updateBundleVariantIds();
           updateBundleOptionsIds();
-          toggleAddToCartButtonState();
+          toggleAddToCartButtonStateForWrapper(wrapper);
   
           if (!sliderWrapper) return;
   
@@ -814,12 +950,9 @@
       });
     });
   
-    toggleAddToCartButtonState();
+    bundleWrappers.forEach(wrapper => toggleAddToCartButtonStateForWrapper(wrapper));
   });
-  
-  
-  
-  
+
   
 
 
@@ -833,25 +966,32 @@
     function updateSelectedSwatch(accordion) {
       const fieldset = accordion.querySelector('fieldset');
       const toggleBtn = accordion.querySelector('.accordion-toggle');
-  
       if (!fieldset || !toggleBtn) return;
   
       const checkedInput = fieldset.querySelector('input[type="radio"]:checked');
       if (!checkedInput) return;
   
-      const label = fieldset.querySelector(`label[for="${checkedInput.id}"]`);
+      const label = fieldset.querySelector(`label[for="${CSS.escape(checkedInput.id)}"]`);
       if (!label) return;
   
       const swatch = label.querySelector('.swatch');
-      if (!swatch) return;
+  
+      // Если нет .swatch — fallback на текстовое значение
+      if (!swatch) {
+        toggleBtn.innerHTML = `<span class="selected-swatch-text">${checkedInput.value}</span>`;
+        return;
+      }
   
       const clone = swatch.cloneNode(true);
       clone.classList.add('selected-swatch');
+  
       toggleBtn.innerHTML = '';
       toggleBtn.appendChild(clone);
     }
   
     function setupAccordion(accordion) {
+      if (accordion.dataset.initialized === 'true') return;
+  
       const toggleBtn = accordion.querySelector('.accordion-toggle');
       const fieldset = accordion.querySelector('fieldset');
       if (!toggleBtn || !fieldset) return;
@@ -900,24 +1040,30 @@
       toggleBtn.removeAttribute('aria-expanded');
       accordion.classList.remove('open');
       accordion.dataset.initialized = 'false';
+  
+      delete accordion._handlers;
     }
   
     function handleAccordions() {
-      const accordions = document.querySelectorAll('.swatch-accordion');
       const isMobile = isMobileView();
+      const accordions = document.querySelectorAll('.swatch-accordion');
   
       accordions.forEach((accordion) => {
-        if (isMobile && accordion.dataset.initialized !== 'true') {
+        if (isMobile) {
           setupAccordion(accordion);
-        } else if (!isMobile && accordion.dataset.initialized === 'true') {
+        } else {
           destroyAccordion(accordion);
         }
       });
     }
   
+    // Первичная инициализация
     handleAccordions();
+  
+    // Обработка ресайза
     window.addEventListener('resize', handleAccordions);
   });
+  
   
   
   
