@@ -40,11 +40,11 @@
     -%}
     
     {%- capture input_id -%}
-      {{ section.id }}-{{ option.position }}-{{ forloop.index0 -}}
+      {{ section.id }}-{{ option.position }}-{{ forloop.index0 -}}-{{ block_index }}
     {%- endcapture -%}
   
     {%- capture input_name -%}
-      {{ option.name }}-{{ option.position }}
+      {{ option.name }}-{{ option.position }}-{{ block_index }}
     {%- endcapture -%}
   
     {%- capture input_dataset -%}

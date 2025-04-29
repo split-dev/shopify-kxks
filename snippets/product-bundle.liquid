@@ -75,7 +75,210 @@
           <p>{{ 'bundles.build_your_bundle' | t }}</p>
         </div>
       </div>
-      {% for bundled_product in product.metafields.custom.bundled_products.value %}
+
+      {% if product.metafields.custom.bundled_product_1.value != blank %}
+        <div class="product__bundle-item d-flex">
+          <div class="product__bundle-slider position-relative">
+            <div class="product__bundle-slider-box">
+              <div class="swiper-button-prev custom-swiper-button-prev js-products-bundle-prev-product-1">
+                {% render 'icon-arrow' %}
+              </div>
+              <div class="swiper-button-next custom-swiper-button-next js-products-bundle-next-product-1">
+                {% render 'icon-arrow' %}
+              </div>
+              <div class="product__bundle-slider-init js-bundle-slider-init-product-1" data-slider-wrapper="product-1">
+                <div class="swiper-wrapper swiper-container">
+                  {% for variant in product.metafields.custom.bundled_product_1.value.variants %}
+                    {%- liquid
+                      if variant.product.has_only_default_variant
+                        assign bundle_variant_image = variant.product.featured_image
+                      else
+                        if variant.featured_image
+                          assign bundle_variant_image = variant.featured_image
+                        else
+                          assign bundle_variant_image = variant.product.featured_image
+                        endif
+                      endif
+                    -%}
+                    <div class="swiper-slide" data-variant-id="{{ variant.id }}">
+                      {{ bundle_variant_image | image_url: width: 460 | image_tag }}
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+              <p class="product__bundle-slider-label">{{ 'bundles.item' | t }} 1</p>
+            </div>
+          </div>
+          <script>
+            document.addEventListener("DOMContentLoaded", () => {
+              const collectionSlider = new Swiper(".js-bundle-slider-init-product-1", {
+                  slidesPerView: 1,
+                  spaceBetween: 16,
+                  centeredSlides: true,
+                  breakpoints: {
+                    900: {
+                      slidesPerView: 2,
+                      spaceBetween: 21,
+                      centeredSlides: true,
+          
+                    },
+                    1024: {
+                      slidesPerView: 3,
+                      spaceBetween: 21,
+                      centeredSlides: true,
+                    }
+                  },
+                  navigation: {
+                    nextEl: ".js-products-bundle-next-product-1",
+                    prevEl: ".js-products-bundle-prev-product-1",
+                  },
+              });
+          });
+          </script>
+          <div class="product__bundle-info" data-info-wrapper="product-1">
+            <p class="product__bundle-info-label">{{ 'bundles.item' | t }} 1</p>
+            <h4>{{ product.metafields.custom.bundled_product_1.value.title }}</h4>
+            {% render 'product-variant-picker', product: product.metafields.custom.bundled_product_1.value, block_index: 'product-1', skip_legend: true, block: section, product_form_id: product_form_id %}
+            <a class="product__bundle-info-link" href="{{ product.metafields.custom.bundled_product_1.value.url }}">More about {{ product.metafields.custom.bundled_product_1.value.title }}</a>
+          </div>
+        </div>
+      {% endif %}
+      {% if product.metafields.custom.bundled_product_2.value != blank %}
+        <div class="product__bundle-item d-flex">
+          <div class="product__bundle-slider position-relative">
+            <div class="product__bundle-slider-box">
+              <div class="swiper-button-prev custom-swiper-button-prev js-products-bundle-prev-product-2">
+                {% render 'icon-arrow' %}
+              </div>
+              <div class="swiper-button-next custom-swiper-button-next js-products-bundle-next-product-2">
+                {% render 'icon-arrow' %}
+              </div>
+              <div class="product__bundle-slider-init js-bundle-slider-init-product-2" data-slider-wrapper="product-2">
+                <div class="swiper-wrapper swiper-container">
+                  {% for variant in product.metafields.custom.bundled_product_2.value.variants %}
+                    {%- liquid
+                      if variant.product.has_only_default_variant
+                        assign bundle_variant_image = variant.product.featured_image
+                      else
+                        if variant.featured_image
+                          assign bundle_variant_image = variant.featured_image
+                        else
+                          assign bundle_variant_image = variant.product.featured_image
+                        endif
+                      endif
+                    -%}
+                    <div class="swiper-slide" data-variant-id="{{ variant.id }}">
+                      {{ bundle_variant_image | image_url: width: 460 | image_tag }}
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+              <p class="product__bundle-slider-label">{{ 'bundles.item' | t }} 2</p>
+            </div>
+          </div>
+          <script>
+            document.addEventListener("DOMContentLoaded", () => {
+              const collectionSlider = new Swiper(".js-bundle-slider-init-product-2", {
+                  slidesPerView: 1,
+                  spaceBetween: 16,
+                  centeredSlides: true,
+                  breakpoints: {
+                    900: {
+                      slidesPerView: 2,
+                      spaceBetween: 21,
+                      centeredSlides: true,
+          
+                    },
+                    1024: {
+                      slidesPerView: 3,
+                      spaceBetween: 21,
+                      centeredSlides: true,
+                    }
+                  },
+                  navigation: {
+                    nextEl: ".js-products-bundle-next-product-2",
+                    prevEl: ".js-products-bundle-prev-product-2",
+                  },
+              });
+          });
+          </script>
+          <div class="product__bundle-info" data-info-wrapper="product-2">
+            <p class="product__bundle-info-label">{{ 'bundles.item' | t }} 2</p>
+            <h4>{{ product.metafields.custom.bundled_product_2.value.title }}</h4>
+            {% render 'product-variant-picker', product: product.metafields.custom.bundled_product_2.value, block_index: 'product-2', skip_legend: true, block: section, product_form_id: product_form_id %}
+            <a class="product__bundle-info-link" href="{{ product.metafields.custom.bundled_product_2.value.url }}">More about {{ product.metafields.custom.bundled_product_2.value.title }}</a>
+          </div>
+        </div>
+      {% endif %}
+      {% if product.metafields.custom.bundled_product_3.value != blank %}
+        <div class="product__bundle-item d-flex">
+          <div class="product__bundle-slider position-relative">
+            <div class="product__bundle-slider-box">
+              <div class="swiper-button-prev custom-swiper-button-prev js-products-bundle-prev-product-3">
+                {% render 'icon-arrow' %}
+              </div>
+              <div class="swiper-button-next custom-swiper-button-next js-products-bundle-next-product-3">
+                {% render 'icon-arrow' %}
+              </div>
+              <div class="product__bundle-slider-init js-bundle-slider-init-product-3" data-slider-wrapper="product-3">
+                <div class="swiper-wrapper swiper-container">
+                  {% for variant in product.metafields.custom.bundled_product_3.value.variants %}
+                    {%- liquid
+                      if variant.product.has_only_default_variant
+                        assign bundle_variant_image = variant.product.featured_image
+                      else
+                        if variant.featured_image
+                          assign bundle_variant_image = variant.featured_image
+                        else
+                          assign bundle_variant_image = variant.product.featured_image
+                        endif
+                      endif
+                    -%}
+                    <div class="swiper-slide" data-variant-id="{{ variant.id }}">
+                      {{ bundle_variant_image | image_url: width: 460 | image_tag }}
+                    </div>
+                  {% endfor %}
+                </div>
+              </div>
+              <p class="product__bundle-slider-label">{{ 'bundles.item' | t }} 3</p>
+            </div>
+          </div>
+          <script>
+            document.addEventListener("DOMContentLoaded", () => {
+              const collectionSlider = new Swiper(".js-bundle-slider-init-product-3", {
+                  slidesPerView: 1,
+                  spaceBetween: 16,
+                  centeredSlides: true,
+                  breakpoints: {
+                    900: {
+                      slidesPerView: 2,
+                      spaceBetween: 21,
+                      centeredSlides: true,
+          
+                    },
+                    1024: {
+                      slidesPerView: 3,
+                      spaceBetween: 21,
+                      centeredSlides: true,
+                    }
+                  },
+                  navigation: {
+                    nextEl: ".js-products-bundle-next-product-3",
+                    prevEl: ".js-products-bundle-prev-product-3",
+                  },
+              });
+          });
+          </script>
+          <div class="product__bundle-info" data-info-wrapper="product-3">
+            <p class="product__bundle-info-label">{{ 'bundles.item' | t }} 3</p>
+            <h4>{{ product.metafields.custom.bundled_product_3.value.title }}</h4>
+            {% render 'product-variant-picker', product: product.metafields.custom.bundled_product_3.value, block_index: 'product-3',  skip_legend: true, block: section, product_form_id: product_form_id %}
+            <a class="product__bundle-info-link" href="{{ product.metafields.custom.bundled_product_3.value.url }}">More about {{ product.metafields.custom.bundled_product_3.value.title }}</a>
+          </div>
+        </div>
+      {% endif %}
+
+      {% comment %} {% for bundled_product in product.metafields.custom.bundled_products.value %}
         <div class="product__bundle-item d-flex">
           <div class="product__bundle-slider position-relative">
             <div class="product__bundle-slider-box">
@@ -141,7 +344,7 @@
             <a class="product__bundle-info-link" href="{{ bundled_product.url }}">More about {{ bundled_product.title }}</a>
           </div>
         </div>
-      {% endfor %}
+      {% endfor %} {% endcomment %}
     </div>
     
     <div class="product__bundle-bottom-wrapper d-flex">
@@ -507,25 +710,14 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    const variantInputs = document.querySelectorAll('[data-option-variant-id]');
-    if (!variantInputs.length) {
-      console.log('No inputs with data-option-variant-id found on the page.');
-      return;
-    }
-  
     const bundleInput = document.querySelector('input[name="properties[_bundleVariantIds]"]');
     const optionsInput = document.querySelector('input[name="properties[_bundleOptionsIds]"]');
   
-    if (!bundleInput) {
-      console.log('No hidden input for _bundleVariantIds found.');
-    }
-    if (!optionsInput) {
-      console.log('No hidden input for _bundleOptionsIds found.');
-    }
+    if (!bundleInput) console.log('No hidden input for _bundleVariantIds found.');
+    if (!optionsInput) console.log('No hidden input for _bundleOptionsIds found.');
   
     function updateBundleVariantIds() {
       if (!bundleInput) return;
-  
       const checkedInputs = document.querySelectorAll('[data-option-variant-id]:checked');
       const ids = Array.from(checkedInputs).map(input => input.getAttribute('data-option-variant-id'));
       bundleInput.value = ids.join(',');
@@ -534,7 +726,6 @@
   
     function updateBundleOptionsIds() {
       if (!optionsInput) return;
-  
       const optionSpans = document.querySelectorAll('[data-selected-value]');
       const values = Array.from(optionSpans).map(span => span.textContent.trim());
       optionsInput.value = values.join(', ');
@@ -545,7 +736,6 @@
       const value = input.value;
       const infoWrapper = input.closest('[data-info-wrapper]');
       if (!infoWrapper) return;
-  
       const selectedValueElement = infoWrapper.querySelector('[data-selected-value]');
       if (selectedValueElement) {
         selectedValueElement.innerHTML = value;
@@ -556,163 +746,143 @@
     function toggleAddToCartButtonState() {
       const addToCartButton = document.querySelector('[data-add-to-cart-trigger]');
       if (!addToCartButton) return;
-  
       const checkedInput = document.querySelector('[data-option-variant-id]:checked');
       if (!checkedInput) return;
-  
       const isDisabled = checkedInput.classList.contains('visually-disabled');
       addToCartButton.disabled = isDisabled;
-  
       console.log(`Add to cart button ${isDisabled ? 'disabled' : 'enabled'}`);
     }
   
-    console.log('Variant inputs found. Initializing event listeners...');
+    console.log('Initializing variant pickers for bundled products…');
   
-    variantInputs.forEach(input => {
-      input.addEventListener('change', function () {
-        if (input.checked) {
+    const bundleWrappers = document.querySelectorAll('[data-info-wrapper]');
+  
+    bundleWrappers.forEach(wrapper => {
+      const inputs = wrapper.querySelectorAll('[data-option-variant-id]');
+      const wrapperId = wrapper.getAttribute('data-info-wrapper');
+      const sliderWrapper = document.querySelector(`[data-slider-wrapper="${wrapperId}"]`);
+  
+      if (!inputs.length) return;
+  
+      inputs.forEach(input => {
+        input.addEventListener('change', function () {
+          if (!input.checked) return;
+  
           const variantId = input.getAttribute('data-option-variant-id');
-          const infoWrapper = input.closest('[data-info-wrapper]');
-          const infoWrapperValue = infoWrapper ? infoWrapper.getAttribute('data-info-wrapper') : null;
-  
-          console.log('Checked variant ID:', variantId);
-          console.log('Parent data-info-wrapper:', infoWrapperValue);
-  
-          if (infoWrapperValue) {
-            const sliderWrapper = document.querySelector(`[data-slider-wrapper="${infoWrapperValue}"]`);
-            if (sliderWrapper) {
-              const slides = sliderWrapper.querySelectorAll('.swiper-slide');
-              let targetIndex = -1;
-  
-              slides.forEach((slide, index) => {
-                if (slide.getAttribute('data-variant-id') === variantId) {
-                  targetIndex = index;
-                }
-              });
-  
-              if (targetIndex !== -1 && sliderWrapper.swiper) {
-                sliderWrapper.swiper.slideTo(targetIndex);
-              }
-            }
-          }
+          console.log(`Checked variant ID: ${variantId} (group ${wrapperId})`);
   
           updateSelectedValueDisplay(input);
           updateBundleVariantIds();
           updateBundleOptionsIds();
           toggleAddToCartButtonState();
-        }
+  
+          if (!sliderWrapper) return;
+  
+          const slides = sliderWrapper.querySelectorAll('.swiper-slide');
+          let targetIndex = -1;
+          slides.forEach((slide, index) => {
+            if (slide.getAttribute('data-variant-id') === variantId) targetIndex = index;
+          });
+  
+          if (targetIndex !== -1 && sliderWrapper.swiper) {
+            sliderWrapper.swiper.slideTo(targetIndex);
+          }
+        });
       });
-    });
   
-    const sliderWrappers = document.querySelectorAll('[data-slider-wrapper]');
-  
-    sliderWrappers.forEach(sliderWrapper => {
-      const swiper = sliderWrapper.swiper;
-  
-      if (!swiper) return;
-  
-      swiper.on('slideChange', function () {
-        const activeSlide = swiper.slides[swiper.activeIndex];
-        const variantId = activeSlide.getAttribute('data-variant-id');
-  
-        if (!variantId) return;
-  
-        const input = document.querySelector(`[data-option-variant-id="${variantId}"]`);
-        if (input) {
-          input.checked = true;
-          input.dispatchEvent(new Event('change', { bubbles: true }));
-  
-          updateBundleVariantIds();
-          updateBundleOptionsIds();
-          toggleAddToCartButtonState();
-        }
-      });
-    });
-  
-    // Отметить visually-disabled слайды
-    variantInputs.forEach(input => {
-      const variantId = input.getAttribute('data-option-variant-id');
-      if (!variantId || !input.classList.contains('visually-disabled')) return;
-  
-      const slide = document.querySelector(`.swiper-slide[data-variant-id="${variantId}"]`);
-      if (slide) {
-        slide.classList.add('visually-disabled');
-        console.log(`Slide ${variantId} marked as visually-disabled`);
+      // Отслеживание смены слайда только в текущем блоке
+      if (sliderWrapper && sliderWrapper.swiper) {
+        const swiper = sliderWrapper.swiper;
+        swiper.on('slideChange', function () {
+          const activeSlide = swiper.slides[swiper.activeIndex];
+          const variantId = activeSlide.getAttribute('data-variant-id');
+          if (!variantId) return;
+          const targetInput = wrapper.querySelector(`[data-option-variant-id="${variantId}"]`);
+          if (targetInput) {
+            targetInput.checked = true;
+            targetInput.dispatchEvent(new Event('change', { bubbles: true }));
+          }
+        });
       }
+  
+      // visually-disabled слайды
+      inputs.forEach(input => {
+        const variantId = input.getAttribute('data-option-variant-id');
+        if (!variantId || !input.classList.contains('visually-disabled')) return;
+        const slide = sliderWrapper?.querySelector(`.swiper-slide[data-variant-id="${variantId}"]`);
+        if (slide) slide.classList.add('visually-disabled');
+      });
     });
   
-    // Проверка при загрузке
     toggleAddToCartButtonState();
   });
+  
+  
   
   
   
 
 
   document.addEventListener('DOMContentLoaded', function () {
+    const MOBILE_WIDTH = 1024;
+  
     function isMobileView() {
-      return window.innerWidth < 1024;
+      return window.innerWidth < MOBILE_WIDTH;
     }
   
-    const accordions = document.querySelectorAll('.swatch-accordion');
+    function updateSelectedSwatch(accordion) {
+      const fieldset = accordion.querySelector('fieldset');
+      const toggleBtn = accordion.querySelector('.accordion-toggle');
   
-    // Отметим аккордионы как неинициализированные
-    accordions.forEach((accordion) => {
-      accordion.dataset.initialized = 'false';
-    });
+      if (!fieldset || !toggleBtn) return;
+  
+      const checkedInput = fieldset.querySelector('input[type="radio"]:checked');
+      if (!checkedInput) return;
+  
+      const label = fieldset.querySelector(`label[for="${checkedInput.id}"]`);
+      if (!label) return;
+  
+      const swatch = label.querySelector('.swatch');
+      if (!swatch) return;
+  
+      const clone = swatch.cloneNode(true);
+      clone.classList.add('selected-swatch');
+      toggleBtn.innerHTML = '';
+      toggleBtn.appendChild(clone);
+    }
   
     function setupAccordion(accordion) {
       const toggleBtn = accordion.querySelector('.accordion-toggle');
       const fieldset = accordion.querySelector('fieldset');
-  
       if (!toggleBtn || !fieldset) return;
   
-      // Обновление выбранного свотча в кнопке
-      function updateSelectedSwatch() {
-        const checkedInput = fieldset.querySelector('input:checked');
-        const label = fieldset.querySelector(`label[for="${checkedInput.id}"]`);
-        if (!label) return;
-  
-        const swatch = label.querySelector('.swatch').cloneNode(true);
-        swatch.classList.add('selected-swatch');
-        toggleBtn.innerHTML = '';
-        toggleBtn.appendChild(swatch);
-      }
-  
-      updateSelectedSwatch();
-  
-      // Клик по кнопке раскрытия
-      function onToggleClick(e) {
+      const onToggleClick = (e) => {
         e.stopPropagation();
         const isOpen = accordion.classList.toggle('open');
         toggleBtn.setAttribute('aria-expanded', isOpen);
-      }
+      };
   
-      // Клик вне аккордиона
-      function onOutsideClick(e) {
+      const onOutsideClick = (e) => {
         if (!accordion.contains(e.target)) {
           accordion.classList.remove('open');
           toggleBtn.setAttribute('aria-expanded', false);
         }
-      }
+      };
   
-      // При выборе варианта — обновляем и закрываем
-      function onSwatchChange() {
-        updateSelectedSwatch();
+      const onSwatchChange = () => {
+        updateSelectedSwatch(accordion);
         accordion.classList.remove('open');
         toggleBtn.setAttribute('aria-expanded', false);
-      }
+      };
   
       toggleBtn.addEventListener('click', onToggleClick);
       document.addEventListener('click', onOutsideClick);
       fieldset.addEventListener('change', onSwatchChange);
   
-      // Сохраняем обработчики для удаления
-      accordion._toggleClick = onToggleClick;
-      accordion._outsideClick = onOutsideClick;
-      accordion._swatchUpdate = onSwatchChange;
-  
+      accordion._handlers = { onToggleClick, onOutsideClick, onSwatchChange };
       accordion.dataset.initialized = 'true';
+  
+      updateSelectedSwatch(accordion);
     }
   
     function destroyAccordion(accordion) {
@@ -720,10 +890,11 @@
   
       const toggleBtn = accordion.querySelector('.accordion-toggle');
       const fieldset = accordion.querySelector('fieldset');
+      const handlers = accordion._handlers || {};
   
-      if (accordion._toggleClick) toggleBtn.removeEventListener('click', accordion._toggleClick);
-      if (accordion._outsideClick) document.removeEventListener('click', accordion._outsideClick);
-      if (accordion._swatchUpdate) fieldset.removeEventListener('change', accordion._swatchUpdate);
+      if (handlers.onToggleClick) toggleBtn.removeEventListener('click', handlers.onToggleClick);
+      if (handlers.onOutsideClick) document.removeEventListener('click', handlers.onOutsideClick);
+      if (handlers.onSwatchChange) fieldset.removeEventListener('change', handlers.onSwatchChange);
   
       toggleBtn.innerHTML = '';
       toggleBtn.removeAttribute('aria-expanded');
@@ -731,23 +902,23 @@
       accordion.dataset.initialized = 'false';
     }
   
-    function initAllAccordions() {
-      const mobile = isMobileView();
+    function handleAccordions() {
+      const accordions = document.querySelectorAll('.swatch-accordion');
+      const isMobile = isMobileView();
   
       accordions.forEach((accordion) => {
-        if (mobile && accordion.dataset.initialized !== 'true') {
+        if (isMobile && accordion.dataset.initialized !== 'true') {
           setupAccordion(accordion);
-        }
-  
-        if (!mobile && accordion.dataset.initialized === 'true') {
+        } else if (!isMobile && accordion.dataset.initialized === 'true') {
           destroyAccordion(accordion);
         }
       });
     }
   
-    initAllAccordions();
-    window.addEventListener('resize', initAllAccordions);
+    handleAccordions();
+    window.addEventListener('resize', handleAccordions);
   });
+  
   
   
   
