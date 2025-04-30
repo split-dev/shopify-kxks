@@ -1,0 +1,195 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "fallback_image_banner",
+      "settings": {
+        "image": "shopify://shop_images/all_products_banner_279c0759-3cd3-4fa7-b13c-90c6c3327f7c.jpg",
+        "image_darken": false,
+        "width": "wide",
+        "banner_height": "medium",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "main": {
+      "type": "collection__main",
+      "blocks": {
+        "c68204d5-dd17-4bb9-a7da-4fe44ea7fd54": {
+          "type": "collection_list",
+          "disabled": true,
+          "settings": {
+            "title": "Collections"
+          }
+        }
+      },
+      "block_order": [
+        "c68204d5-dd17-4bb9-a7da-4fe44ea7fd54"
+      ],
+      "settings": {
+        "collection_breadcrumb": false,
+        "collection_tags": false,
+        "collection_sort": false,
+        "show_sidebar": false,
+        "sidebar_position": "left",
+        "show_promo_banner": false,
+        "image": "shopify://shop_images/all_products_banner.jpg",
+        "image_darken": false,
+        "promo_title": "Special sale on now!",
+        "promo_text": "",
+        "banner_height": "medium",
+        "align_height": true,
+        "collection_height": 400,
+        "products_per_row": 4,
+        "mobile_products_per_row": "1",
+        "pagination_limit": 48,
+        "pagination_type": "basic_pagination",
+        "width": "standard",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1672485675570cec0d": {
+      "type": "apps",
+      "blocks": {
+        "eba16e9f-1d07-4b70-afec-800e4e532765": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "eba16e9f-1d07-4b70-afec-800e4e532765"
+      ],
+      "settings": {
+        "width": "standard",
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "fd7b3ee2-444d-4dcb-b11c-eb48a194d8d5": {
+      "type": "index__gallery",
+      "blocks": {
+        "template--16057642287258__fd7b3ee2-444d-4dcb-b11c-eb48a194d8d5-16874071336e59c611-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/originals_tile.jpg",
+            "link": "shopify://collections/originals"
+          }
+        },
+        "template--16057642287258__fd7b3ee2-444d-4dcb-b11c-eb48a194d8d5-16874071336e59c611-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/suede_tile_e2db298c-1f47-4779-84d4-2bfe73e125c2.jpg",
+            "link": "shopify://collections/suede"
+          }
+        },
+        "template--16057642287258__fd7b3ee2-444d-4dcb-b11c-eb48a194d8d5-16874071336e59c611-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/camo_tile_a8dfff14-1f70-4c94-be71-e290738706ec.jpg",
+            "link": "shopify://collections/camo"
+          }
+        },
+        "image_TKtYet": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/backpack_tile.jpg",
+            "link": ""
+          }
+        },
+        "template--16057642287258__fd7b3ee2-444d-4dcb-b11c-eb48a194d8d5-16874071336e59c611-3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/sneaker_case_tile_1.jpg",
+            "link": "shopify://collections/travel-cases"
+          }
+        }
+      },
+      "block_order": [
+        "template--16057642287258__fd7b3ee2-444d-4dcb-b11c-eb48a194d8d5-16874071336e59c611-0",
+        "template--16057642287258__fd7b3ee2-444d-4dcb-b11c-eb48a194d8d5-16874071336e59c611-2",
+        "template--16057642287258__fd7b3ee2-444d-4dcb-b11c-eb48a194d8d5-16874071336e59c611-1",
+        "image_TKtYet",
+        "template--16057642287258__fd7b3ee2-444d-4dcb-b11c-eb48a194d8d5-16874071336e59c611-3"
+      ],
+      "settings": {
+        "gallery_type": "classic",
+        "images_per_row": 5,
+        "crop_images": false,
+        "enable_lightbox": false,
+        "overlay_color": "#000000",
+        "link_color": "#ffffff",
+        "width": "wide",
+        "show_gutter": false,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "164905993555c5a53a": {
+      "type": "index__image-with-text-overlay",
+      "settings": {
+        "image": "shopify://shop_images/1800x900_Module__1.jpg",
+        "mobile_image": "shopify://shop_images/1400x900_mobile.jpg",
+        "link": "",
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "pretext_color": "#000000",
+        "heading_color": "#000000",
+        "subheading_color": "#000000",
+        "text_alignment": "center",
+        "text_horizontal_position": "center",
+        "text_vertical_position": "middle",
+        "text_width": 40,
+        "background_color": "#ffffff",
+        "background_opacity": 77,
+        "border_color": "#ffffff",
+        "border_width": 0,
+        "button_1": "",
+        "button_1_link": "",
+        "button_1_style": "button--secondary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "mobile_text_below_image": true,
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_color_mobile": "rgba(0,0,0,0)",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "main",
+    "1672485675570cec0d",
+    "fd7b3ee2-444d-4dcb-b11c-eb48a194d8d5",
+    "164905993555c5a53a"
+  ]
+}
