@@ -215,7 +215,7 @@
                     object-fit: contain;
                     max-height: 240px;
                     max-width: 240px;
-                    width: 240px;
+                    width: 240px !important;
                     height: 240px;
                     @include media-breakpoint-down(md) {
                         max-height: 170px;
@@ -243,6 +243,7 @@
     }
     &__bundle-slider-init {
         height: 100%;
+        width: 100%;
         max-width: 720px;
         overflow: hidden;
         position: relative;
