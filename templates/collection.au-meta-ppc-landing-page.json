@@ -11,6 +11,7 @@
   "sections": {
     "banner": {
       "type": "fallback_image_banner",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/all_products_banner_279c0759-3cd3-4fa7-b13c-90c6c3327f7c.jpg",
         "image_darken": false,
@@ -18,6 +19,119 @@
         "banner_height": "medium",
         "padding_top": 0,
         "padding_bottom": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "164905993555c5a53a": {
+      "type": "index__image-with-text-overlay",
+      "settings": {
+        "image": "shopify://shop_images/kxks-mothers-day-sale-au.jpg",
+        "mobile_image": "shopify://shop_images/1.jpg",
+        "link": "",
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "pretext_color": "#000000",
+        "heading_color": "#000000",
+        "subheading_color": "#000000",
+        "text_alignment": "center",
+        "text_horizontal_position": "center",
+        "text_vertical_position": "middle",
+        "text_width": 40,
+        "background_color": "#ffffff",
+        "background_opacity": 77,
+        "border_color": "#ffffff",
+        "border_width": 0,
+        "button_1": "",
+        "button_1_link": "",
+        "button_1_style": "button--secondary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "mobile_text_below_image": true,
+        "mobile_preheading": "",
+        "mobile_heading": "",
+        "mobile_subheading": "",
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_color_mobile": "rgba(0,0,0,0)",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "text_alignment_mobile": "same_as_desktop",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "index_image_with_text_overlay_PkhwpD": {
+      "type": "index__image-with-text-overlay",
+      "settings": {
+        "image": "shopify://shop_images/1800x900_Module__1.jpg",
+        "mobile_image": "shopify://shop_images/1400x900_mobile.jpg",
+        "link": "",
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "pretext_color": "#000000",
+        "heading_color": "#000000",
+        "subheading_color": "#000000",
+        "text_alignment": "center",
+        "text_horizontal_position": "center",
+        "text_vertical_position": "middle",
+        "text_width": 40,
+        "background_color": "#ffffff",
+        "background_opacity": 77,
+        "border_color": "#ffffff",
+        "border_width": 0,
+        "button_1": "",
+        "button_1_link": "",
+        "button_1_style": "button--secondary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "mobile_text_below_image": true,
+        "mobile_preheading": "",
+        "mobile_heading": "",
+        "mobile_subheading": "",
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_color_mobile": "rgba(0,0,0,0)",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "text_alignment_mobile": "same_as_desktop",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1672485675570cec0d": {
+      "type": "apps",
+      "blocks": {
+        "eba16e9f-1d07-4b70-afec-800e4e532765": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "eba16e9f-1d07-4b70-afec-800e4e532765"
+      ],
+      "settings": {
+        "width": "standard",
+        "padding_top": 0,
+        "padding_bottom": 20,
         "css_class": "",
         "custom_css": ""
       }
@@ -57,27 +171,6 @@
         "width": "standard",
         "padding_top": 0,
         "padding_bottom": 0,
-        "css_class": "",
-        "custom_css": ""
-      }
-    },
-    "1672485675570cec0d": {
-      "type": "apps",
-      "blocks": {
-        "eba16e9f-1d07-4b70-afec-800e4e532765": {
-          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {
-            "maxwidth": 1080
-          }
-        }
-      },
-      "block_order": [
-        "eba16e9f-1d07-4b70-afec-800e4e532765"
-      ],
-      "settings": {
-        "width": "standard",
-        "padding_top": 0,
-        "padding_bottom": 20,
         "css_class": "",
         "custom_css": ""
       }
@@ -140,46 +233,12 @@
         "padding_top": 20,
         "padding_bottom": 20,
         "animation": "none",
-        "css_class": "",
-        "custom_css": ""
-      }
-    },
-    "164905993555c5a53a": {
-      "type": "index__image-with-text-overlay",
-      "settings": {
-        "image": "shopify://shop_images/1800x900_Module__1.jpg",
-        "mobile_image": "shopify://shop_images/1400x900_mobile.jpg",
-        "link": "",
-        "pretext": "",
-        "title": "",
-        "subtitle": "",
-        "pretext_color": "#000000",
-        "heading_color": "#000000",
-        "subheading_color": "#000000",
-        "text_alignment": "center",
-        "text_horizontal_position": "center",
-        "text_vertical_position": "middle",
-        "text_width": 40,
-        "background_color": "#ffffff",
-        "background_opacity": 77,
-        "border_color": "#ffffff",
-        "border_width": 0,
-        "button_1": "",
-        "button_1_link": "",
-        "button_1_style": "button--secondary",
-        "button_2": "",
-        "button_2_link": "",
-        "button_2_style": "button--secondary",
-        "width": "wide",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "padding_left": 0,
-        "padding_right": 0,
-        "animation": "none",
-        "mobile_text_below_image": true,
-        "pretext_color_mobile": "rgba(0,0,0,0)",
-        "heading_color_mobile": "rgba(0,0,0,0)",
-        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "mobile_layout": "stacked",
+        "crop_images_mobile": false,
+        "show_arrows": true,
+        "show_navigation_dots": true,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
         "css_class": "",
         "custom_css": ""
       }
@@ -187,9 +246,10 @@
   },
   "order": [
     "banner",
-    "main",
+    "164905993555c5a53a",
+    "index_image_with_text_overlay_PkhwpD",
     "1672485675570cec0d",
-    "fd7b3ee2-444d-4dcb-b11c-eb48a194d8d5",
-    "164905993555c5a53a"
+    "main",
+    "fd7b3ee2-444d-4dcb-b11c-eb48a194d8d5"
   ]
 }
