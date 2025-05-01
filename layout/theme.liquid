@@ -338,11 +338,9 @@ max-width: 360px !important;
       event.preventDefault();
       event.stopPropagation();
     
-      // Показываем прелоадер внутри кнопки
       bundleButton.disabled = true;
       bundleButton.innerHTML = 'Creating bundle...';
       bundleButton.classList.add('bundle-loading');
-
     
       try {
         const cart = await fetch('/cart.js').then(res => res.json());
@@ -356,36 +354,32 @@ max-width: 360px !important;
           return;
         }
     
-        const productIdList = bundleItems
-          .map(item => item.properties?._bundleProductsIds)
-          .filter(Boolean)
-          .flatMap(ids => ids.split(','));
+        const createdVariantIds = [];
     
-        const bundleIdList = bundleItems
-          .map(item => item.properties?._bundleId)
-          .filter(Boolean);
+        for (const item of bundleItems) {
+          const productIdList = item.properties?._bundleProductsIds?.split(',') || [];
+          const bundleId = item.properties?._bundleId || '';
+          const colorList = item.properties?._bundleOptionsIds?.split(',') || [];
     
-        const colorList = bundleItems
-          .map(item => item.properties?._bundleOptionsIds)
-          .filter(Boolean)
-          .flatMap(color => color.split(','));
+          const query = new URLSearchParams({
+            productId: productIdList.join(','),
+            bundleId: bundleId,
+            color: colorList.join(',')
+          });
     
-        const query = new URLSearchParams({
-          productId: productIdList.join(','),
-          bundleId: bundleIdList.join(','),
-          color: colorList.join(',')
-        });
+          const requestUrl = `https://reliable-build-56fxk.ampt.app/test-bundle?${query.toString()}`;
+          console.log('📦 Sending GET request to backend:', requestUrl);
     
-        const requestUrl = `https://reliable-build-56fxk.ampt.app/test-bundle?${query.toString()}`;
-        console.log('📦 Sending GET request to backend:', requestUrl);
+          const response = await fetch(requestUrl);
+          const data = await response.json();
+          console.log('✅ Backend responded:', data);
     
-        const response = await fetch(requestUrl);
-        const responseJson = await response.json();
-        console.log('✅ Backend responded:', responseJson);
+          const variantGid = data.variantId;
+          const variantId = variantGid.split('/').pop();
+          createdVariantIds.push(variantId);
+        }
     
-        const variantGid = responseJson.variantId;
-        const variantId = variantGid.split('/').pop();
-    
+        // Удаляем все старые бандлы
         for (const item of bundleItems) {
           await fetch('/cart/change.js', {
             method: 'POST',
@@ -394,11 +388,14 @@ max-width: 360px !important;
           });
         }
     
-        await fetch('/cart/add.js', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ id: variantId, quantity: 1 })
-        });
+        // Добавляем все созданные товары
+        for (const id of createdVariantIds) {
+          await fetch('/cart/add.js', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: id, quantity: 1 })
+          });
+        }
     
         window.location.href = '/checkout';
     
@@ -406,6 +403,6 @@ max-width: 360px !important;
         console.error('❌ Error during bundle checkout handling:', error);
         window.location.href = '/checkout';
       }
-    });    
+    });       
 
   </script>
