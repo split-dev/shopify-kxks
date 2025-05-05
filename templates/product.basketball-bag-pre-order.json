@@ -37,16 +37,19 @@
         },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {
             "display_savings": true
           }
         },
         "description": {
           "type": "description",
+          "disabled": true,
           "settings": {}
         },
         "form": {
           "type": "form",
+          "disabled": true,
           "settings": {
             "show_payment_button": true,
             "show_gift_card_recipient_form": false
@@ -54,13 +57,13 @@
         },
         "share": {
           "type": "share",
+          "disabled": true,
           "settings": {}
         },
         "ce770b67-888c-401e-8bd8-773651b7d21f": {
           "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
-          "disabled": true,
           "settings": {
-            "formId": "RZWkvG"
+            "formId": "Skf4pY"
           }
         }
       },
@@ -95,6 +98,7 @@
     },
     "d32abb0c-a450-439b-ad28-c11709e81923": {
       "type": "index__video",
+      "disabled": true,
       "settings": {
         "iframe_video": "https://www.youtube.com/watch?v=92HoltIq5lg&ab_channel=KicksKase",
         "html5_video": "",
@@ -156,6 +160,7 @@
         "95362825-ecfb-4f53-b312-4651ec116c4e",
         "15983550-a5f4-4dfd-8499-116f59580efa"
       ],
+      "disabled": true,
       "settings": {
         "width": "standard",
         "padding_top": 20,
