@@ -97,6 +97,55 @@
         "custom_css": ""
       }
     },
+    "index_image_with_text_AKeejq": {
+      "type": "index__image-with-text",
+      "blocks": {
+        "image_3N36bn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/DSCF5630_ed_re.jpg",
+            "mobile_image": "shopify://shop_images/DSCF5625_ed_re.jpg",
+            "image_link": ""
+          }
+        },
+        "text_ybXQbm": {
+          "type": "text",
+          "settings": {
+            "title": "Be First to Own the Ultimate Sports Backpack",
+            "heading_size": "regular",
+            "text": "<p>After months of development, we are finally set to release our highly anticipated Game Day Backpack. Designed with the modern athlete in mind, this backpack is versatile enough to fit both your on-court and off-court gear.</p><p>Officially dropping late-July 2025, join the waitlist now for early access.</p>",
+            "alignment": "left",
+            "vertical_position": "center",
+            "button_label": "Join the Waitlist",
+            "link": "shopify://products/game-day-backpack",
+            "button_style": "button--link-style",
+            "background": "rgba(0,0,0,0)",
+            "text_color": "rgba(0,0,0,0)",
+            "mobile_title": "",
+            "mobile_heading_size": "same_as_desktop",
+            "mobile_text": "",
+            "mobile_alignment": "same_as_desktop"
+          }
+        }
+      },
+      "block_order": [
+        "image_3N36bn",
+        "text_ybXQbm"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "width": "wide",
+        "show_gutter": true,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "mobile_text_position": "same_as_desktop",
+        "mobile_padding_top": 20,
+        "mobile_padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
     "e377968d-b8b5-48b0-8bac-f8d3c56f35ac": {
       "type": "index__gallery",
       "blocks": {
@@ -492,6 +541,7 @@
     "index_html_Qme7Nm",
     "16116130705f391e7b",
     "index_featured_collection_hRUEhX",
+    "index_image_with_text_AKeejq",
     "e377968d-b8b5-48b0-8bac-f8d3c56f35ac",
     "75fc114c-e813-42b4-a561-f942c0dd5eb9",
     "index_featured_collection_8JGJRV",
