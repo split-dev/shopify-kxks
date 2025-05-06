@@ -71,6 +71,7 @@
     },
     "index_image_with_text_overlay_PkhwpD": {
       "type": "index__image-with-text-overlay",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/1800x900_Module__1.jpg",
         "mobile_image": "shopify://shop_images/1400x900_mobile.jpg",
