@@ -98,10 +98,9 @@
     },
     "d32abb0c-a450-439b-ad28-c11709e81923": {
       "type": "index__video",
-      "disabled": true,
       "settings": {
-        "iframe_video": "https://www.youtube.com/watch?v=92HoltIq5lg&ab_channel=KicksKase",
-        "html5_video": "",
+        "iframe_video": "",
+        "html5_video": "https://drive.google.com/file/d/1Yeke8840eOLYXmsuod8vUeSmccwQ2AJs/view?usp=drive_link",
         "autoplay": false,
         "autoloop": true,
         "mute_video": false,
@@ -124,7 +123,7 @@
         "background_opacity": 77,
         "gradient": "rgba(0,0,0,0)",
         "gradient_rotation": 180,
-        "width": "standard",
+        "width": "half",
         "padding_top": 20,
         "padding_bottom": 0,
         "padding_left": 0,
