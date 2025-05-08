@@ -70,17 +70,21 @@
   </script>
   {% comment %}Inject theme-object end{% endcomment %}
 
+  {% comment %} Swiper {% endcomment %}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  {% comment %} Swiper {% endcomment %}
 
   <script>
     {% render 'js-variables' %}
 
     //SEO hidden product
-    function redirectToHome() {
+    {% comment %} function redirectToHome() {
       window.location.replace('{{ routes.root_url }}');
     }
     {% if template.name == 'product' and product.metafields.seo.hidden == 1 and request.design_mode == false %}
       redirectToHome();
-    {% endif %}
+    {% endif %} {% endcomment %}
   </script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
@@ -325,3 +329,81 @@ max-width: 360px !important;
 {% endcapture %}
 {% assign content = content | replace_first: '<!doctype', '!doctype' | split: ' <' %}
 {%- for html in content -%}{%- assign htmlblock = html | strip | prepend: ' <' -%}{{htmlblock | replace: ' </', '</'}}{%- endfor -%}
+
+
+  <script>
+    document.addEventListener('click', async function (event) {
+      const bundleButton = event.target.closest('[data-bundle-checkout]');
+      if (!bundleButton) return;
+    
+      event.preventDefault();
+      event.stopPropagation();
+    
+      bundleButton.disabled = true;
+      bundleButton.innerHTML = 'Creating bundle...';
+      bundleButton.classList.add('bundle-loading');
+    
+      try {
+        const cart = await fetch('/cart.js').then(res => res.json());
+    
+        const bundleItems = cart.items.filter(item =>
+          item.properties && item.properties._bundleTrue === 'bundle'
+        );
+    
+        if (!bundleItems.length) {
+          window.location.href = '/checkout';
+          return;
+        }
+    
+        const createdVariantIds = [];
+    
+        for (const item of bundleItems) {
+          const productIdList = item.properties?._bundleProductsIds?.split(',') || [];
+          const bundleId = item.properties?._bundleId || '';
+          const colorList = item.properties?._bundleOptionsIds?.split(',') || [];
+    
+          const query = new URLSearchParams({
+            productId: productIdList.join(','),
+            bundleId: bundleId,
+            color: colorList.join(',')
+          });
+    
+          const requestUrl = `https://reliable-build-56fxk.ampt.app/test-bundle?${query.toString()}`;
+          console.log('📦 Sending GET request to backend:', requestUrl);
+    
+          const response = await fetch(requestUrl);
+          const data = await response.json();
+          console.log('✅ Backend responded:', data);
+    
+          const variantGid = data.variantId;
+          const variantId = variantGid.split('/').pop();
+          createdVariantIds.push(variantId);
+        }
+    
+        // Удаляем все старые бандлы
+        for (const item of bundleItems) {
+          await fetch('/cart/change.js', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: item.key, quantity: 0 })
+          });
+        }
+    
+        // Добавляем все созданные товары
+        for (const id of createdVariantIds) {
+          await fetch('/cart/add.js', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: id, quantity: 1 })
+          });
+        }
+    
+        window.location.href = '/checkout';
+    
+      } catch (error) {
+        console.error('❌ Error during bundle checkout handling:', error);
+        window.location.href = '/checkout';
+      }
+    });       
+
+  </script>

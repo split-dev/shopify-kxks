@@ -10,6 +10,9 @@ html {
   -webkit-text-size-adjust: none;
   -ms-text-size-adjust: none;
 }
+.d-flex {
+  display: flex !important;
+}
 
 .justify-content-start   { justify-content: flex-start !important; }
 .justify-content-end     { justify-content: flex-end !important; }
@@ -31,4 +34,26 @@ html {
 }
 .w-100 {
   width: 100%;
+}
+.position-relative {
+  position: relative;
+}
+.ajax-cart__checkout-button {
+  margin: 14px 0;
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.07); }
+  100% { transform: scale(1); }
+}
+
+.bundle-loading {
+  animation: pulse 2s infinite;
+}
+.cart__text .item__title {
+  color: #000;
+}
+.pointer-evetns-none {
+  pointer-events: none;
 }

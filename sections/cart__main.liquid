@@ -135,7 +135,7 @@
 
             <div class="cart__card container is-align-center" data-cart-item="{{ item.key }}" data-variant-id="{{ item.id }}" data-line-item="{{ forloop.index }}">
               <div class="cart__image">
-                <a href="{{ item.url }}" title="{{ item.title | escape }}" class="cart_page_image">
+                <a href="{{ item.url }}" title="{{ item.title | escape }}" class="cart_page_image {% if item.product.tags contains 'custom_bundle' %} pointer-evetns-none {% endif %}">
                   {%
                     render 'image-element',
                     image: item.image,
@@ -149,7 +149,11 @@
                 <div class="cart__description">
                   <div class="cart__text">
                     <p class="item__title">
-                      <a href="{{ item.url }}">{{ item.product.title }}</a>
+                      {% unless item.product.tags contains 'custom_bundle' %}
+                        <a href="{{ item.url }}">{{ item.product.title }}</a>
+                      {% else %}
+                        {{ item.product.title }}
+                      {% endunless %}
                     </p>
 
                     {%- if item.product.has_only_default_variant == false
@@ -265,15 +269,17 @@
 
                 {% if section.settings.display_product_quantity_cart %}
                   <div class="cart__quantity">
-                    <div class="purchase-details__quantity product-quantity-box" data-line-item-key={{ forloop.index }}>
-                      {%
-                        render 'quantity-box',
-                        item: item,
-                        size: 'is-medium',
-                        variant: item.variant
-                      %}
-                    </div>
-                    <p class="cart__quantity-warning quantity-warning">
+                    {% unless item.properties._bundleTrue == "bundle" or item.product.tags contains "custom_bundle" %}
+                      <div class="purchase-details__quantity product-quantity-box" data-line-item-key={{ forloop.index }}>
+                        {%
+                          render 'quantity-box',
+                          item: item,
+                          size: 'is-medium',
+                          variant: item.variant
+                        %}
+                      </div>
+                      <p class="cart__quantity-warning quantity-warning">
+                    {% endunless %}
                   </div>
                 {% endif %}
 
@@ -424,33 +430,61 @@
                         </div>
                       {% endif %}
                     </div>
-                    <div class="is-flex is-align-center is-justify-end cart__buttons">
-                      <div class="cart__checkout">
-                        <button type="submit" class="button add_to_cart checkout" id="checkout" name="checkout" value="{{ 'cart.general.checkout' | t }}">
-                          {% if settings.show_lock_icon %}
-                            {%
-                              render 'icon',
-                              name: 'lock'
-                            %}
-                          {% endif %}
-                          {{ 'cart.general.checkout' | t }}
-                        </button>
+                    
+                    
+                    {%- assign has_bundle = false -%}
+
+                    {%- for item in cart.items -%}
+                      {%- if item.properties._bundleTrue == "bundle" -%}
+                        {%- assign has_bundle = true -%}
+                        {%- break -%}
+                      {%- endif -%}
+                    {%- endfor -%}
+
+                    {%- if has_bundle -%}
+                      <!-- 👇 Кастомная кнопка для бандлов -->
+                      <div class="is-flex is-align-center is-justify-end cart__buttons">
+                        <div class="cart__checkout">
+                          <button data-bundle-checkout type="button" class="button add_to_cart checkout">
+                            {% if settings.show_lock_icon %}
+                              {% render 'icon', name: 'lock' %}
+                            {% endif %}
+                            {{ 'cart.general.checkout' | t }}
+                          </button>
+                        </div>
                       </div>
-                    </div>
-                    <div class="is-flex is-align-center is-justify-end">
-                      {% if content_for_additional_checkout_buttons %}
-                        <div class="additional-checkout-buttons">
-                          {{ content_for_additional_checkout_buttons }}
+                    {%- else -%}
+                      <!-- 👇 Стандартные кнопки (только если нет бандлов) -->
+                      <div class="is-flex is-align-center is-justify-end cart__buttons">
+                        <div class="cart__checkout">
+                          <button type="submit" class="button add_to_cart checkout" id="checkout" name="checkout" value="{{ 'cart.general.checkout' | t }}">
+                            {% if settings.show_lock_icon %}
+                              {% render 'icon', name: 'lock' %}
+                            {% endif %}
+                            {{ 'cart.general.checkout' | t }}
+                          </button>
                         </div>
-                      {% endif %}
-                    </div>
-                    <div class="is-flex is-align-center is-justify-end">
-                      {% if cart.item_count > 0 %}
-                        <div class="cart__featured-links">
-                          <a href="{{ continue_shopping_link }}">{{ 'cart.general.continue_shopping_link_html' | t }}</a>
-                        </div>
-                      {% endif %}
-                    </div>
+                      </div>
+
+                      <div class="is-flex is-align-center is-justify-end">
+                        {% if content_for_additional_checkout_buttons %}
+                          <div class="additional-checkout-buttons">
+                            {{ content_for_additional_checkout_buttons }}
+                          </div>
+                        {% endif %}
+                      </div>
+
+                      <div class="is-flex is-align-center is-justify-end">
+                        {% if cart.item_count > 0 %}
+                          <div class="cart__featured-links">
+                            <a href="{{ continue_shopping_link }}">{{ 'cart.general.continue_shopping_link_html' | t }}</a>
+                          </div>
+                        {% endif %}
+                      </div>
+                    {%- endif -%}
+
+
+
                   </div>
 
               </div>
@@ -488,6 +522,9 @@
   }
 </script>
 <script src="{{ 'z__jsCart.js' | asset_url }}" defer></script>
+
+
+
 
 {% schema %}
 

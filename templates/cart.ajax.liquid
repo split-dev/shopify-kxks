@@ -65,13 +65,13 @@
           <figure class="ajax-cart__product-image media-left">
             {% if item.product.media %}
               {% if item.product.featured_media.preview_image %}
-                <a href="{{ item.url }}">
+                <a href="{{ item.url }}" class="{% if item.product.tags contains 'custom_bundle' %} pointer-evetns-none {% endif %}">
                   <img src="{{ item.image | img_url: '320x' }}" alt="{{ item.title | escape }}" />
                 </a>
               {% endif %}
             {% else %}
               {% if item.image %}
-                <a href="{{ item.url }}">
+                <a href="{{ item.url }}" class="{% if item.product.tags contains 'custom_bundle' %} pointer-evetns-none {% endif %}">
                   <img src="{{ item | img_url: '320x' }}" alt="{{ item.title | escape }}" />
                 </a>
               {% endif %}
@@ -80,7 +80,7 @@
 
           <div class="ajax-cart__product-content media-content">
             <div class="ajax-cart__product-title">
-              <a href="{{ item.url }}">
+              <a href="{{ item.url }}" class="{% if item.product.tags contains 'custom_bundle' %} pointer-evetns-none {% endif %}">
                 {{ item.product.title }}
                 {% unless item.product.has_only_default_variant or item.variant.title contains "Title" %}
                   -
@@ -168,12 +168,14 @@
 
             {% if settings.display_ajax_quantity_box %}
               <div class="ajax-cart__quantity-box product-quantity-box" data-line-item-key={{ forloop.index }}>
-                {%
-                  render 'quantity-box',
-                  item: item,
-                  size: 'is-medium',
-                  variant: item.variant
-                %}
+                {% unless item.properties._bundleTrue == "bundle" or item.product.tags contains "custom_bundle" %}
+                  {%
+                    render 'quantity-box',
+                    item: item,
+                    size: 'is-medium',
+                    variant: item.variant
+                  %}
+                {% endunless %}
               </div>
               <p class="ajax-cart__quantity-warning quantity-warning">
             {% endif %}
@@ -290,15 +292,40 @@
       {% comment %} Checkout {% endcomment %}
       <div class="ajax-cart__button-wrapper text-align-center">
         {% if settings.go_to_checkout %}
-          <button type="submit" name="checkout" class="ajax-cart__button button--add-to-cart button">
-            {% if settings.show_lock_icon %}
-              {%
-                render 'icon',
-                name: 'lock'
-              %}
-            {% endif %}
-            {{ 'layout.general.checkout' | t }}
-          </button>
+
+          {%- assign has_bundle = false -%}
+
+          {%- for item in cart.items -%}
+            {%- if item.properties._bundleTrue == "bundle" -%}
+              {%- assign has_bundle = true -%}
+              {%- break -%}
+            {%- endif -%}
+          {%- endfor -%}
+
+          {%- if has_bundle -%}
+            <!-- 👇 Кастомная кнопка для бандлов -->
+            <button data-bundle-checkout class="ajax-cart__button button--add-to-cart button">
+              {% if settings.show_lock_icon %}
+                {%
+                  render 'icon',
+                  name: 'lock'
+                %}
+              {% endif %}
+              {{ 'layout.general.checkout' | t }}
+            </button>
+          {%- else -%}
+            <!-- 👇 Стандартные кнопки (только если нет бандлов) -->
+            <button type="submit" name="checkout" class="ajax-cart__button button--add-to-cart button">
+              {% if settings.show_lock_icon %}
+                {%
+                  render 'icon',
+                  name: 'lock'
+                %}
+              {% endif %}
+              {{ 'layout.general.checkout' | t }}
+            </button>
+          {%- endif -%}
+
           <a class="ajax-cart__cart-link" href="{{ routes.cart_url }}" >{{ 'layout.general.go_to_cart' | t }}</a>
         {% else %}
           <a href="{{ routes.cart_url }}" class="ajax-cart__button button--add-to-cart button">
