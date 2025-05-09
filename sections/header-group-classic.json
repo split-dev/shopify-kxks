@@ -29,7 +29,7 @@
         "text_color": "#ffffff",
         "width": "wide",
         "css_class": "",
-        "custom_css": ""
+        "custom_css": ".pxu-announcement-slider__text {\n  font-family: \"Arimo\", sans-serif; /* Changed font to Arimo */\n  font-weight: 400; /* Optional: for regular weight */\n  font-style: normal; /* Optional: for normal style (not italic) */\n}"
       }
     },
     "header": {
