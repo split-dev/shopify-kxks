@@ -26,9 +26,10 @@
 {% endfor %}
 
 {% for product in products limit: for_limit %}
-
+  {% assign hidden = product.metafields.seo.hidden %}
+  
   {% comment %} Skip product if we're on its product page {% endcomment %}
-  {% if product.id != skip_product.id %}
+  {% if product.id != skip_product.id and hidden != 1 and hidden != '1' %}
     {% render 'product-thumbnail',
             product: product,
             limit: limit,
@@ -42,3 +43,4 @@
     %}
   {% endif %}
 {% endfor %}
+

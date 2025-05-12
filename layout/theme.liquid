@@ -79,12 +79,12 @@
     {% render 'js-variables' %}
 
     //SEO hidden product
-    {% comment %} function redirectToHome() {
+    function redirectToHome() {
       window.location.replace('{{ routes.root_url }}');
     }
     {% if template.name == 'product' and product.metafields.seo.hidden == 1 and request.design_mode == false %}
       redirectToHome();
-    {% endif %} {% endcomment %}
+    {% endif %}
   </script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
