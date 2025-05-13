@@ -12,7 +12,8 @@
     "common": {
       "animations": {
         "animations": "Animaciones",
-        "enable_animations": "Habilitar animaciones"
+        "enable_animations": "Habilitar animaciones",
+        "animation_duration": "Duración de la animación"
       },
       "button": {
         "background_color_info": "Se aplica al estilo de contorno",
@@ -224,7 +225,8 @@
         "default_html_3": "<p>Describe un producto, haz anuncios o da la bienvenida a los clientes a tu tienda.</p>",
         "name": "Texto",
         "text_size": "Tamaño del texto",
-        "text_size_mobile": "Móvil tamaño texto"
+        "text_size_mobile": "Móvil tamaño texto",
+        "mobile_text": "Texto móvil"
       },
       "timer": {
         "complete_message": "Mensaje de finalización del temporizador",
@@ -394,6 +396,16 @@
         "mobile_video_placement": "Ubicación del video en móvil",
         "video_first": "Video primero",
         "video_second": "Video segundo"
+      },
+      "aspect_ratio": {
+        "desktop_aspect_ratio": "Relación de aspecto de escritorio",
+        "landscape": "Horizontal (3:2)",
+        "mobile_aspect_ratio": "Relación de aspecto móvil",
+        "square": "Cuadrado (1:1)",
+        "ultra_wide": "Ultra ancho (21:9)",
+        "ultra_wide_plus": "Ultra ancho+ (32:9)",
+        "vertical": "Vertical (4:5)",
+        "wide": "Ancho (16:9)"
       }
     },
     "sections": {
@@ -934,6 +946,28 @@
         "text": {
           "heading_default": "Imagen antes y después",
           "default": "Utiliza esta sección para comparar dos imágenes y destacar un antes y después o variantes de producto."
+        }
+      },
+      "particle_banner": {
+        "background_link": {
+          "label": "Enlace de fondo"
+        },
+        "desktop_text_width": {
+          "label": "Ancho del texto de escritorio"
+        },
+        "for_best_performance": "Para un mejor rendimiento, use esta sección una vez por página.",
+        "image_overlay_opacity": {
+          "label": "Opacidad de superposición de imagen"
+        },
+        "mobile_text_width": {
+          "label": "Ancho del texto móvil"
+        },
+        "name": "🧰 Banner de partículas",
+        "text_desktop": {
+          "default": "Banner de partículas"
+        },
+        "text_mobile": {
+          "info": "Utilice esta opción si desea mostrar texto alternativo en dispositivos móviles."
         }
       }
     }

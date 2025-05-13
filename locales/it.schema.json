@@ -12,7 +12,8 @@
     "common": {
       "animations": {
         "animations": "Animazioni",
-        "enable_animations": "Abilita animazioni"
+        "enable_animations": "Abilita animazioni",
+        "animation_duration": "Durata dell'animazione"
       },
       "button": {
         "background_color_info": "Si applica allo stile contorno.",
@@ -224,7 +225,8 @@
         "default_html_3": "<p>Descrivi un prodotto, fai annunci o dai il benvenuto ai clienti nel tuo negozio.</p>",
         "name": "Testo",
         "text_size": "Dimensioni del testo",
-        "text_size_mobile": "Dimensione testo mobile"
+        "text_size_mobile": "Dimensione testo mobile",
+        "mobile_text": "Testo mobile"
       },
       "timer": {
         "complete_message": "Messaggio di completamento del timer",
@@ -394,6 +396,16 @@
         "mobile_video_placement": "Posizionamento video mobile",
         "video_first": "Video primo",
         "video_second": "Video secondo"
+      },
+      "aspect_ratio": {
+        "desktop_aspect_ratio": "Proporzioni desktop",
+        "landscape": "Orizzontale (3:2)",
+        "mobile_aspect_ratio": "Proporzioni mobile",
+        "square": "Quadrato (1:1)",
+        "ultra_wide": "Ultra largo (21:9)",
+        "ultra_wide_plus": "Ultra largo+ (32:9)",
+        "vertical": "Verticale (4:5)",
+        "wide": "Ampio (16:9)"
       }
     },
     "sections": {
@@ -934,6 +946,28 @@
         "text": {
           "heading_default": "Immagine prima e dopo",
           "default": "Usa questa sezione per confrontare due immagini, evidenziando un prima e un dopo o varianti di prodotto."
+        }
+      },
+      "particle_banner": {
+        "background_link": {
+          "label": "Link di sfondo"
+        },
+        "desktop_text_width": {
+          "label": "Larghezza del testo desktop"
+        },
+        "for_best_performance": "Per le migliori prestazioni, utilizzare questa sezione una volta per pagina.",
+        "image_overlay_opacity": {
+          "label": "Opacità sovrapposizione immagine"
+        },
+        "mobile_text_width": {
+          "label": "Larghezza del testo mobile"
+        },
+        "name": "🧰 Banner particellare",
+        "text_desktop": {
+          "default": "Banner particellare"
+        },
+        "text_mobile": {
+          "info": "Utilizza questa opzione se desideri visualizzare un testo alternativo su dispositivi mobili."
         }
       }
     }

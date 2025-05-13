@@ -71,7 +71,8 @@
     "common": {
       "animations": {
         "animations": "Animations",
-        "enable_animations": "Enable animations"
+        "enable_animations": "Enable animations",
+        "animation_duration": "Animation duration"
       },
       "button": {
         "background_color_info": "Applies to Outline style.",
@@ -286,7 +287,8 @@
         "default_html_3": "<p>Describe a product, make announcements, or welcome customers to your store.</p>",
         "name": "Text",
         "text_size": "Text size",
-        "text_size_mobile": "Mobile text size"
+        "text_size_mobile": "Mobile text size",
+        "mobile_text": "Mobile text"
       },
       "timer": {
         "complete_message": "Timer complete message",
@@ -456,6 +458,16 @@
         "mobile_video_placement": "Mobile video placement",
         "video_first": "Video first",
         "video_second": "Video second"
+      },
+      "aspect_ratio": {
+        "desktop_aspect_ratio": "Desktop aspect ratio",
+        "landscape": "Landscape (3:2)",
+        "mobile_aspect_ratio": "Mobile aspect ratio",
+        "square": "Square (1:1)",
+        "ultra_wide": "Ultra-wide (21:9)",
+        "ultra_wide_plus": "Ultra-wide+ (32:9)",
+        "vertical": "Vertical (4:5)",
+        "wide": "Wide (16:9)"
       }
     },
     "sections": {
@@ -996,6 +1008,28 @@
         "text": {
           "heading_default": "Before & after image",
           "default": "Use this section to compare two images, highlighting a before and after or product variants."
+        }
+      },
+      "particle_banner": {
+        "background_link": {
+          "label": "Background link"
+        },
+        "desktop_text_width": {
+          "label": "Desktop text width"
+        },
+        "for_best_performance": "For best performance, use this section once per page.",
+        "image_overlay_opacity": {
+          "label": "Image overlay opacity"
+        },
+        "mobile_text_width": {
+          "label": "Mobile text width"
+        },
+        "name": "🧰 Particle banner",
+        "text_desktop": {
+          "default": "Particle banner"
+        },
+        "text_mobile": {
+          "info": "Use this option if you want to display alternate text in mobile."
         }
       }
     }

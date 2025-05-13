@@ -12,7 +12,8 @@
     "common": {
       "animations": {
         "animations": "Animationen",
-        "enable_animations": "Animationen aktivieren"
+        "enable_animations": "Animationen aktivieren",
+        "animation_duration": "Animationsdauer"
       },
       "button": {
         "background_color_info": "Gilt für den Umrissstil.",
@@ -224,7 +225,8 @@
         "default_html_3": "<p>Beschreiben Sie ein Produkt, machen Sie Ankündigungen oder heißen Sie Kunden in Ihrem Shop willkommen.</p>",
         "name": "Text",
         "text_size": "Textgröße",
-        "text_size_mobile": "Textgröße mobil"
+        "text_size_mobile": "Textgröße mobil",
+        "mobile_text": "Mobiler Text"
       },
       "timer": {
         "complete_message": "Timer-Abschlussnachricht",
@@ -394,6 +396,16 @@
         "mobile_video_placement": "Mobil-Video-Positionierung",
         "video_first": "Video zuerst",
         "video_second": "Video zweit"
+      },
+      "aspect_ratio": {
+        "desktop_aspect_ratio": "Seitenverhältnis Desktop",
+        "landscape": "Querformat (3:2)",
+        "mobile_aspect_ratio": "Seitenverhältnis Mobilgerät",
+        "square": "Quadrat (1:1)",
+        "ultra_wide": "Ultrabreit (21:9)",
+        "ultra_wide_plus": "Ultrabreit+ (32:9)",
+        "vertical": "Vertikal (4:5)",
+        "wide": "Breitbild (16:9)"
       }
     },
     "sections": {
@@ -934,6 +946,28 @@
         "text": {
           "heading_default": "Vorher & Nachher-Bild",
           "default": "Verwenden Sie diesen Abschnitt, um zwei Bilder zu vergleichen und Vorher-Nachher-Effekte oder Produktvarianten hervorzuheben."
+        }
+      },
+      "particle_banner": {
+        "background_link": {
+          "label": "Hintergrundlink"
+        },
+        "desktop_text_width": {
+          "label": "Textbreite Desktop"
+        },
+        "for_best_performance": "Für beste Leistung verwenden Sie diesen Abschnitt einmal pro Seite.",
+        "image_overlay_opacity": {
+          "label": "Bildüberlagerungsdeckkraft"
+        },
+        "mobile_text_width": {
+          "label": "Textbreite Mobilgerät"
+        },
+        "name": "🧰 Partikel-Banner",
+        "text_desktop": {
+          "default": "Partikel-Banner"
+        },
+        "text_mobile": {
+          "info": "Verwenden Sie diese Option, wenn Sie alternativen Text auf Mobilgeräten anzeigen möchten."
         }
       }
     }

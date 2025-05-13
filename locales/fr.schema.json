@@ -12,7 +12,8 @@
     "common": {
       "animations": {
         "animations": "Animations",
-        "enable_animations": "Activer les animations"
+        "enable_animations": "Activer les animations",
+        "animation_duration": "Durée de l'animation"
       },
       "button": {
         "background_color_info": "S'applique au style de contour.",
@@ -224,7 +225,8 @@
         "default_html_3": "<p>Décrivez un produit, faites des annonces ou souhaitez la bienvenue à vos clients dans votre boutique.</p>",
         "name": "Texte",
         "text_size": "Taille du texte",
-        "text_size_mobile": "Taille du texte mobile"
+        "text_size_mobile": "Taille du texte mobile",
+        "mobile_text": "Texte mobile"
       },
       "timer": {
         "complete_message": "Message de fin du minuteur",
@@ -394,6 +396,16 @@
         "mobile_video_placement": "Placement de la vidéo sur mobile",
         "video_first": "Vidéo en premier",
         "video_second": "Vidéo en deuxième"
+      },
+      "aspect_ratio": {
+        "desktop_aspect_ratio": "Ratio d'aspect pour ordinateur",
+        "landscape": "Paysage (3:2)",
+        "mobile_aspect_ratio": "Ratio d'aspect mobile",
+        "square": "Carré (1:1)",
+        "ultra_wide": "Ultra-large (21:9)",
+        "ultra_wide_plus": "Ultra-large+ (32:9)",
+        "vertical": "Vertical (4:5)",
+        "wide": "Large (16:9)"
       }
     },
     "sections": {
@@ -934,6 +946,28 @@
         "text": {
           "heading_default": "Image avant et après",
           "default": "Utilisez cette section pour comparer deux images, mettant en avant un avant et un après ou des variantes de produit."
+        }
+      },
+      "particle_banner": {
+        "background_link": {
+          "label": "Lien de fond"
+        },
+        "desktop_text_width": {
+          "label": "Largeur du texte sur ordinateur"
+        },
+        "for_best_performance": "Pour de meilleures performances, utilisez cette section une fois par page.",
+        "image_overlay_opacity": {
+          "label": "Opacité de la superposition d'image"
+        },
+        "mobile_text_width": {
+          "label": "Largeur du texte mobile"
+        },
+        "name": "🧰 Bannière à particules",
+        "text_desktop": {
+          "default": "Bannière à particules"
+        },
+        "text_mobile": {
+          "info": "Utilisez cette option si vous souhaitez afficher un texte alternatif sur mobile."
         }
       }
     }
