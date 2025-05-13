@@ -154,7 +154,9 @@
         "mobile_image_2": "Imagen móvil 2",
         "mobile_image_height": "Altura de la imagen móvil",
         "mobile_image_placement": "Colocación de imagen en móvil",
-        "small": "Pequeño"
+        "small": "Pequeño",
+        "image_ratio": "Relación de aspecto de la imagen",
+        "mobile_image_ratio": "Relación de aspecto de la imagen móvil"
       },
       "layout": {
         "bottom": "Inferior",
@@ -857,6 +859,82 @@
           "default": "<p>Combina texto con un video para enfocarte en el producto, colección o publicación de blog de tu elección. Agrega detalles sobre disponibilidad, estilo o incluso una reseña.</p>"
         },
         "name": "🧰 Video con texto"
+      },
+      "announcement_slider": {
+        "auto_rotate": {
+          "label": "Rotar automáticamente los anuncios"
+        },
+        "blocks": {
+          "announcement": {
+            "mobile_text": {
+              "default": "Anunciar algo aquí",
+              "info": "Usa esta opción si deseas mostrar texto alternativo en dispositivos móviles",
+              "label": "Texto móvil"
+            },
+            "name": "Anuncio",
+            "text": {
+              "default": "Anunciar algo aquí",
+              "label": "Texto"
+            }
+          }
+        },
+        "name": "🧰 Deslizador de anuncios",
+        "rotation_speed": {
+          "label": "Cambiar cada"
+        },
+        "show_arrows": {
+          "label": "Mostrar flechas"
+        }
+      },
+      "before_after_image": {
+        "blocks": {
+          "image": {
+            "badge": {
+              "content": "Etiqueta",
+              "position": {
+                "label": "Posición de la etiqueta",
+                "options": {
+                  "end": "Final",
+                  "middle": "Centro",
+                  "start": "Inicio"
+                }
+              },
+              "show_badge": "Mostrar etiqueta",
+              "text": "Texto"
+            },
+            "name": "Imagen"
+          }
+        },
+        "image_ratio": {
+          "options": {
+            "landscape": "Horizontal (3:2)",
+            "portrait": "Vertical (2:3)",
+            "square": "Cuadrado (1:1)",
+            "ultra_wide": "Ultrapanorámico (21:9)",
+            "wide": "Panorámico (16:9)"
+          }
+        },
+        "name": "🧰 Imagen antes/después",
+        "section_heading": {
+          "value": "Imagen antes/después"
+        },
+        "slider": {
+          "content": "Controles del deslizador",
+          "control_color": "Color del control deslizante",
+          "direction": {
+            "label": "Dirección del deslizador",
+            "options": {
+              "horizontal": "Horizontal",
+              "vertical": "Vertical"
+            }
+          },
+          "position": "Posición del deslizador",
+          "slider_color": "Color del deslizador"
+        },
+        "text": {
+          "heading_default": "Imagen antes y después",
+          "default": "Utiliza esta sección para comparar dos imágenes y destacar un antes y después o variantes de producto."
+        }
       }
     }
   }

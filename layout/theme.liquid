@@ -150,7 +150,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ 'favicon.png' | asset_url }}">
   {%- endif -%}
 
-  {{ content_for_header }}
+  <!-- pxu-sections-js start DO NOT EDIT --><script src="{{ 'pxu-sections.js' | asset_url }}" defer></script><!-- DO NOT EDIT pxu-sections-js end-->
+{{ content_for_header }}
 
   {% render 'social-meta-info' %}
   {% if collection.previous_product %}<link rel="prev" href="{{ collection.previous_product }}">{% endif %}

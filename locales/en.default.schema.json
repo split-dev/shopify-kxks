@@ -213,7 +213,9 @@
         "mobile_image_2": "Mobile image 2",
         "mobile_image_height": "Mobile image height",
         "mobile_image_placement": "Mobile image placement",
-        "small": "Small"
+        "small": "Small",
+        "image_ratio": "Image aspect ratio",
+        "mobile_image_ratio": "Mobile image aspect ratio"
       },
       "layout": {
         "bottom": "Bottom",
@@ -919,6 +921,82 @@
           "default": "<p>Pair text with a video to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>"
         },
         "name": "🧰 Video with text"
+      },
+      "announcement_slider": {
+        "auto_rotate": {
+          "label": "Auto-rotate announcements"
+        },
+        "blocks": {
+          "announcement": {
+            "mobile_text": {
+              "default": "Announce something here",
+              "info": "Use this option if you want to display alternate text in mobile",
+              "label": "Mobile text"
+            },
+            "name": "Announcement",
+            "text": {
+              "default": "Announce something here",
+              "label": "Text"
+            }
+          }
+        },
+        "name": "🧰 Announcement slider",
+        "rotation_speed": {
+          "label": "Change every"
+        },
+        "show_arrows": {
+          "label": "Show arrows"
+        }
+      },
+      "before_after_image": {
+        "blocks": {
+          "image": {
+            "badge": {
+              "content": "Badge",
+              "position": {
+                "label": "Badge position",
+                "options": {
+                  "end": "End",
+                  "middle": "Middle",
+                  "start": "Start"
+                }
+              },
+              "show_badge": "Show badge",
+              "text": "Text"
+            },
+            "name": "Image"
+          }
+        },
+        "image_ratio": {
+          "options": {
+            "landscape": "Landscape (3:2)",
+            "portrait": "Portrait (2:3)",
+            "square": "Square (1:1)",
+            "ultra_wide": "Ultra-wide (21:9)",
+            "wide": "Wide (16:9)"
+          }
+        },
+        "name": "🧰 Before/after image",
+        "section_heading": {
+          "value": "Before/after image"
+        },
+        "slider": {
+          "content": "Slider controls",
+          "control_color": "Slider control color",
+          "direction": {
+            "label": "Slider direction",
+            "options": {
+              "horizontal": "Horizontal",
+              "vertical": "Vertical"
+            }
+          },
+          "position": "Slider position",
+          "slider_color": "Slider color"
+        },
+        "text": {
+          "heading_default": "Before & after image",
+          "default": "Use this section to compare two images, highlighting a before and after or product variants."
+        }
       }
     }
   }

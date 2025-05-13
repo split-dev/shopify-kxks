@@ -154,7 +154,9 @@
         "mobile_image_2": "Mobiles Bild 2",
         "mobile_image_height": "Höhe des mobilen Bildes",
         "mobile_image_placement": "Platzierung des mobilen Bildes",
-        "small": "Klein"
+        "small": "Klein",
+        "image_ratio": "Bild-Seitenverhältnis",
+        "mobile_image_ratio": "Mobiles Bild-Seitenverhältnis"
       },
       "layout": {
         "bottom": "Unten",
@@ -857,6 +859,82 @@
           "default": "<p>Kombinieren Sie Text mit einem Video, um sich auf Ihr ausgewähltes Produkt, Ihre Kollektion oder Ihren Blog-Beitrag zu konzentrieren. Fügen Sie Details zur Verfügbarkeit, zum Stil oder sogar eine Bewertung hinzu.</p>"
         },
         "name": "🧰 Video mit Text"
+      },
+      "announcement_slider": {
+        "auto_rotate": {
+          "label": "Automatische Ankündigungen rotieren"
+        },
+        "blocks": {
+          "announcement": {
+            "mobile_text": {
+              "default": "Hier etwas ankündigen",
+              "info": "Verwenden Sie diese Option, wenn Sie alternativen Text auf mobilen Geräten anzeigen möchten",
+              "label": "Mobiler Text"
+            },
+            "name": "Ankündigung",
+            "text": {
+              "default": "Hier etwas ankündigen",
+              "label": "Text"
+            }
+          }
+        },
+        "name": "🧰 Ankündigungs-Slider",
+        "rotation_speed": {
+          "label": "Ändern alle"
+        },
+        "show_arrows": {
+          "label": "Pfeile anzeigen"
+        }
+      },
+      "before_after_image": {
+        "blocks": {
+          "image": {
+            "badge": {
+              "content": "Abzeichen",
+              "position": {
+                "label": "Abzeichenposition",
+                "options": {
+                  "end": "Ende",
+                  "middle": "Mitte",
+                  "start": "Anfang"
+                }
+              },
+              "show_badge": "Abzeichen anzeigen",
+              "text": "Text"
+            },
+            "name": "Bild"
+          }
+        },
+        "image_ratio": {
+          "options": {
+            "landscape": "Querformat (3:2)",
+            "portrait": "Hochformat (2:3)",
+            "square": "Quadrat (1:1)",
+            "ultra_wide": "Ultraweit (21:9)",
+            "wide": "Breitbild (16:9)"
+          }
+        },
+        "name": "🧰 Vorher/Nachher-Bild",
+        "section_heading": {
+          "value": "Vorher/Nachher-Bild"
+        },
+        "slider": {
+          "content": "Schieberegler-Steuerungen",
+          "control_color": "Farbe der Schieberegler-Steuerungen",
+          "direction": {
+            "label": "Schieberegler-Richtung",
+            "options": {
+              "horizontal": "Horizontal",
+              "vertical": "Vertikal"
+            }
+          },
+          "position": "Schieberegler-Position",
+          "slider_color": "Schieberegler-Farbe"
+        },
+        "text": {
+          "heading_default": "Vorher & Nachher-Bild",
+          "default": "Verwenden Sie diesen Abschnitt, um zwei Bilder zu vergleichen und Vorher-Nachher-Effekte oder Produktvarianten hervorzuheben."
+        }
       }
     }
   }
