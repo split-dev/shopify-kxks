@@ -193,7 +193,7 @@
     "cart_action": "mini_cart",
     "show_lock_icon": true,
     "cart_icon": "bag",
-    "display_special_instructions": false,
+    "display_special_instructions": true,
     "display_tos_checkbox": false,
     "tos_page": "",
     "display_savings": true,
