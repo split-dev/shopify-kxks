@@ -296,6 +296,7 @@
     },
     "index_featured_collection_8JGJRV": {
       "type": "index__featured-collection",
+      "disabled": true,
       "settings": {
         "title": "DUFFLES",
         "collection": "kicks-kase-duffles",
