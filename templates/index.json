@@ -138,7 +138,7 @@
       "type": "index__featured-collection",
       "settings": {
         "title": "HOT SELLERS",
-        "collection": "hot-sellers",
+        "collection": "most-wanted",
         "products_per": 4,
         "products_limit": 16,
         "align_height": false,
@@ -152,7 +152,7 @@
         "padding_bottom": 20,
         "animation": "none",
         "collection_layout_mobile": "slider",
-        "mobile_products_per_row": "1",
+        "mobile_products_per_row": "2",
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 20,
         "css_class": "",
