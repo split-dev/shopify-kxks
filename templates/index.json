@@ -86,21 +86,24 @@
         "collection_q6E4XA": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "backpacks",
+            "image": "shopify://shop_images/PhotoFeb112025_90519PM_606d8c3f-5009-43f0-ab51-bcd3d61042bf.jpg",
             "heading": ""
           }
         },
         "collection_6wi6VE": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "travel-cases",
+            "image": "shopify://shop_images/2N5A8244-2.jpg",
             "heading": ""
           }
         },
         "collection_9Q4DJd": {
           "type": "collection",
           "settings": {
-            "collection": "",
+            "collection": "accessories",
+            "image": "shopify://shop_images/Image_2_e46db4d2-9ceb-4ec4-904e-c757ea46cc89.png",
             "heading": ""
           }
         }
