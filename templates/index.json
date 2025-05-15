@@ -246,6 +246,7 @@
         "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-0",
         "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-2"
       ],
+      "disabled": true,
       "settings": {
         "gallery_type": "classic",
         "images_per_row": 4,
@@ -476,7 +477,7 @@
         "show-border": false,
         "button_label": "Read more",
         "button_type": "button--primary",
-        "width": "wide",
+        "width": "standard",
         "padding_top": 20,
         "padding_bottom": 0,
         "animation": "none",
