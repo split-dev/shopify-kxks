@@ -155,7 +155,7 @@
     "qty_border_radius": 0,
     "tag_style": "solid",
     "enable_shopify_collection_badges": true,
-    "show_secondary_image": true,
+    "show_secondary_image": false,
     "display_vendor": false,
     "thumbnail_hover_enabled": false,
     "thumbnail_text_alignment": "center",
