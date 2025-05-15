@@ -13,6 +13,7 @@
   "sections": {
     "announcement_bar": {
       "type": "announcement-bar",
+      "disabled": true,
       "settings": {
         "homepage_only": true,
         "enable_sticky": true,
@@ -30,6 +31,45 @@
         "width": "wide",
         "css_class": "",
         "custom_css": ".pxu-announcement-slider__text {\n  font-family: \"Arimo\", sans-serif; /* Changed font to Arimo */\n  font-weight: 400; /* Optional: for regular weight */\n  font-style: normal; /* Optional: for normal style (not italic) */\n}"
+      }
+    },
+    "pxu_announcement_slider_XVmEdd": {
+      "type": "pxu-announcement-slider",
+      "blocks": {
+        "announcement_9BVapM": {
+          "type": "announcement",
+          "settings": {
+            "text": "FREE SHIPPING ON ALL AUS ORDERS!",
+            "mobile_text": "",
+            "link": ""
+          }
+        },
+        "announcement_NVnxgi": {
+          "type": "announcement",
+          "settings": {
+            "text": "Bundle & Save. <a href=\"/collections/product-bundles\" title=\"Product Bundles\">SHOP OUR BUNDLES</a>",
+            "mobile_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_9BVapM",
+        "announcement_NVnxgi"
+      ],
+      "name": "t:pxu_sections.sections.announcement_slider.name",
+      "settings": {
+        "auto_rotate": true,
+        "rotation_speed": 5,
+        "show_arrows": true,
+        "text_size": 14,
+        "text_size_mobile": 14,
+        "text_color": "#FFFFFF",
+        "background_color": "#000000",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "margin_top": 0,
+        "margin_bottom": 0
       }
     },
     "header": {
@@ -498,6 +538,7 @@
   },
   "order": [
     "announcement_bar",
+    "pxu_announcement_slider_XVmEdd",
     "header",
     "header_top-bar",
     "mega_menu_1",
