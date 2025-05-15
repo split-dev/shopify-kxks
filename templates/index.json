@@ -137,7 +137,7 @@
     "index_featured_collection_hRUEhX": {
       "type": "index__featured-collection",
       "settings": {
-        "title": "HOT SELLERS",
+        "title": "MOST WANTED",
         "collection": "most-wanted",
         "products_per": 4,
         "products_limit": 16,
