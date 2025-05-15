@@ -1,0 +1,330 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "product__breadcrumb",
+      "settings": {
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "sidebar": {
+      "type": "product__sidebar",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "main": {
+      "type": "product__main",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "display_savings": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "form": {
+          "type": "form",
+          "settings": {
+            "show_payment_button": true,
+            "show_gift_card_recipient_form": false
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {}
+        },
+        "ce770b67-888c-401e-8bd8-773651b7d21f": {
+          "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/form-embed-block/2632fe16-c075-4321-a88b-50b567f42507",
+          "disabled": true,
+          "settings": {
+            "formId": "RZWkvG"
+          }
+        },
+        "bl_custom_html_css_js_liquid_block_code_WU4wHe": {
+          "type": "shopify://apps/bl-custom-html-css-js-liquid/blocks/block-code/96fc73ef-2727-4174-82ec-12cfce5b3426",
+          "settings": {
+            "html_code": "<dl class=\"accordion\">\n    <dt><a class=\"active\" href=\"#\"><small class=\"right\">◄</small>Description</a></dt>\n    <dd class=\"active\">Discover the ultimate travel companion designed for both style and functionality. Our superior quality duffle bags feature three padded dividers with Velcro, allowing for a customisable packing experience tailored to your needs. Accommodating up to size US15 men's shoes and a 16\" laptop, this versatile bag is perfect for gym sessions, weekend getaways, or business trips. With a spacious front pocket, side pockets, and three inner pockets for smaller items, you'll have ample room for all your essentials.</dd>\n    <dt><a class=\"active\" href=\"#\"><small class=\"right\">◄</small>Size</a></dt>\n    <dd class=\"active\">Approved for carry-on travel (55 x 24 x 33 cm)</dd>\n    <dt><a class=\"active\" href=\"#\"><small class=\"right\">◄</small>Includes</a></dt>\n    <dd class=\"active\">\n        <ul>\n            <li>1 x Duffle bag<br>\n</li>\n            <li>1 x Shoulder strap</li>\n            <li>3 x Padded dividers</li>\n            <li>4 x Shoe pouches</li>\n        </ul>\n    </dd>\n    <dt><a class=\"active\" href=\"#\"><small class=\"right\">◄</small>Shipping</a></dt>\n    <dd class=\"active\">\n        <p class=\"lead\"><span>Free shipping for all AUS orders.</span></p>\n        <table width=\"100%\">\n            <tbody>\n                <tr>\n                    <td><strong>Australia</strong></td>\n                    <td></td>\n                </tr>\n                <tr>\n                    <td>Standard <span>(5-10 business days)</span>\n</td>\n                    <td>FREE</td>\n                </tr>\n                <tr>\n                    <td>Express <span>(4-8 business days)</span>\n</td>\n                    <td>$6 AUD</td>\n                </tr>\n            </tbody>\n        </table>\n        <p>For shipping information for other countries please go to:<span> </span><a href=\"https://www.kickskase.com.au/pages/shipping-delivery\">Shipping &amp; Delivery</a>.</p>\n    </dd>\n</dl>",
+            "css_code": "",
+            "js_code": "",
+            "liquid_code": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "description",
+        "form",
+        "share",
+        "ce770b67-888c-401e-8bd8-773651b7d21f",
+        "bl_custom_html_css_js_liquid_block_code_WU4wHe"
+      ],
+      "settings": {
+        "product_images_position": "left",
+        "set_product_height": false,
+        "product_height": 500,
+        "video_looping": false,
+        "gallery_arrows": true,
+        "enable_zoom": true,
+        "enable_product_lightbox": true,
+        "slideshow_speed": 0,
+        "slideshow_transition": "slide",
+        "display_thumbnails": true,
+        "thumbnail_position": "bottom-thumbnails",
+        "enable_thumbnail_slider": true,
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "d32abb0c-a450-439b-ad28-c11709e81923": {
+      "type": "index__video",
+      "settings": {
+        "iframe_video": "https://www.youtube.com/watch?v=92HoltIq5lg&ab_channel=KicksKase",
+        "html5_video": "",
+        "autoplay": false,
+        "autoloop": true,
+        "mute_video": false,
+        "controls": true,
+        "aspect_ratio": "16:9",
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "pretext_color": "#000000",
+        "heading_color": "#000000",
+        "subheading_color": "#000000",
+        "text_align": "center",
+        "horizontal_text_position": "center",
+        "vertical_text_position": "center",
+        "button_label": "",
+        "button_style": "button--secondary",
+        "text_width": 70,
+        "overlay_style": "text_only",
+        "video_overlay_color": "rgba(0,0,0,0)",
+        "background_opacity": 77,
+        "gradient": "rgba(0,0,0,0)",
+        "gradient_rotation": 180,
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "mobile_text_below_video": true,
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_color_mobile": "rgba(0,0,0,0)",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "mobile_text_alignment": "none",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "16484837071b250fef": {
+      "type": "apps",
+      "blocks": {
+        "95362825-ecfb-4f53-b312-4651ec116c4e": {
+          "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
+          "settings": {
+            "maxwidth": 1080
+          }
+        },
+        "15983550-a5f4-4dfd-8499-116f59580efa": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "95362825-ecfb-4f53-b312-4651ec116c4e",
+        "15983550-a5f4-4dfd-8499-116f59580efa"
+      ],
+      "settings": {
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "164906006462a11931": {
+      "type": "index__image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/1800x900_Module__1.jpg",
+        "mobile_image": "shopify://shop_images/1400x900_mobile_0235fd34-8054-451e-9984-9182c2b85dfe.jpg",
+        "link": "",
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "pretext_color": "#000000",
+        "heading_color": "#000000",
+        "subheading_color": "#000000",
+        "text_alignment": "center",
+        "text_horizontal_position": "center",
+        "text_vertical_position": "middle",
+        "text_width": 40,
+        "background_color": "#ffffff",
+        "background_opacity": 77,
+        "border_color": "#ffffff",
+        "border_width": 0,
+        "button_1": "",
+        "button_1_link": "",
+        "button_1_style": "button--secondary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "mobile_text_below_image": true,
+        "mobile_preheading": "",
+        "mobile_heading": "",
+        "mobile_subheading": "",
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_color_mobile": "rgba(0,0,0,0)",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "text_alignment_mobile": "same_as_desktop",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "recommendations": {
+      "type": "product__recommendations",
+      "settings": {
+        "show_product_recommendations": true,
+        "product_recommendations_style": "slider",
+        "product_recommendations_heading": "You may also like",
+        "products_per": 4,
+        "recommended_products_limit": 10,
+        "align_height": false,
+        "collection_height": 200,
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "546616cd-9421-4f34-bd2a-3b398ef476a0": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<script>\nwindow.addEventListener('load', function() {\nvar _learnq = window._learnq || [];\nfunction addedToCart() {\n  fetch(`${window.location.origin}/cart.js`)\n  .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price/100,\n      $value: data.total_price/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', cart]);\n        klAjax = false;\n      }\n  }))\n};\n(function (ns, fetch) {\n  ns.fetch = function() {\n    const response = fetch.apply(this, arguments);\n    response.then(res => {\n      if (`${window.location.origin}/cart/add.js`\n      \t.includes(res.url)) {\n        \taddedToCart()\n      }\n    });\n    return response\n  }\n}(window, window.fetch));\nvar klAjax = true;\nvar atcButtons = document.querySelectorAll(\"form[action*='/cart/add'] button[type='submit']\");\nfor (var i = 0; i < atcButtons.length; i++) {\n    atcButtons[i].addEventListener(\"click\", function() {\n      if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', item]);\n        klAjax = false;\n      }\n    })\n}\n});\n</script>"
+      }
+    },
+    "index_gallery_hdmiB6": {
+      "type": "index__gallery",
+      "blocks": {
+        "image_rb8HGq": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/originals_tile.jpg",
+            "link": "shopify://collections/originals"
+          }
+        },
+        "image_tmpA6k": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/suede_tile_e2db298c-1f47-4779-84d4-2bfe73e125c2.jpg",
+            "link": "shopify://collections/suede"
+          }
+        },
+        "image_7crWQ8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/camo_tile_a8dfff14-1f70-4c94-be71-e290738706ec.jpg",
+            "link": "shopify://collections/camo"
+          }
+        },
+        "image_bCEQDA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/backpack_tile.jpg",
+            "link": "shopify://collections/backpacks"
+          }
+        },
+        "image_rbM9Ya": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/sneaker_case_tile_1.jpg",
+            "link": "shopify://collections/travel-cases"
+          }
+        }
+      },
+      "block_order": [
+        "image_rb8HGq",
+        "image_tmpA6k",
+        "image_7crWQ8",
+        "image_bCEQDA",
+        "image_rbM9Ya"
+      ],
+      "settings": {
+        "gallery_type": "classic",
+        "images_per_row": 5,
+        "crop_images": false,
+        "enable_lightbox": true,
+        "overlay_color": "#000000",
+        "link_color": "#ffffff",
+        "width": "standard",
+        "show_gutter": true,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "mobile_layout": "stacked",
+        "crop_images_mobile": false,
+        "show_arrows": true,
+        "show_navigation_dots": true,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "sidebar",
+    "main",
+    "d32abb0c-a450-439b-ad28-c11709e81923",
+    "16484837071b250fef",
+    "164906006462a11931",
+    "recommendations",
+    "546616cd-9421-4f34-bd2a-3b398ef476a0",
+    "index_gallery_hdmiB6"
+  ]
+}
