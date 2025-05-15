@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "index_html_Qme7Nm": {
       "type": "index__html",
@@ -70,6 +70,65 @@
         "padding_bottom_mobile": 0,
         "css_class": "",
         "custom_css": ""
+      }
+    },
+    "pxu_collection_list_6MYc76": {
+      "type": "pxu-collection-list",
+      "blocks": {
+        "collection_kiHxYM": {
+          "type": "collection",
+          "settings": {
+            "collection": "originals",
+            "image": "shopify://shop_images/5_0e02fcfe-039a-4f28-9756-88497d1b49a5.jpg",
+            "heading": "Duffles"
+          }
+        },
+        "collection_q6E4XA": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "heading": ""
+          }
+        },
+        "collection_6wi6VE": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "heading": ""
+          }
+        },
+        "collection_9Q4DJd": {
+          "type": "collection",
+          "settings": {
+            "collection": "",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_kiHxYM",
+        "collection_q6E4XA",
+        "collection_6wi6VE",
+        "collection_9Q4DJd"
+      ],
+      "name": "t:pxu_sections.sections.collection_list.name",
+      "settings": {
+        "section_heading": "Collection list",
+        "section_heading_size": 40,
+        "section_heading_size_mobile": 30,
+        "desktop_columns": 4,
+        "content_alignment": "center",
+        "heading_size": 20,
+        "heading_size_mobile": 18,
+        "image_crop": "circle",
+        "mobile_columns": 2,
+        "text_color": "#000000",
+        "background_color": "#FFFFFF",
+        "enable_animations": true,
+        "padding_top": 32,
+        "padding_bottom": 32,
+        "margin_top": 64,
+        "margin_bottom": 64
       }
     },
     "index_featured_collection_hRUEhX": {
@@ -540,6 +599,7 @@
   "order": [
     "index_html_Qme7Nm",
     "16116130705f391e7b",
+    "pxu_collection_list_6MYc76",
     "index_featured_collection_hRUEhX",
     "index_image_with_text_AKeejq",
     "e377968d-b8b5-48b0-8bac-f8d3c56f35ac",
