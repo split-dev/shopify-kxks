@@ -72,66 +72,6 @@
         "custom_css": ""
       }
     },
-    "e377968d-b8b5-48b0-8bac-f8d3c56f35ac": {
-      "type": "index__gallery",
-      "blocks": {
-        "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-0": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/originals_tile.jpg",
-            "link": "shopify://collections/originals"
-          }
-        },
-        "image_AzCcgR": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/backpack_tile.jpg",
-            "link": "shopify://collections/backpacks"
-          }
-        },
-        "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-3": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/packing_organisers.jpg",
-            "link": "shopify://collections/travel-cases"
-          }
-        },
-        "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-2": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Image_2_e46db4d2-9ceb-4ec4-904e-c757ea46cc89.png",
-            "link": "shopify://collections/accessories"
-          }
-        }
-      },
-      "block_order": [
-        "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-0",
-        "image_AzCcgR",
-        "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-3",
-        "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-2"
-      ],
-      "settings": {
-        "gallery_type": "classic",
-        "images_per_row": 4,
-        "crop_images": false,
-        "enable_lightbox": false,
-        "overlay_color": "#000000",
-        "link_color": "#ffffff",
-        "width": "standard",
-        "show_gutter": true,
-        "padding_top": 20,
-        "padding_bottom": 20,
-        "animation": "none",
-        "mobile_layout": "slider",
-        "crop_images_mobile": false,
-        "show_arrows": false,
-        "show_navigation_dots": true,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20,
-        "css_class": "",
-        "custom_css": ""
-      }
-    },
     "index_featured_collection_hRUEhX": {
       "type": "index__featured-collection",
       "settings": {
@@ -536,12 +476,83 @@
         "css_class": "",
         "custom_css": ""
       }
+    },
+    "index_collection_list_VrpTX6": {
+      "type": "index__collection-list",
+      "blocks": {
+        "collection_byXrrj": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "kicks-kase-duffles",
+            "image": "shopify://shop_images/5_0e02fcfe-039a-4f28-9756-88497d1b49a5.jpg",
+            "title": "DUFFLES",
+            "button_label": ""
+          }
+        },
+        "collection_7UBbmD": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "backpacks",
+            "image": "shopify://shop_images/PhotoFeb112025_90519PM_606d8c3f-5009-43f0-ab51-bcd3d61042bf.jpg",
+            "title": "BACKPACKS",
+            "button_label": ""
+          }
+        },
+        "collection_6E7E8W": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "travel-cases",
+            "image": "shopify://shop_images/2N5A8244-2.jpg",
+            "title": "PACKING ORGANISERS",
+            "button_label": ""
+          }
+        },
+        "collection_4gcgQR": {
+          "type": "collection",
+          "settings": {
+            "feature_collection": "accessories",
+            "image": "shopify://shop_images/2N5A9929-4-Edit_297764d7-5dd4-4bb8-85be-0e8f50a93414.jpg",
+            "title": "ACCESSORIES",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "collection_byXrrj",
+        "collection_7UBbmD",
+        "collection_6E7E8W",
+        "collection_4gcgQR"
+      ],
+      "name": "Collection list",
+      "settings": {
+        "collections_per_row": 4,
+        "align_height": false,
+        "collection_height": 400,
+        "enable_zoom": true,
+        "button_style": "button--secondary",
+        "overlay_text": "#FFFFFF",
+        "overlay_background": "#939393",
+        "overlay_background_opacity": 0,
+        "collection_title_below_image": false,
+        "width": "wide",
+        "show_gutter": true,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "mobile_layout": "stacked",
+        "show_arrows": true,
+        "show_navigation_dots": true,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
     }
   },
   "order": [
     "index_html_Qme7Nm",
     "16116130705f391e7b",
-    "e377968d-b8b5-48b0-8bac-f8d3c56f35ac",
+    "index_collection_list_VrpTX6",
     "index_featured_collection_hRUEhX",
     "index_image_with_text_AKeejq",
     "75fc114c-e813-42b4-a561-f942c0dd5eb9",
