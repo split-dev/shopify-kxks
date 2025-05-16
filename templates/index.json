@@ -125,7 +125,7 @@
         "collection_height": 400,
         "enable_zoom": true,
         "button_style": "button--secondary",
-        "overlay_text": "#FFFFFF",
+        "overlay_text": "#ffffff",
         "overlay_background": "#939393",
         "overlay_background_opacity": 0,
         "collection_title_below_image": false,
@@ -320,6 +320,7 @@
     },
     "e784de53-2fea-48c7-808d-99f9e489abd5": {
       "type": "index__rich-text",
+      "disabled": true,
       "settings": {
         "title": "FEATURED ON",
         "heading_font": "rubik_n4",
@@ -368,6 +369,7 @@
       "block_order": [
         "template--16057642614938__6a857bb0-3a50-4f0e-be4b-ae7cb4f57144-16850948524529b1c6-0"
       ],
+      "disabled": true,
       "settings": {
         "logos_per_row": 5,
         "logo_size": "medium",
@@ -443,6 +445,7 @@
       "blocks": {
         "09751664-4ce6-4cc3-8f76-60668cd70c78": {
           "type": "shopify://apps/judge-me-reviews/blocks/featured_carousel/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "disabled": true,
           "settings": {
             "maxwidth": 1080
           }
@@ -451,6 +454,7 @@
       "block_order": [
         "09751664-4ce6-4cc3-8f76-60668cd70c78"
       ],
+      "disabled": true,
       "settings": {
         "width": "wide",
         "padding_top": 0,
