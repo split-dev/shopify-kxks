@@ -13,7 +13,6 @@
   "sections": {
     "announcement_bar": {
       "type": "announcement-bar",
-      "disabled": true,
       "settings": {
         "homepage_only": true,
         "enable_sticky": true,
@@ -57,6 +56,7 @@
         "announcement_9BVapM",
         "announcement_NVnxgi"
       ],
+      "disabled": true,
       "name": "t:pxu_sections.sections.announcement_slider.name",
       "settings": {
         "auto_rotate": true,
@@ -64,7 +64,7 @@
         "show_arrows": true,
         "text_size": 14,
         "text_size_mobile": 14,
-        "text_color": "#FFFFFF",
+        "text_color": "#ffffff",
         "background_color": "#000000",
         "padding_top": 0,
         "padding_bottom": 0,

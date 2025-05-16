@@ -72,6 +72,66 @@
         "custom_css": ""
       }
     },
+    "e377968d-b8b5-48b0-8bac-f8d3c56f35ac": {
+      "type": "index__gallery",
+      "blocks": {
+        "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/originals_tile.jpg",
+            "link": "shopify://collections/originals"
+          }
+        },
+        "image_AzCcgR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/backpack_tile.jpg",
+            "link": "shopify://collections/backpacks"
+          }
+        },
+        "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/packing_organisers.jpg",
+            "link": "shopify://collections/travel-cases"
+          }
+        },
+        "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Image_2_e46db4d2-9ceb-4ec4-904e-c757ea46cc89.png",
+            "link": "shopify://collections/accessories"
+          }
+        }
+      },
+      "block_order": [
+        "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-0",
+        "image_AzCcgR",
+        "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-3",
+        "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-2"
+      ],
+      "settings": {
+        "gallery_type": "classic",
+        "images_per_row": 4,
+        "crop_images": false,
+        "enable_lightbox": false,
+        "overlay_color": "#000000",
+        "link_color": "#ffffff",
+        "width": "wide",
+        "show_gutter": true,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "mobile_layout": "slider",
+        "crop_images_mobile": false,
+        "show_arrows": false,
+        "show_navigation_dots": true,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
     "pxu_collection_list_6MYc76": {
       "type": "pxu-collection-list",
       "blocks": {
@@ -114,6 +174,7 @@
         "collection_6wi6VE",
         "collection_9Q4DJd"
       ],
+      "disabled": true,
       "name": "t:pxu_sections.sections.collection_list.name",
       "settings": {
         "section_heading": "Collection list",
@@ -126,7 +187,7 @@
         "image_crop": "circle",
         "mobile_columns": 2,
         "text_color": "#000000",
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "enable_animations": true,
         "padding_top": 32,
         "padding_bottom": 32,
@@ -204,67 +265,6 @@
         "mobile_text_position": "middle",
         "mobile_padding_top": 20,
         "mobile_padding_bottom": 20,
-        "css_class": "",
-        "custom_css": ""
-      }
-    },
-    "e377968d-b8b5-48b0-8bac-f8d3c56f35ac": {
-      "type": "index__gallery",
-      "blocks": {
-        "image_AzCcgR": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/backpack_tile.jpg",
-            "link": "shopify://collections/backpacks"
-          }
-        },
-        "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-3": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/packing_organisers.jpg",
-            "link": "shopify://collections/travel-cases"
-          }
-        },
-        "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-0": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/originals_tile.jpg",
-            "link": "shopify://collections/originals"
-          }
-        },
-        "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-2": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/suede_tile_e2db298c-1f47-4779-84d4-2bfe73e125c2.jpg",
-            "link": "shopify://collections/suede"
-          }
-        }
-      },
-      "block_order": [
-        "image_AzCcgR",
-        "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-3",
-        "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-0",
-        "template--16057642614938__e377968d-b8b5-48b0-8bac-f8d3c56f35ac-1687406293d13850c2-2"
-      ],
-      "disabled": true,
-      "settings": {
-        "gallery_type": "classic",
-        "images_per_row": 4,
-        "crop_images": false,
-        "enable_lightbox": false,
-        "overlay_color": "#000000",
-        "link_color": "#ffffff",
-        "width": "wide",
-        "show_gutter": true,
-        "padding_top": 20,
-        "padding_bottom": 20,
-        "animation": "none",
-        "mobile_layout": "slider",
-        "crop_images_mobile": false,
-        "show_arrows": false,
-        "show_navigation_dots": true,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20,
         "css_class": "",
         "custom_css": ""
       }
@@ -604,10 +604,10 @@
   "order": [
     "index_html_Qme7Nm",
     "16116130705f391e7b",
+    "e377968d-b8b5-48b0-8bac-f8d3c56f35ac",
     "pxu_collection_list_6MYc76",
     "index_featured_collection_hRUEhX",
     "index_image_with_text_AKeejq",
-    "e377968d-b8b5-48b0-8bac-f8d3c56f35ac",
     "75fc114c-e813-42b4-a561-f942c0dd5eb9",
     "index_featured_collection_8JGJRV",
     "e784de53-2fea-48c7-808d-99f9e489abd5",
