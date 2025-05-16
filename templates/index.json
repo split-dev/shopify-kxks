@@ -106,7 +106,7 @@
           "type": "collection",
           "settings": {
             "feature_collection": "accessories",
-            "image": "shopify://shop_images/2N5A9929-4-Edit_297764d7-5dd4-4bb8-85be-0e8f50a93414.jpg",
+            "image": "shopify://shop_images/2N5A9929-4-Edited_dde9d78f-8276-49fa-8f47-f416cc5e15bc.jpg",
             "title": "ACCESSORIES",
             "button_label": ""
           }
@@ -143,6 +143,55 @@
         "custom_css": ""
       }
     },
+    "index_image_with_text_AKeejq": {
+      "type": "index__image-with-text",
+      "blocks": {
+        "text_ybXQbm": {
+          "type": "text",
+          "settings": {
+            "title": "BUNDLE & SAVE",
+            "heading_size": "regular",
+            "text": "<p>Discover our bundle collection – the bigger the bundle, the more you save. </p><p>We've created multiple bundle options to suit your needs. Each set combines our top-rated products at discounted prices. <br/><br/></p>",
+            "alignment": "left",
+            "vertical_position": "center",
+            "button_label": "SHOP BUNDLES",
+            "link": "shopify://products/game-day-backpack",
+            "button_style": "button--link-style",
+            "background": "rgba(0,0,0,0)",
+            "text_color": "rgba(0,0,0,0)",
+            "mobile_title": "",
+            "mobile_heading_size": "same_as_desktop",
+            "mobile_text": "",
+            "mobile_alignment": "same_as_desktop"
+          }
+        },
+        "image_3N36bn": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/JNY_9819_resized.jpg",
+            "mobile_image": "shopify://shop_images/JNY_9814_resized.jpg",
+            "image_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_ybXQbm",
+        "image_3N36bn"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "width": "wide",
+        "show_gutter": true,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "mobile_text_position": "middle",
+        "mobile_padding_top": 20,
+        "mobile_padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
     "index_featured_collection_hRUEhX": {
       "type": "index__featured-collection",
       "settings": {
@@ -168,18 +217,18 @@
         "custom_css": ""
       }
     },
-    "index_image_with_text_AKeejq": {
+    "index_image_with_text_DbVRhY": {
       "type": "index__image-with-text",
       "blocks": {
-        "image_3N36bn": {
+        "image_mxGWhP": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/DSCF5630_ed_re_1bc1a083-eac3-4be0-93de-7ea48d6d5a03.jpg",
+            "image": "shopify://shop_images/DSCF5630_ed_reed_db1b131e-5e2e-4ca8-a6ee-aa53fa6ae033.jpg",
             "mobile_image": "shopify://shop_images/DSCF5625_ed_re_5d3674d2-0a3d-46a9-a7eb-a50ae1a0c04c.jpg",
             "image_link": ""
           }
         },
-        "text_ybXQbm": {
+        "text_8QVP93": {
           "type": "text",
           "settings": {
             "title": "Be First to Own the Ultimate Sports Backpack",
@@ -200,8 +249,8 @@
         }
       },
       "block_order": [
-        "image_3N36bn",
-        "text_ybXQbm"
+        "image_mxGWhP",
+        "text_8QVP93"
       ],
       "name": "Image with text",
       "settings": {
@@ -412,6 +461,7 @@
     },
     "index_blog_posts_fUYTff": {
       "type": "index__blog-posts",
+      "disabled": true,
       "settings": {
         "title": "ON THE MOVE WITH...",
         "blog_widget_select": "news",
@@ -553,8 +603,9 @@
     "index_html_Qme7Nm",
     "16116130705f391e7b",
     "index_collection_list_VrpTX6",
-    "index_featured_collection_hRUEhX",
     "index_image_with_text_AKeejq",
+    "index_featured_collection_hRUEhX",
+    "index_image_with_text_DbVRhY",
     "75fc114c-e813-42b4-a561-f942c0dd5eb9",
     "index_featured_collection_8JGJRV",
     "e784de53-2fea-48c7-808d-99f9e489abd5",
