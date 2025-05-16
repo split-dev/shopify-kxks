@@ -11,6 +11,7 @@
   "sections": {
     "banner": {
       "type": "fallback_image_banner",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/all_products_banner_279c0759-3cd3-4fa7-b13c-90c6c3327f7c.jpg",
         "image_darken": false,
@@ -140,6 +141,12 @@
         "padding_top": 20,
         "padding_bottom": 20,
         "animation": "none",
+        "mobile_layout": "stacked",
+        "crop_images_mobile": false,
+        "show_arrows": true,
+        "show_navigation_dots": true,
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
         "css_class": "",
         "custom_css": ""
       }
@@ -177,9 +184,15 @@
         "padding_right": 0,
         "animation": "none",
         "mobile_text_below_image": true,
+        "mobile_preheading": "",
+        "mobile_heading": "",
+        "mobile_subheading": "",
         "pretext_color_mobile": "rgba(0,0,0,0)",
         "heading_color_mobile": "rgba(0,0,0,0)",
         "subheading_color_mobile": "rgba(0,0,0,0)",
+        "text_alignment_mobile": "same_as_desktop",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
         "css_class": "",
         "custom_css": ""
       }
