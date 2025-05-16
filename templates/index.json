@@ -132,7 +132,7 @@
         "width": "wide",
         "show_gutter": true,
         "padding_top": 20,
-        "padding_bottom": 20,
+        "padding_bottom": 15,
         "animation": "none",
         "mobile_layout": "stacked",
         "show_arrows": true,
