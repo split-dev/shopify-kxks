@@ -97,79 +97,60 @@
     "mega_menu_1": {
       "type": "mega-menu",
       "blocks": {
-        "4c84ed03-ce81-4b19-8bb4-43514947fe7a": {
-          "type": "mixed",
-          "settings": {
-            "richtext_top": "",
-            "image_link_top": "shopify://collections/kicks-kase-duffles",
-            "image_caption_top": "",
-            "menu_1": "kicks-kase-duffles",
-            "menu_1_link": "shopify://collections/kicks-kase-duffles",
-            "menu_2": "",
-            "menu_2_link": "",
-            "menu_3": "",
-            "menu_3_link": "",
-            "menu_4": "",
-            "menu_4_link": "",
-            "image_link_bottom": "shopify://collections/kicks-kase-duffles",
-            "richtext_bottom": ""
-          }
-        },
-        "featured_promo_bRWYE4": {
+        "featured_promo_PzTbkH": {
           "type": "featured_promo",
           "settings": {
-            "image": "shopify://shop_images/DUFFLES_tile.jpg",
+            "image": "shopify://shop_images/5_0e02fcfe-039a-4f28-9756-88497d1b49a5.jpg",
             "richtext": "",
-            "bgr_color": "#eaedee",
+            "bgr_color": "#eeeeee",
             "text_color": "#000000",
-            "button_label": "Shop Duffles",
+            "button_label": "DUFFLES",
             "promo_link": "shopify://collections/kicks-kase-duffles",
-            "button_style": "button--primary"
+            "button_style": "button--secondary"
           }
         },
         "mega-menu-1-1": {
           "type": "featured_promo",
           "settings": {
-            "image": "shopify://shop_images/packing_organisers.jpg",
+            "image": "shopify://shop_images/PhotoFeb112025_90519PM_606d8c3f-5009-43f0-ab51-bcd3d61042bf.jpg",
             "richtext": "",
             "bgr_color": "#eaedee",
             "text_color": "#000000",
-            "button_label": "Shop Packing Organisers",
+            "button_label": "BACKPACKS",
+            "promo_link": "shopify://collections/backpacks",
+            "button_style": "button--secondary"
+          }
+        },
+        "featured_promo_bRWYE4": {
+          "type": "featured_promo",
+          "settings": {
+            "image": "shopify://shop_images/2N5A8244-2.jpg",
+            "richtext": "",
+            "bgr_color": "#eaedee",
+            "text_color": "#000000",
+            "button_label": "PACKING ORGANISERES",
             "promo_link": "shopify://collections/travel-cases",
-            "button_style": "button--primary"
+            "button_style": "button--secondary"
           }
         },
         "86c1b510-9a51-4914-b5bc-fa856f18d586": {
           "type": "featured_promo",
           "settings": {
-            "image": "shopify://shop_images/backpack_tile.jpg",
+            "image": "shopify://shop_images/2N5A9929-4-Edited_dde9d78f-8276-49fa-8f47-f416cc5e15bc.jpg",
             "richtext": "",
             "bgr_color": "#eaedee",
             "text_color": "#000000",
-            "button_label": "Shop Backpacks",
-            "promo_link": "shopify://collections/backpacks",
-            "button_style": "button--primary"
-          }
-        },
-        "0a8f2532-b5a3-455a-a1e1-26cdd9ca15d4": {
-          "type": "featured_promo",
-          "settings": {
-            "image": "shopify://shop_images/gift_cards.jpg",
-            "richtext": "",
-            "bgr_color": "#eaedee",
-            "text_color": "#000000",
-            "button_label": "Shop Gift Cards",
-            "promo_link": "shopify://collections/egift-cards",
-            "button_style": "button--link-style"
+            "button_label": "ACCESSORIES",
+            "promo_link": "shopify://collections/accessories",
+            "button_style": "button--secondary"
           }
         }
       },
       "block_order": [
-        "4c84ed03-ce81-4b19-8bb4-43514947fe7a",
-        "featured_promo_bRWYE4",
+        "featured_promo_PzTbkH",
         "mega-menu-1-1",
-        "86c1b510-9a51-4914-b5bc-fa856f18d586",
-        "0a8f2532-b5a3-455a-a1e1-26cdd9ca15d4"
+        "featured_promo_bRWYE4",
+        "86c1b510-9a51-4914-b5bc-fa856f18d586"
       ],
       "settings": {
         "parent_link": "Shop",
