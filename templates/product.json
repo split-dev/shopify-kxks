@@ -236,74 +236,6 @@
       "settings": {
         "custom_liquid": "<script>\nwindow.addEventListener('load', function() {\nvar _learnq = window._learnq || [];\nfunction addedToCart() {\n  fetch(`${window.location.origin}/cart.js`)\n  .then(res => res.clone().json().then(data => {\n    var cart = {\n      total_price: data.total_price/100,\n      $value: data.total_price/100,\n      total_discount: data.total_discount,\n      original_total_price: data.original_total_price/100,\n      items: data.items\n    }\n    if (item !== 'undefined') {\n      cart = Object.assign(cart, item)\n    }\n    if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', cart]);\n        klAjax = false;\n      }\n  }))\n};\n(function (ns, fetch) {\n  ns.fetch = function() {\n    const response = fetch.apply(this, arguments);\n    response.then(res => {\n      if (`${window.location.origin}/cart/add.js`\n      \t.includes(res.url)) {\n        \taddedToCart()\n      }\n    });\n    return response\n  }\n}(window, window.fetch));\nvar klAjax = true;\nvar atcButtons = document.querySelectorAll(\"form[action*='/cart/add'] button[type='submit']\");\nfor (var i = 0; i < atcButtons.length; i++) {\n    atcButtons[i].addEventListener(\"click\", function() {\n      if (klAjax) {\n        _learnq.push(['track', 'Added to Cart', item]);\n        klAjax = false;\n      }\n    })\n}\n});\n</script>"
       }
-    },
-    "index_gallery_hdmiB6": {
-      "type": "index__gallery",
-      "blocks": {
-        "image_rb8HGq": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/originals_tile.jpg",
-            "link": "shopify://collections/originals"
-          }
-        },
-        "image_tmpA6k": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/suede_tile_e2db298c-1f47-4779-84d4-2bfe73e125c2.jpg",
-            "link": "shopify://collections/suede"
-          }
-        },
-        "image_7crWQ8": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/camo_tile_a8dfff14-1f70-4c94-be71-e290738706ec.jpg",
-            "link": "shopify://collections/camo"
-          }
-        },
-        "image_bCEQDA": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/backpack_tile.jpg",
-            "link": "shopify://collections/backpacks"
-          }
-        },
-        "image_rbM9Ya": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/sneaker_case_tile_1.jpg",
-            "link": "shopify://collections/travel-cases"
-          }
-        }
-      },
-      "block_order": [
-        "image_rb8HGq",
-        "image_tmpA6k",
-        "image_7crWQ8",
-        "image_bCEQDA",
-        "image_rbM9Ya"
-      ],
-      "settings": {
-        "gallery_type": "classic",
-        "images_per_row": 5,
-        "crop_images": false,
-        "enable_lightbox": true,
-        "overlay_color": "#000000",
-        "link_color": "#ffffff",
-        "width": "standard",
-        "show_gutter": true,
-        "padding_top": 20,
-        "padding_bottom": 20,
-        "animation": "none",
-        "mobile_layout": "stacked",
-        "crop_images_mobile": false,
-        "show_arrows": true,
-        "show_navigation_dots": true,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20,
-        "css_class": "",
-        "custom_css": ""
-      }
     }
   },
   "order": [
@@ -314,7 +246,6 @@
     "16484837071b250fef",
     "164906006462a11931",
     "recommendations",
-    "546616cd-9421-4f34-bd2a-3b398ef476a0",
-    "index_gallery_hdmiB6"
+    "546616cd-9421-4f34-bd2a-3b398ef476a0"
   ]
 }

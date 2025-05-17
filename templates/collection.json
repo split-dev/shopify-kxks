@@ -83,74 +83,6 @@
         "custom_css": ""
       }
     },
-    "fd7b3ee2-444d-4dcb-b11c-eb48a194d8d5": {
-      "type": "index__gallery",
-      "blocks": {
-        "template--16057642287258__fd7b3ee2-444d-4dcb-b11c-eb48a194d8d5-16874071336e59c611-0": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/originals_tile.jpg",
-            "link": "shopify://collections/originals"
-          }
-        },
-        "template--16057642287258__fd7b3ee2-444d-4dcb-b11c-eb48a194d8d5-16874071336e59c611-2": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/suede_tile_e2db298c-1f47-4779-84d4-2bfe73e125c2.jpg",
-            "link": "shopify://collections/suede"
-          }
-        },
-        "template--16057642287258__fd7b3ee2-444d-4dcb-b11c-eb48a194d8d5-16874071336e59c611-1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/camo_tile_a8dfff14-1f70-4c94-be71-e290738706ec.jpg",
-            "link": "shopify://collections/camo"
-          }
-        },
-        "image_TKtYet": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/backpack_tile.jpg",
-            "link": ""
-          }
-        },
-        "template--16057642287258__fd7b3ee2-444d-4dcb-b11c-eb48a194d8d5-16874071336e59c611-3": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/sneaker_case_tile_1.jpg",
-            "link": "shopify://collections/travel-cases"
-          }
-        }
-      },
-      "block_order": [
-        "template--16057642287258__fd7b3ee2-444d-4dcb-b11c-eb48a194d8d5-16874071336e59c611-0",
-        "template--16057642287258__fd7b3ee2-444d-4dcb-b11c-eb48a194d8d5-16874071336e59c611-2",
-        "template--16057642287258__fd7b3ee2-444d-4dcb-b11c-eb48a194d8d5-16874071336e59c611-1",
-        "image_TKtYet",
-        "template--16057642287258__fd7b3ee2-444d-4dcb-b11c-eb48a194d8d5-16874071336e59c611-3"
-      ],
-      "settings": {
-        "gallery_type": "classic",
-        "images_per_row": 5,
-        "crop_images": false,
-        "enable_lightbox": false,
-        "overlay_color": "#000000",
-        "link_color": "#ffffff",
-        "width": "wide",
-        "show_gutter": false,
-        "padding_top": 20,
-        "padding_bottom": 20,
-        "animation": "none",
-        "mobile_layout": "stacked",
-        "crop_images_mobile": false,
-        "show_arrows": true,
-        "show_navigation_dots": true,
-        "padding_top_mobile": 20,
-        "padding_bottom_mobile": 20,
-        "css_class": "",
-        "custom_css": ""
-      }
-    },
     "164905993555c5a53a": {
       "type": "index__image-with-text-overlay",
       "settings": {
@@ -202,7 +134,6 @@
     "banner",
     "main",
     "1672485675570cec0d",
-    "fd7b3ee2-444d-4dcb-b11c-eb48a194d8d5",
     "164905993555c5a53a"
   ]
 }
