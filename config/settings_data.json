@@ -159,7 +159,7 @@
     "display_vendor": false,
     "thumbnail_hover_enabled": false,
     "thumbnail_text_alignment": "center",
-    "stickers_enabled": true,
+    "stickers_enabled": false,
     "sticker_shape": "square",
     "sticker_position": "right",
     "collection_swatches": true,
