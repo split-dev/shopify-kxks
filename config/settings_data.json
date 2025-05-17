@@ -177,7 +177,7 @@
     "notify_me_form": true,
     "notify_me_description": "<p>Notify me when this product is available:</p>",
     "size_chart": "",
-    "enable_quickshop": true,
+    "enable_quickshop": false,
     "quickshop_button_style": "button--primary",
     "qs_popup_color": "#ffffff",
     "search_title": "Search",
